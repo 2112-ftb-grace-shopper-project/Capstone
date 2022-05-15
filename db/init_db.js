@@ -1,4 +1,13 @@
 const client = require('./client');
+const {
+  createUser,
+  users,
+  animals,
+  createAnimals
+} = require("./index");
+
+
+const { user } = require('pg/lib/defaults');
 
 async function dropTables() {
   try {
@@ -6,6 +15,7 @@ async function dropTables() {
 
     await client.query(`
       DROP TABLE IF EXISTS users;
+      DROP TABLE IF EXISTS animals;
     `);
     
     console.log("Tables has been dropped!")
@@ -25,7 +35,20 @@ async function createTables() {
         username VARCHAR(255) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
-        isAdmin BOOLEAN DEFAULT false
+        "isAdmin" BOOLEAN DEFAULT false
+      );
+
+      CREATE TABLE animals (
+        Name VARCHAR(255) NOT NULL,
+        Id SERIAL PRIMARY KEY,
+        Biome TEXT NOT NULL,
+        Type TEXT NOT NULL,
+        Description TEXT NOT NULL,
+        "CareInstructions" TEXT NOT NULL,
+        Diet TEXT NOT NULL,
+        Age TEXT NOT NULL,
+        "CareDifficulty" TEXT NOT NULL,
+        Price TEXT NOT NULL
       );
     `)
 
@@ -39,18 +62,31 @@ async function createTables() {
 async function createInitialUsers() {
   console.log("Starting to create users...");
   try {
-    const usersToCreate = [
-      { username: "albert", password: "bertie99", email: "dsab@gmail.com" },
-      { username: "sandra", password: "sandra123", email: "ab@gmail.com" },
-      { username: "glamgal", password: "glamgal123", email: "glamgal@gmail.com"},
-    ];
-    const users = await Promise.all(usersToCreate.map(createUser));
+    await Promise.all(users.map(async(user) => {
+      await createUser(user);
+    }))
+  
     
-    console.log("Users created:");
+    
     console.log(users);
     console.log("Finished creating users!");
   } catch (error) {
     console.error("Error creating users!");
+    throw error;
+  }
+}
+
+async function createInitialAnimals() {
+  console.log("starting to make animals...");
+  try {
+    await Promise.all(animals.map(async(animal) => {
+      await createAnimals(animal);
+    }))
+    
+    console.log(animals);
+    console.log("Finished creating animals!");
+  } catch (error) {
+    console.error("Error creating animals!");
     throw error;
   }
 }
@@ -62,6 +98,7 @@ async function rebuildDB() {
     await dropTables();
     await createTables();
     await createInitialUsers();
+    await createInitialAnimals();
     // drop tables in correct order
 
     // build tables in correct order
