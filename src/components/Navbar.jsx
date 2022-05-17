@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const Navbar = ({ loggedIn, setIsLoggedIn }) => {
+const Navbar = ({ loggedIn, setLoggedIn }) => {
   const links = [
     {
       key: "Nav1",

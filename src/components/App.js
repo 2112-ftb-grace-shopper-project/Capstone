@@ -4,12 +4,14 @@ import React, { useState, useEffect } from 'react';
 // where each adapter fetches specific info from our express server's /api route
 import { getAPIHealth } from '../axios-services';
 import { 
-  Navbar
+  Navbar,
+  Login,
+  Register,
  } from './components/index'
 import '../style/App.css';
 
 const App = () => {
-  const [loggedIn, setIsLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [holdToken, setHoldToken] = useState('');
   const [APIHealth, setAPIHealth] = useState('');
 
@@ -29,8 +31,8 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navbar loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />
-      <Login loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Register setHoldToken={setHoldToken} />
       <h1>Hello, World!</h1>
       <p>API Status: {APIHealth}</p>
