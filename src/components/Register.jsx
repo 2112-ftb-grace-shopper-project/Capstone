@@ -11,6 +11,7 @@ const Register = ({ setHoldToken }) => {
         alert("Passwords don't match")
         return;
     }
+    
     // const userSubmit = await newUser(newUsername, newPassword)
     console.log(userSubmit)
     setHoldToken(userSubmit.token)
