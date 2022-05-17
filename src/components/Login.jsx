@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
 
-const Login = ({ loggedIn, setIsLoggedIn }) => {
+const Login = ({ loggedIn, setLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessages, setErrorMessages] = useState([]);
 
-
   const logInUser = async (event) => {
-    event.preventDefault();
-    // const userSubmit = await logIn(username, password);
-    if (userSubmit.token) {
-      setIsLoggedIn(true);
-    } else {
-      console.error("Unable to Login");
-      setErrorMessages([
-        ...errorMessages,
-        "Username or Password is incorrect. Please try again.",
-      ]);
-    }
-    
+  //   event.preventDefault();
+  //   // const userSubmit = await logIn(username, password);
+  //   if (userSubmit.token) {
+  //     setIsLoggedIn(true);
+  //   } else {
+  //     console.error("Unable to Login");
+  //     setErrorMessages([
+  //       ...errorMessages,
+  //       "Username or Password is incorrect. Please try again.",
+  //     ]);
+  //   }
   };
 
   const logOut = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
-    setIsLoggedIn(false);
+    setLoggedIn(false);
   };
 
   return (

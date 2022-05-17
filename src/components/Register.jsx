@@ -6,15 +6,15 @@ const Register = ({ setHoldToken }) => {
   const [passwordAgain, setPasswordAgain] = useState("");
 
   const registerUser = async (event) => {
-    event.preventDefault()
-    if (newPassword !== passwordAgain){
-        alert("Passwords don't match")
-        return;
-    }
-    
-    // const userSubmit = await newUser(newUsername, newPassword)
-    console.log(userSubmit)
-    setHoldToken(userSubmit.token)
+//     event.preventDefault()
+//     if (newPassword !== passwordAgain){
+//         alert("Passwords don't match")
+//         return;
+//     }
+
+//     // const userSubmit = await newUser(newUsername, newPassword)
+//     console.log(userSubmit)
+//     setHoldToken(userSubmit.token)
 };
 
   return (
