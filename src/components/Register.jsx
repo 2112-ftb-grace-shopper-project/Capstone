@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Register = () => {
+const Register = ({ setHoldToken }) => {
   const [newUsername, setNewUsername] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [passwordAgain, setPasswordAgain] = useState("");
@@ -13,7 +13,7 @@ const Register = () => {
     }
     // const userSubmit = await newUser(newUsername, newPassword)
     console.log(userSubmit)
-    props.setHoldToken(userSubmit.token)
+    setHoldToken(userSubmit.token)
 };
 
   return (

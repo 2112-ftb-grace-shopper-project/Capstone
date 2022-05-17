@@ -10,6 +10,7 @@ import '../style/App.css';
 
 const App = () => {
   const [loggedIn, setIsLoggedIn] = useState(false);
+  const [holdToken, setHoldToken] = useState('');
   const [APIHealth, setAPIHealth] = useState('');
 
   useEffect(() => {
@@ -29,6 +30,8 @@ const App = () => {
   return (
     <div className="app-container">
       <Navbar loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Login loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Register setHoldToken={setHoldToken} />
       <h1>Hello, World!</h1>
       <p>API Status: {APIHealth}</p>
     </div>
