@@ -3,9 +3,13 @@ import React, { useState, useEffect } from 'react';
 // you can think of that directory as a collection of api adapters
 // where each adapter fetches specific info from our express server's /api route
 import { getAPIHealth } from '../axios-services';
+import { 
+  Navbar
+ } from './components/index'
 import '../style/App.css';
 
 const App = () => {
+  const [loggedIn, setIsLoggedIn] = useState(false);
   const [APIHealth, setAPIHealth] = useState('');
 
   useEffect(() => {
@@ -24,6 +28,7 @@ const App = () => {
 
   return (
     <div className="app-container">
+      <Navbar loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />
       <h1>Hello, World!</h1>
       <p>API Status: {APIHealth}</p>
     </div>
