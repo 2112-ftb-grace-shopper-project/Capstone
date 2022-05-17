@@ -7,7 +7,7 @@ import {
   Navbar,
   Login,
   Register,
- } from './components/index'
+ } from './'
 import '../style/App.css';
 
 const App = () => {
