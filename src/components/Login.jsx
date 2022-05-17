@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Login = () => {
+const Login = ({ loggedIn, setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessages, setErrorMessages] = useState([]);
@@ -10,7 +10,7 @@ const Login = () => {
     event.preventDefault();
     // const userSubmit = await logIn(username, password);
     if (userSubmit.token) {
-      props.setIsLoggedIn(true);
+      setIsLoggedIn(true);
     } else {
       console.error("Unable to Login");
       setErrorMessages([
@@ -24,12 +24,12 @@ const Login = () => {
   const logOut = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
-    props.setIsLoggedIn(false);
+    setIsLoggedIn(false);
   };
 
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-      {props.isLoggedIn ? (
+      {loggedIn ? (
         <>
           <h3>Log Out</h3>
           <button onClick={logOut}>Log Out</button>
