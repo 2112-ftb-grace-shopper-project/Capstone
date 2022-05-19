@@ -6,17 +6,17 @@ const Login = ({ loggedIn, setLoggedIn }) => {
   const [errorMessages, setErrorMessages] = useState([]);
 
   const logInUser = async (event) => {
-  //   event.preventDefault();
-  //   // const userSubmit = await logIn(username, password);
-  //   if (userSubmit.token) {
-  //     setIsLoggedIn(true);
-  //   } else {
-  //     console.error("Unable to Login");
-  //     setErrorMessages([
-  //       ...errorMessages,
-  //       "Username or Password is incorrect. Please try again.",
-  //     ]);
-  //   }
+    event.preventDefault();
+    // const userSubmit = await logIn(username, password);
+    if (userSubmit.token) {
+      setIsLoggedIn(true);
+    } else {
+      console.error("Unable to Login");
+      setErrorMessages([
+        ...errorMessages,
+        "Username or Password is incorrect. Please try again.",
+      ]);
+    }
   };
 
   const logOut = () => {
