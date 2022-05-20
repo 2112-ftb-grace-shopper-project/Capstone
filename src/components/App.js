@@ -7,6 +7,8 @@ import {
   Navbar,
   Login,
   Register,
+  ProductsList,
+  Product
  } from './'
 import '../style/App.css';
 
@@ -34,6 +36,8 @@ const App = () => {
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Register setHoldToken={setHoldToken} />
+      <ProductsList /> 
+      <Product />
       <h1>Hello, World!</h1>
       <p>API Status: {APIHealth}</p>
     </div>
