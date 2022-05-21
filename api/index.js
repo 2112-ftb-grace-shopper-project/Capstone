@@ -1,4 +1,3 @@
-// create an api router
 // attach other routers from files in this api directory (users, activities...)
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = process.env;
