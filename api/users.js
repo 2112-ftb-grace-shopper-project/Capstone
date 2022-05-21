@@ -15,8 +15,14 @@ const {
 // const { user } = require("pg/lib/defaults");
 
 usersRouter.get("/", async (req, res, next) => {
-  const users = await getAllUsers();
-  res.send(users)
+  try {
+    const users = await getAllUsers();
+    res.send(users)
+
+  } catch (error) {
+    console.log("error in get")
+    next (error)
+  }
 })
 
 usersRouter.post("/register", async (req, res, next) => {

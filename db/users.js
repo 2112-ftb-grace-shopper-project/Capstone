@@ -32,6 +32,7 @@ async function getAllUsers() {
       FROM users;
     `);
 
+    // console.log("get All users",rows)
     return rows;
   } catch (error) {
     throw error;
