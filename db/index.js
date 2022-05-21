@@ -5,5 +5,6 @@ module.exports = {
   client,
   ...require("./users"),
   ...require("./seedData.json"),
-  ...require("./animals")
+  ...require("./animals"),
+  ...require("./orders")
 };

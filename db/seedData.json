@@ -638,6 +638,19 @@
     {"id":8,"username":"dtregenna7","password":"0WuPIao","email":"rmuselli7@hud.gov"},
     {"id":9,"username":"rnorval8","password":"3tsuc9c","email":"rastell8@ebay.com"},
     {"id":10,"username":"jhartshorne9","password":"4qrUco","email":"bgurnee9@elpais.com"}
+  ],
+  "orders":
+  [
+    {"userId":1,"status":"In Progress","cart":0},
+    {"userId":2,"status":"Delivered","cart":0},
+    {"userId":3,"status":"Cancelled","cart":0},
+    {"userId":4,"status":"In Progress","cart":0},
+    {"userId":5,"status":"Delivered","cart":0},
+    {"userId":6,"status":"Delivered","cart":0},
+    {"userId":7,"status":"In Progress","cart":0},
+    {"userId":8,"status":"Delivered","cart":0},
+    {"userId":9,"status":"Cancelled","cart":0},
+    {"userId":10,"status":"Delivered","cart":0}
   ]
 }
   
