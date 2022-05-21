@@ -1,5 +1,5 @@
 const client = require("./client");
-const { createUser, users, animals, createAnimals } = require("./index");
+const { createUser, users, animals, createAnimals, orders, createOrders } = require("./index");
 
 const { user } = require("pg/lib/defaults");
 
@@ -8,6 +8,7 @@ async function dropTables() {
     console.log("Building tables...");
 
     await client.query(`
+      DROP TABLE IF EXISTS orders;
       DROP TABLE IF EXISTS users;
       DROP TABLE IF EXISTS animals;
     `);
@@ -43,6 +44,13 @@ async function createTables() {
         Age TEXT NOT NULL,
         "CareDifficulty" TEXT NOT NULL,
         Price TEXT NOT NULL
+      );
+
+      CREATE TABLE orders (
+        id SERIAL PRIMARY KEY,
+        "userId" INTEGER REFERENCES users(id),
+        status varchar(255) NOT NULL,
+        cart INT 
       );
     `);
 
@@ -86,6 +94,23 @@ async function createInitialAnimals() {
   }
 }
 
+
+async function createInitialOrders() {
+  console.log("starting to make orders...");
+  try {
+    await Promise.all(
+      orders.map(async(order) => {
+        await createOrders(order);
+      })
+    );
+
+      console.log(orders)
+      console.log("Finished creating orders");
+  } catch (error) {
+    console.log("There is an issue with creating order table");
+    throw error;
+  }
+}
 async function rebuildDB() {
   try {
     client.connect();
@@ -93,6 +118,7 @@ async function rebuildDB() {
     await createTables();
     await createInitialUsers();
     await createInitialAnimals();
+    await createInitialOrders();
     // drop tables in correct order
 
     // build tables in correct order
