@@ -9,10 +9,15 @@ const {
   createUser,
   getUserByUsername,
   getUser,
+  getAllUsers,
 //   getPublicRoutinesByUser
 } = require("../db");
 // const { user } = require("pg/lib/defaults");
 
+usersRouter.get("/", async (req, res, next) => {
+  const users = await getAllUsers();
+  res.send(users)
+})
 
 usersRouter.post("/register", async (req, res, next) => {
   const { username, password } = req.body;
@@ -90,15 +95,6 @@ usersRouter.get("/me", requireUser,  async(req, res, next) => {
   }
 })
 
-// usersRouter.get("/:username/routines", async(req, res, next) => {
-//   const { username } = req.params
-//   try {
-//     const routines = await getPublicRoutinesByUser({username});
-//     res.send(routines)
-//   } catch (error) {
-//     next(error)
-//   }
-// })
 
 
 
