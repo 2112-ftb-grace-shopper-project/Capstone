@@ -43,14 +43,8 @@ apiRouter.use(async (req, res, next) => {
 const usersRouter = require("./users");
 apiRouter.use("/users", usersRouter);
 
-// const activitiesRouter = require("./activities");
-// apiRouter.use("/activities", activitiesRouter);
-
-// const routinesRouter = require("./routines");
-// apiRouter.use("/routines", routinesRouter);
-
-// const routineActivitiesRouter = require("./routine_activities");
-// apiRouter.use("/routine_activities", routineActivitiesRouter);
+const animalsRouter = require("./animals");
+apiRouter.use("/animals", animalsRouter);
 
 apiRouter.use((error, req, res, next) => {
   res.status(500).send({
