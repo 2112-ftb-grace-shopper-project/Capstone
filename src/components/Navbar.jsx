@@ -4,11 +4,29 @@ import { Link } from "react-router-dom";
 const Navbar = ({ loggedIn, setLoggedIn }) => {
   const links = [
     {
-      key: "Nav1",
-      route: "/ROUTE", // FIX THIS
-      placeholder: "ROUTE NAME", // FIX THIS
-      shouldDisplay: true, // CHANGE TO loggedIn or !loggedIn
-      onClick: () => { //  ONLY USE THIS FOR THE LOGOUT ROUTE
+      key: "Home",
+      route: "/",
+      placeholder: "Home",
+      shouldDisplay: true,
+    },
+    {
+      key: "Login",
+      route: "/Login",
+      placeholder: "Login",
+      shouldDisplay: true,
+    },
+    {
+      key: "Register",
+      route: "/Register",
+      placeholder: "Register",
+      shouldDisplay: true,
+    },
+    {
+      key: "Logout",
+      route: "/Logout",
+      placeholder: "Logout",
+      shouldDisplay: true,
+      onClick: () => {
         localStorage.removeItem("token");
         setLoggedIn(false);
       },
