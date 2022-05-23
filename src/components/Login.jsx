@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { accountLogin } from '../api';
 
 const Login = ({ loggedIn, setLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -22,6 +23,7 @@ const Login = ({ loggedIn, setLoggedIn }) => {
   const logOut = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
+    localStorage.removeItem("userId");
     setLoggedIn(false);
   };
 
