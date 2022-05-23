@@ -1,59 +1,63 @@
 import React, { useState } from 'react';
+import { registerAccount } from '../axios-services';
 
-const Register = ({ setHoldToken }) => {
+const Register = ({ setLoggedIn }) => {
   const [newUsername, setNewUsername] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [passwordAgain, setPasswordAgain] = useState("");
 
-  const registerUser = async (event) => {
-//     event.preventDefault()
-//     if (newPassword !== passwordAgain){
-//         alert("Passwords don't match")
-//         return;
-//     }
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  };
 
-//     // const userSubmit = await newUser(newUsername, newPassword)
-//     console.log(userSubmit)
-//     setHoldToken(userSubmit.token)
-};
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handlePasswordAgain = (e) => {
+    setPasswordAgain(e.target.value);
+  };
+
+  const submitInformation = async (e) => {
+    e.preventDefault();
+    if (password.length < 5) {
+      alert("Your Password needs to be at least 6 characters long")
+    } else if (newPassword !== passwordAgain) {
+      alert("Your Password did not match!")
+    } else {
+      const account = await registerAccount(newUsername, newPassword);
+      setNewUsername("")
+      setNewPassword("")
+      setLoggedIn(true)
+      return(account)
+    };
+  }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", width: "250px" }}>
-        <label>Username</label>
+    <div className="Register">
+      <h2>Register</h2>
+      <form onSubmit={submitInformation}>
         <input
-          type="text"
-          name="userName"
-          required
+          placeholder="Username"
           value={newUsername}
-          onChange={(event) => setNewUsername(event.target.value)}
+          onChange={handleUsername}
         ></input>
-
-        <label>Password</label>
         <input
-          type="text"
-          min="8"
-          required
+          placeholder="Password"
+          type="password"
           value={newPassword}
-          onChange={(event) => setNewPassword(event.target.value)}
+          onChange={handlePassword}
         ></input>
-
-        <label>Re-Enter Password</label>
         <input
-          type="text"
-          min="8"
-          required
+          placeholder="Retype Your Password"
+          type="password"
           value={passwordAgain}
-          onChange={(event) => setPasswordAgain(event.target.value)}
+          onChange={handlePasswordAgain}
         ></input>
-
-        <label>Register</label>
-            <button type='submit'
-            onClick={registerUser}
-            >Submit</button>
-      </div>
-  )
-}
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+};
 
 export default Register
-
-//should we have payment/contact/address info on users db?
