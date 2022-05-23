@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { getAPIHealth } from '../axios-services';
 import { 
   Navbar,
@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect (() => {
     const token = localStorage.getItem("token")
-    if (token.length > 4) {
+    if (token) {
       setLoggedIn(true)
     }
   }, [])
@@ -32,18 +32,16 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <BrowserRouter>
-        <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-        <p>API Status: {APIHealth}</p>
-        <Routes>
-          <Route path="/" element={<ProductsList />} />
-          <Route path="/Login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
-          <Route path="/Logout" element={<Logout />} />
-          <Route path="Register" element={<Register setLoggedIn={setLoggedIn} />} />
-          <Route path="/Logout" element={<ProductsList />} />
-          <Route path="/Logout" element={<Product />} />
-        </Routes>
-      </BrowserRouter>
+      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      <p>API Status: {APIHealth}</p>
+      <Routes>
+        <Route path="/" element={<ProductsList />} />
+        <Route path="/Login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+        <Route path="/Logout" element={<Logout />} />
+        <Route path="Register" element={<Register setLoggedIn={setLoggedIn} />} />
+        <Route path="/Logout" element={<ProductsList />} />
+        <Route path="/Logout" element={<Product />} />
+      </Routes>
     </div>
   );
 };

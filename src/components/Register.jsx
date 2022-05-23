@@ -7,11 +7,11 @@ const Register = ({ setLoggedIn }) => {
   const [passwordAgain, setPasswordAgain] = useState("");
 
   const handleUsername = (e) => {
-    setUsername(e.target.value);
+    setNewUsername(e.target.value);
   };
 
   const handlePassword = (e) => {
-    setPassword(e.target.value);
+    setNewPassword(e.target.value);
   };
 
   const handlePasswordAgain = (e) => {
@@ -20,7 +20,7 @@ const Register = ({ setLoggedIn }) => {
 
   const submitInformation = async (e) => {
     e.preventDefault();
-    if (password.length < 5) {
+    if (newPassword.length < 5) {
       alert("Your Password needs to be at least 6 characters long")
     } else if (newPassword !== passwordAgain) {
       alert("Your Password did not match!")
