@@ -39,8 +39,8 @@ const App = () => {
         <Route path="/Login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
         <Route path="Register" element={<Register setLoggedIn={setLoggedIn} />} />
-        <Route path="/Logout" element={<ProductsList />} />
-        <Route path="/Logout" element={<Product />} />
+        <Route path="/ProductsList" element={<ProductsList />} />
+        <Route path="/Product" element={<Product />} />
       </Routes>
     </div>
   );
