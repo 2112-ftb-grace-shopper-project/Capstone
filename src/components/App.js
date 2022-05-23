@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { getAPIHealth } from '../axios-services';
 import { 
   Navbar,
@@ -12,7 +13,7 @@ import '../style/App.css';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
-  // const [APIHealth, setAPIHealth] = useState('');
+  const [APIHealth, setAPIHealth] = useState('');
 
   useEffect (() => {
     const token = localStorage.getItem("token")
@@ -21,30 +22,28 @@ const App = () => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   // follow this pattern inside your useEffect calls:
-  //   // first, create an async function that will wrap your axios service adapter
-  //   // invoke the adapter, await the response, and set the data
-  //   const getAPIStatus = async () => {
-  //     const { healthy } = await getAPIHealth();
-  //     setAPIHealth(healthy ? 'api is up! :D' : 'api is down :/');
-  //   };
-
-  //   // second, after you've defined your getter above
-  //   // invoke it immediately after its declaration, inside the useEffect callback
-  //   getAPIStatus();
-  // }, []);
+  useEffect(() => {
+    const getAPIStatus = async () => {
+      const { healthy } = await getAPIHealth();
+      setAPIHealth(healthy ? 'The API is Healthy' : 'The API is DOWN');
+    };
+    getAPIStatus();
+  }, []);
 
   return (
     <div className="app-container">
-      <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-      <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-      <Logout loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-      <Register setLoggedIn={setLoggedIn} />
-      <ProductsList /> 
-      <Product />
-      <h1>Hello, World!</h1>
-      <p>API Status: {APIHealth}</p>
+      <BrowserRouter>
+        <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        <p>API Status: {APIHealth}</p>
+        <Routes>
+          <Route path="/" element={<ProductsList />} />
+          <Route path="/Login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+          <Route path="/Logout" element={<Logout />} />
+          <Route path="Register" element={<Register setLoggedIn={setLoggedIn} />} />
+          <Route path="/Logout" element={<ProductsList />} />
+          <Route path="/Logout" element={<Product />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
