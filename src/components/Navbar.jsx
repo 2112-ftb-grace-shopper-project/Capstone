@@ -18,7 +18,7 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
   return (
     <div className="Navbar">
       <Link className="NavTitle" to={"/"}>
-        Fitness Tracker
+        Exotic Animals R Us
       </Link>
       <div className="NavMenuItems">
         {links.map((link) => {
