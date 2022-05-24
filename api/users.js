@@ -41,7 +41,7 @@ usersRouter.post("/register", async (req, res, next) => {
         message: "password must be at least 8 characters",
       });
     } else {
-      const user = await createUser({ username, password });
+      const user = await createUser({ username, password, email });
       const token = jwt.sign(user, JWT_SECRET);
       if(!user) {
         next({
