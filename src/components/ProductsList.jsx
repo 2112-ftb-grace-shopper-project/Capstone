@@ -14,7 +14,7 @@ const ProductsList = () => {
       "age" : 8,
       "CareDifficulty" : "Hard",
       "price" : "$5000",
-      "image" : "../assets/ExoticAnimals/id01gorillaphant"
+      "image" : "../assets/ExoticAnimals/id01gorillaphant.jpg"
     },
     {
       "name" : "Orangutans",
@@ -74,7 +74,7 @@ const ProductsList = () => {
     <div>
       {testAnimals.map((animal) => (
         <div key={animal.id}>
-          {/* <p>{animal.image}</p> */}
+          {/* <img alt={animal.name} src={require(testAnimals.image)} /> */}
           <h3>{animal.name}</h3>
           <p>{animal.biome}</p>
           <p>{animal.type}</p>
