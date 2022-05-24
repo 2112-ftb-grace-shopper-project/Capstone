@@ -1,5 +1,3 @@
-// import Axios from "axios";
-
 export const accountLogin = (username, password) => {
   return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/users/login",
