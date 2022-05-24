@@ -1,4 +1,6 @@
-export const accountLogin = async (user, pass) => {
+// import Axios from "axios";
+
+export const accountLogin = async (username, password) => {
   return await fetch(
     "https://exotic-animal-shop.herokuapp.com/api/users/login",
     {
@@ -7,8 +9,8 @@ export const accountLogin = async (user, pass) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: user,
-        password: pass,
+        username: username,
+        password: password,
       }),
     }
   )
@@ -22,17 +24,17 @@ export const accountLogin = async (user, pass) => {
     .catch(console.error);
 };
 
-export const registerAccount = async (user, pass) => {
+export const registerAccount = async (username, password) => {
   return await fetch(
-    "https://fast-plateau-20949.herokuapp.com/api/users/register",
+    "https://exotic-animal-shop.herokuapp.com/api/users/register",
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: user,
-        password: pass,
+        username: username,
+        password: password,
       }),
     }
   )

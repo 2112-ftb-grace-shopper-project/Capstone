@@ -25,6 +25,7 @@ const Register = ({ setLoggedIn }) => {
     } else if (newPassword !== passwordAgain) {
       alert("Your Password did not match!")
     } else {
+      console.log(newUsername, newPassword)
       const account = await registerAccount(newUsername, newPassword);
       setNewUsername("")
       setNewPassword("")

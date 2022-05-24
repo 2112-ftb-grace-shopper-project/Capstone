@@ -74,7 +74,7 @@ const ProductsList = () => {
     <div>
       {testAnimals.map((animal) => (
         <div key={animal.id}>
-          <img src={testAnimals.image} />
+          {/* <img src={testAnimals.image} /> */}
           <h3>{animal.name}</h3>
           <p>{animal.biome}</p>
           <p>{animal.type}</p>
