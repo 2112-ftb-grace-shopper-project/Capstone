@@ -24,10 +24,10 @@ const App = () => {
     <div className="app-container">
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
-        <Route path="/" element={<ProductsList />} />
+        <Route path="*" element={<ProductsList />} />
         <Route path="/Login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="Register" element={<Register setLoggedIn={setLoggedIn} />} />
+        <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/ProductsList" element={<ProductsList />} />
         <Route path="/Product" element={<Product />} />
       </Routes>

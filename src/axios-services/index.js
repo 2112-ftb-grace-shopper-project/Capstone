@@ -61,4 +61,3 @@ export const animals = async () => {
     })
     .catch(console.error);
 };
-
