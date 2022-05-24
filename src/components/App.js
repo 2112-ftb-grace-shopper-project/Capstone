@@ -25,7 +25,7 @@ const App = () => {
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
         <Route path="*" element={<ProductsList />} />
-        <Route path="/Login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+        <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/ProductsList" element={<ProductsList />} />

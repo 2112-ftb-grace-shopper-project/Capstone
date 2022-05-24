@@ -1,7 +1,7 @@
 // import Axios from "axios";
 
-export const accountLogin = async (username, password) => {
-  return await fetch(
+export const accountLogin = (username, password) => {
+  return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/users/login",
     {
       method: "POST",
@@ -16,16 +16,17 @@ export const accountLogin = async (username, password) => {
   )
     .then((response) => response.json())
     .then((result) => {
+      console.log(result);
       localStorage.setItem("token", result.token);
-      localStorage.setItem("username", result.users.username);
-      localStorage.setItem("userId", result.users.id);
-      return result.users.username;
+      localStorage.setItem("username", result.user.username);
+      localStorage.setItem("userId", result.user.id);
+      return result.user.username;
     })
     .catch(console.error);
 };
 
-export const registerAccount = async (username, password) => {
-  return await fetch(
+export const registerAccount = (username, password, email) => {
+  return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/users/register",
     {
       method: "POST",
@@ -35,21 +36,22 @@ export const registerAccount = async (username, password) => {
       body: JSON.stringify({
         username: username,
         password: password,
+        email: email,
       }),
     }
   )
     .then((response) => response.json())
     .then((result) => {
       localStorage.setItem("token", result.token);
-      localStorage.setItem("username", result.users.username);
-      localStorage.setItem("userId", result.users.id);
-      return result.users.username;
+      localStorage.setItem("username", result.user.username);
+      localStorage.setItem("userId", result.user.id);
+      return result.user.username;
     })
     .catch(console.error);
 };
 
-export const animals = async () => {
-  return await fetch(
+export const animals = () => {
+  return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/animals",
     {
       method: "GET",
