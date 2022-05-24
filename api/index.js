@@ -7,13 +7,6 @@ const apiRouter = express.Router();
 
 const { getUserById } = require("../db");
 
-//health check
-apiRouter.get("/health", async (req, res, next) => {
-  res.send({
-    message: "server is healthy",
-  });
-});
-
 apiRouter.use(async (req, res, next) => {
   const prefix = "Bearer ";
   const auth = req.header("Authorization");
