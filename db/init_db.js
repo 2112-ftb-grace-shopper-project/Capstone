@@ -8,6 +8,7 @@ async function dropTables() {
     console.log("Building tables...");
 
     await client.query(`
+      DROP TABLE IF EXISTS animalOrders;
       DROP TABLE IF EXISTS orders;
       DROP TABLE IF EXISTS users;
       DROP TABLE IF EXISTS animals;
@@ -51,6 +52,12 @@ async function createTables() {
         "userId" INTEGER REFERENCES users(id),
         status varchar(255) NOT NULL,
         cart INT 
+      );
+
+      CREATE TABLE animalOrders (
+        "animalId" INTEGER REFERENCES animals(id),
+        "orderId" INTEGER REFERENCES order(id),
+        UNIQUE ("animalId", "orderId")
       );
     `);
 
@@ -111,6 +118,23 @@ async function createInitialOrders() {
     throw error;
   }
 }
+
+async function createInitialAnimalOrders() {
+  try {
+    console.log("starting to make AnimalOrders...");
+
+    // const createAnimalOrderDummy = [
+    //   {
+    //     animalId: "switch"
+    //     orderId: 
+    //   }
+    // ]
+  } catch (error) {
+    console.log("There is an issue with creating AnimalOrders table");
+    throw error;
+  }
+}
+
 async function rebuildDB() {
   try {
     client.connect();
@@ -119,6 +143,7 @@ async function rebuildDB() {
     await createInitialUsers();
     await createInitialAnimals();
     await createInitialOrders();
+    await createInitialAnimalOrders();
     // drop tables in correct order
 
     // build tables in correct order
