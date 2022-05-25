@@ -1,7 +1,7 @@
 const client = require("./client");
 const { createUser, users, animals, createAnimals, orders, createOrders } = require("./index");
 
-const { user } = require("pg/lib/defaults");
+// const { user } = require("pg/lib/defaults");
 
 async function dropTables() {
   try {
@@ -123,12 +123,29 @@ async function createInitialAnimalOrders() {
   try {
     console.log("starting to make AnimalOrders...");
 
-    // const createAnimalOrderDummy = [
-    //   {
-    //     animalId: "switch"
-    //     orderId: 
-    //   }
-    // ]
+    const createAnimalOrderDummy = [
+      {
+        animalId: 1,//id from animals(id)
+        orderId: 10
+      },
+      {
+        animalId: 5,
+        orderId: 1
+      },
+      {
+        animalId: 4,
+        orderId: 5
+      },
+      {
+        animalId: 22,
+        orderId: 9
+      },
+      {
+        animalId: 37,
+        orderId: 4
+      }
+    ]
+    return createAnimalOrderDummy;
   } catch (error) {
     console.log("There is an issue with creating AnimalOrders table");
     throw error;
