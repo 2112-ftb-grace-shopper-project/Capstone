@@ -12,7 +12,7 @@
       "age" : 8,
       "CareDifficulty" : "Hard",
       "price" : "$5000",
-      "image" : "../assets/ExoticAnimals/id01gorillaphant.jpg"
+      "image" : "/id01gorillaphant.jpg"
     },
     {
       "name" : "Orangutans",
@@ -25,7 +25,7 @@
       "age" : 10,
       "CareDifficulty" : "medium", 
       "price" : "$1000",
-      "image" : "../assets/ExoticAnimals/id02orangutans"
+      "image" : "/id02orangutans.png"
     },
     {
       "name" : "Zebrafrog",
@@ -38,7 +38,7 @@
       "age" : 4,
       "CareDifficulty" : "easy",
       "price" : "$50",
-      "image" : "../assets/ExoticAnimals/id03zebrafrog"
+      "image" : "/id03zebrafrog.jpg"
     },
     {
       "name" : "Red Panda",
@@ -51,7 +51,7 @@
       "age" : "3",
       "CareDifficulty" : "easy",
       "price" : "$600",
-      "image" : "../assets/ExoticAnimals/id04redpanda"
+      "image" : "/id04redpanda.png"
     },
     {
       "name" : "Stitch",
@@ -64,7 +64,7 @@
       "age" : 626,
       "CareDifficulty" :"hard",
       "price" : "$2",
-      "image" : "../assets/ExoticAnimals/id05stitch"
+      "image" : "/id05stitch.png"
     },
     {
       "name" : "Emperor Tamarin",
@@ -77,7 +77,7 @@
       "age" : 4,
       "CareDifficulty" : "easy",
       "price" : "$79.99",
-      "image" : "../assets/ExoticAnimals/id06emperorTamarin"
+      "image" : "/id06emperorTamarin.png"
     },
     {
       "name" : "Sharse",
@@ -90,7 +90,7 @@
       "age": 2,
       "CareDifficulty": "hard",
       "price": "$9000",
-      "image" : "../assets/ExoticAnimals/id07sharse"
+      "image" : "/id07sharse.png"
     },
     {
       "name" : "Beluga Whale",
@@ -103,7 +103,7 @@
       "age": 6,
       "CareDifficulty": "medium",
       "price": "$20000",
-      "image" : "../assets/ExoticAnimals/id08belugaWhale"
+      "image" : "/id08belugaWhale.png"
     },
     {
       "name" : "Tabby Cat",
@@ -116,7 +116,7 @@
       "age": 3,
       "CareDifficulty": "easy",
       "price": "$100",
-      "image" : "../assets/ExoticAnimals/id09tabbyCat"
+      "image" : "/id09tabbyCat.png"
     },
     {
      "name" : "Axolotl",
@@ -129,7 +129,7 @@
       "age": "Forever baby!The ability to regenerate keeps me young",
       "CareDifficulty": "easy",
       "price": "$500",
-      "image" : "../assets/ExoticAnimals/id10axolotl"
+      "image" : "/id10axolotl.png"
     },
     {
       "name" : "Komodo Dragon",
@@ -142,7 +142,7 @@
       "age": "6" ,
       "CareDifficulty": "hard",
       "price": "$5000",
-      "image" : "../assets/ExoticAnimals/id11komodoDragon"
+      "image" : "/id11komodoDragon.png"
     },
     {
       "name" : "Mongoose vs King Cobra",
@@ -155,7 +155,7 @@
       "age": 4,
       "CareDifficulty": "medium",
       "price": "$500 each, $850 together",
-      "image" : "../assets/ExoticAnimals/id12MongooseVsKingCobra"
+      "image" : "/id12MongooseVsKingCobra.png"
     },
     {
       "name" : "Creepy Boy",
@@ -168,7 +168,7 @@
       "age": 99,
       "CareDifficulty": "low",
       "price": "$0.01",
-      "image" : "../assets/ExoticAnimals/id13CreepyBoy"
+      "image" : "/id13CreepyBoy.png"
     },
     {
       "name" : "Hercules Beetle",
@@ -181,7 +181,7 @@
       "age" : 2,
       "CareDifficulty" : "easy",
       "price" : "$200",
-      "image" : "../assets/ExoticAnimals/id14herculesbeetle"
+      "image" : "/id14herculesbeetle.jpeg"
     },
     {
       "name" : "Guinea Pig",
@@ -194,7 +194,7 @@
       "age" : 4,
       "CareDifficulty" : "easy",
       "price" : "$50",
-      "image" : "../assets/ExoticAnimals/id15guineaPig"
+      "image" : "/id15guineaPig.jpg"
     },
     {
       "name" : "Fairy Armadillo",
@@ -207,7 +207,7 @@
       "age":"2" ,
       "CareDifficulty": "easy for night lovers",
       "price": "$250",
-      "image" : "../assets/ExoticAnimals/id16FairyArmadillo"
+      "image" : "/id16FairyArmadillo.png"
     },
     {
       "name" : "Honey Badger",
@@ -220,7 +220,7 @@
       "age": 11,
       "CareDifficulty": "hard",
       "price": "$750",
-      "image" : "../assets/ExoticAnimals/id17honeyBadger"
+      "image" : "/id17honeyBadger.png"
     },
     {
       "name" : "Kangaroo",
@@ -233,7 +233,7 @@
       "age": 17,
       "CareDifficulty": "hard",
       "price": "$2500",
-      "image" : "../assets/ExoticAnimals/id18Kangaroo"
+      "image" : "/id18Kangaroo.png"
     },
     {
       "name" : "Horse",
@@ -246,7 +246,7 @@
       "age": 8,
       "CareDifficulty": "medium",
       "price": "$40,000",
-      "image" : "../assets/ExoticAnimals/id19horse"
+      "image" : "/id19horse.png"
     },
     {
       "name" : "Nessie",
@@ -259,7 +259,7 @@
       "age": 1500,
       "CareDifficulty": "hard",
       "price": "$10,000",
-      "image" : "../assets/ExoticAnimals/id20nessie"
+      "image" : "/id20nessie.png"
     },
     {
       "name" : "Hedgehog",
@@ -272,7 +272,7 @@
       "age": 4,
       "CareDifficulty": "easy",
       "price": "$75",
-      "image" : "../assets/ExoticAnimals/id21hedgehog"
+      "image" : "/id21hedgehog.png"
     },
     {
       "name" : "Mandarin Duck",
@@ -285,7 +285,7 @@
       "age": 5,
       "CareDifficulty": "hard",
       "price": "$250",
-      "image" : "../assets/ExoticAnimals/id22mandarinduck"
+      "image" : "/id22mandarinduck.png"
     },
     {
       "name" : "Emperor Penguin",
@@ -298,7 +298,7 @@
       "age": 9,
       "CareDifficulty": "easy",
       "price": "$1000",
-      "image" : "../assets/ExoticAnimals/id23emperorpenguin"
+      "image" : "/id23emperorpenguin.png"
     },
     {
       "name" : "2 Toed Sloth",
@@ -311,7 +311,7 @@
       "age": 2,
       "CareDifficulty": "easy",
       "price": "$200",
-      "image" : "../assets/ExoticAnimals/id24twotoedsloth.png"
+      "image" : "/id24twotoedsloth.png"
     },
     {
       "name" : "3 Toed Sloth",
@@ -324,7 +324,7 @@
       "age": 3,
       "CareDifficulty": "easy",
       "price": "$300",
-      "image" : "../assets/ExoticAnimals/id25threetoedsloth"
+      "image" : "/id25threetoedsloth.png"
     },
     {
       "name" : "Grizzly Bear",
@@ -337,7 +337,7 @@
       "age": 8,
       "CareDifficulty": "hard",
       "price": "$3000",
-      "image" : "../assets/ExoticAnimals/id26grizzlybear"
+      "image" : "/id26grizzlybear.png"
     },
     {
       "name" : "Black Bear",
@@ -350,7 +350,7 @@
       "age": 10,
       "CareDifficulty": "hard",
       "price": "$3000",
-      "image" : "../assets/ExoticAnimals/id27blackBear"
+      "image" : "/id27blackBear.png"
     },
     {
       "name" : "Golden Pheasant",
@@ -363,7 +363,7 @@
       "age": 7,
       "CareDifficulty": "low",
       "price": "$500",
-      "image" : "../assets/ExoticAnimals/id28goldenpheasant"
+      "image" : "/id28goldenpheasant.png"
     },
     {
       "name" : "Giraffe",
@@ -376,7 +376,7 @@
       "age": 12,
       "CareDifficulty": "low",
       "price": "$4000",
-      "image" : "../assets/ExoticAnimals/id29giraffe"
+      "image" : "/id29giraffe.png"
     },
     {
       "name" : "Minion (evil)",
@@ -389,7 +389,7 @@
       "age": 20,
       "CareDifficulty": "medium",
       "price": "$500",
-      "image" : "../assets/ExoticAnimals/id30minion(evil)"
+      "image" : "/id30minion(evil).png"
     },
     {
       "name" : "Minion (yellow)",
@@ -402,7 +402,7 @@
       "age": 60000000,
       "CareDifficulty": "medium",
       "price": "$100 (each)",
-      "image" : "../assets/ExoticAnimals/id31minions"
+      "image" : "/id31minions.png"
     },
     {
       "name" : "Drogon",
@@ -415,7 +415,7 @@
       "age" : 3,
       "CareDifficulty" : "hard",
       "price" : "$200,000",
-      "image" : "../assets/ExoticAnimals/id32drogon"
+      "image" : "/id32drogon.png"
     },
     {
       "name" : "Pangolin",
@@ -428,7 +428,7 @@
       "age" : 5,
       "CareDifficulty" : "medium",
       "price" : "$699.99",
-      "image" : "../assets/ExoticAnimals/id33pangolin"
+      "image" : "/id33pangolin.png"
     },
     {
       "name" : "Mission Golden-Eyed Tree Frog",
@@ -441,7 +441,7 @@
       "age" : 2,
       "CareDifficulty" : "medium",
       "price" : "$499.99",
-      "image" : "../assets/ExoticAnimals/id34treefrog"
+      "image" : "/id34treefrog.png"
     },
     {
       "name" : "Zebra",
@@ -454,7 +454,7 @@
       "age" : 14,
       "CareDifficulty" : "low",
       "price" : "$12.99",
-      "image" : "../assets/ExoticAnimals/id35zebra"
+      "image" : "/id35zebra.png"
     },
     {
       "name" : "Lemur",
@@ -467,7 +467,7 @@
       "age" : 4,
       "CareDifficulty" : "high",
       "price" : "$49.99",
-      "image" : "../assets/ExoticAnimals/id36lemur"
+      "image" : "/id36lemur.png"
     },
     {
       "name" : "Velociraptor",
@@ -480,7 +480,7 @@
       "age" : 6,
       "CareDifficulty" : "high",
       "price" : "$19999.99",
-      "image" : "../assets/ExoticAnimals/id37velociraptor"
+      "image" : "/id37velociraptor.png"
     },
     {
       "name" : "Panther Chameleon",
@@ -493,7 +493,7 @@
       "age" : 2,
       "CareDifficulty" : "low",
       "price" : "$4999.99",
-      "image" : "../assets/ExoticAnimals/id38pantherchameleon"
+      "image" : "/id38pantherchameleon.png"
     },
     {
       "name" : "Southern Cassowary",
@@ -506,7 +506,7 @@
       "age" : 3,
       "CareDifficulty" : "medium",
       "price" : "$9.99",
-      "image" : "../assets/ExoticAnimals/id39southerncassowary"
+      "image" : "/id39southerncassowary.png"
     },
     {
       "name" : "Emu",
@@ -519,7 +519,7 @@
       "age" : 4,
       "CareDifficulty" : "medium",
       "price" : "$199.99",
-      "image" : "../assets/ExoticAnimals/id40emu"
+      "image" : "/id40emu.png"
     },
     {
       "name" : "Hippopotamus",
@@ -532,7 +532,7 @@
       "age" : 9,
       "CareDifficulty" : "low",
       "price" : "$29999.99",
-      "image" : "../assets/ExoticAnimals/id41hippo"
+      "image" : "/id41hippo.png"
     },
     {
       "name" : "Fire Ant",
@@ -545,7 +545,7 @@
       "age" : 1,
       "CareDifficulty" : "high",
       "price" : "$1 (each)",
-      "image" : "../assets/ExoticAnimals/id42fireant"
+      "image" : "/id42fireant.jpg"
     },
     {
       "name" : "Spider Doggo",
@@ -558,7 +558,7 @@
       "age" : 4,
       "CareDifficulty" : "medium",
       "price" : "$1999.99",
-      "image" : "../assets/ExoticAnimals/id43spiderdoggo"
+      "image" : "/id43spiderdoggo.png"
     },
     {
       "name" : "Ghost Bat",
@@ -571,7 +571,7 @@
       "age" : 3,
       "CareDifficulty" : "low",
       "price" : "$19.99",
-      "image" : "../assets/ExoticAnimals/id44ghostbat"
+      "image" : "/id44ghostbat.png"
     },
     {
       "name" : "Man O War Jellyfish",
@@ -584,7 +584,7 @@
       "age" : 450,
       "CareDifficulty" : "medium",
       "price" : "$49.99",
-      "image" : "../assets/ExoticAnimals/id45manofwar"
+      "image" : "/id45manofwar.jpg"
     },
     {
       "name" : "Dugite",
@@ -597,7 +597,7 @@
       "age" : 2,
       "CareDifficulty" : "low",
       "price" : "$1.99",
-      "image" : "../assets/ExoticAnimals/id46dugite"
+      "image" : "/id46dugite.jpg"
     },
     {
       "name" : "Bush Viper",
@@ -610,7 +610,7 @@
       "age" : 2,
       "CareDifficulty" : "low",
       "price" : "$4.99",
-      "image" : "../assets/ExoticAnimals/id47bushviper"
+      "image" : "/id47bushviper.jpeg"
     },
     {
       "name" : "Spiny Turtle",
@@ -623,7 +623,7 @@
       "age" : 249,
       "CareDifficulty" : "high",
       "price" : "$99.99",
-      "image" : "../assets/ExoticAnimals/id48spinyturtle"
+      "image" : "/id48spinyturtle.jpeg"
     }
   ],
   "users": 

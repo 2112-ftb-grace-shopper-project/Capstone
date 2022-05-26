@@ -48,7 +48,7 @@ export const registerAccount = (username, password, email) => {
     .catch(console.error);
 };
 
-export const animals = () => {
+export const getAnimals = () => {
   return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/animals",
     {
@@ -57,6 +57,22 @@ export const animals = () => {
         "Content-Type": "application/json",
       },
     })
+    .then((response) => response.json())
+    .then((result) => {
+      return result;
+    })
+    .catch(console.error);
+};
+
+export const getSingleAnimal = (id) => {
+  return fetch(
+    `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`,
+    {
+      headers: {
+        "Content-Type": "application/json"
+      },
+    }
+  )
     .then((response) => response.json())
     .then((result) => {
       return result;
