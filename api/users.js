@@ -1,18 +1,16 @@
-// const { response } = require("express");
+
 const express = require("express");
 const usersRouter = express.Router();
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET = 'neverTell' } = process.env;
-const { requireUser } = require('./utils')
 
 const {
   createUser,
   getUserByUsername,
   getUser,
   getAllUsers,
-//   getPublicRoutinesByUser
+
 } = require("../db");
-// const { user } = require("pg/lib/defaults");
 
 usersRouter.get("/", async (req, res, next) => {
   try {
@@ -21,7 +19,7 @@ usersRouter.get("/", async (req, res, next) => {
 
   } catch (error) {
     console.log("error in get")
-    next (error)
+    next(error)
   }
 })
 
@@ -34,7 +32,7 @@ usersRouter.post("/register", async (req, res, next) => {
         name: "userAlreadyExists",
         message: "a user with that username already exists",
       });
-      
+
     } else if (password.length < 8) {
       next({
         name: "passwordTooShort",
@@ -43,12 +41,12 @@ usersRouter.post("/register", async (req, res, next) => {
     } else {
       const user = await createUser({ username, password, email });
       const token = jwt.sign(user, JWT_SECRET);
-      if(!user) {
+      if (!user) {
         next({
           message: "error here no user"
         })
       }
-      res.send({user, token});
+      res.send({ user, token });
     }
   } catch ({ name, message }) {
     next({ name, message });
@@ -58,48 +56,40 @@ usersRouter.post("/register", async (req, res, next) => {
 
 
 usersRouter.post("/login", async (req, res, next) => {
-  const {username, password} = req.body;
-  
+  const { username, password } = req.body;
+
   try {
-    if (!username|| !password) {
+    if (!username || !password) {
       next({
         name: "MissingCredentialsError",
         message: "Please input both a username and password"
       });
     }
-    
-    const user = await getUser({username, password});
-    
-    if(!user) {
+
+    const user = await getUser({ username, password });
+
+    if (!user) {
       next({
         name: "MissingCredentialError",
         message: "There is no user. please sign up"
       });
-    } 
-    
+    }
+
     else {
       const token = jwt.sign({
         id: user.id,
         username: user.username
       }, JWT_SECRET);
-      
-      res.send({user, message: "thanks for signing up", token:token});
-    } 
-    
-  } catch ({name, message}) {
-    next({name, message});
+
+      res.send({ user, message: "thanks for signing up", token: token });
+    }
+
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 
 
-usersRouter.get("/me", requireUser,  async(req, res, next) => {
-  try {
-    res.send(req.user)
-
-  } catch (error) {
-    next(error);
-  }
-})
 
 
 
