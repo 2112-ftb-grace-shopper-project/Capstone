@@ -42,6 +42,9 @@ apiRouter.use("/animals", animalsRouter);
 const cartRouter = require("./cart");
 apiRouter.use("/cart", cartRouter);
 
+const animalOrdersRouter = require("./animalOrders");
+apiRouter.use("/animalOrders", animalOrdersRouter);
+
 apiRouter.use((error, req, res, next) => {
   res.status(500).send({
     name: error.name,
