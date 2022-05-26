@@ -1,6 +1,6 @@
 const express = require('express');
 const cartRouter = express.Router();
-const requireUser = require("./utils");
+const { requireUser } = require("./utils");
 const { getAllOrders, createOrders, destroyOrder } = require('../db');
 
 
