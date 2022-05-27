@@ -1,30 +1,14 @@
-import React, { useState, useEffect } from "react";
-// import { Product } from "./"
+import React from "react";
 import { Link } from "react-router-dom";
-import { getAnimals } from "../axios-services";
 
-const ProductsList = () => {
-  const [animalList, setAnimalList] = useState([]);
-  
-  useEffect(() => {
-    const fetchAnimals = () => {
-      getAnimals()
-      .then((result) => {
-        setAnimalList(result)
-      })
-      .catch(console.error)
-    }
-    fetchAnimals()
-  }, []);
-
+const ProductsList = ({ animalList }) => {
   return (
     <div>
       {animalList.map((animal) => {
         return (
           <Link key={animal.id} to={`/animals/${animal.id}`}>
             <div>
-              {/* <Product /> */}
-              <img alt={animal.image} src={("../../assets/ExoticAnimals" + animal.image)} /> {/* ADD REQUIRE WHEN WORKING */}
+              <img alt={animal.image} src={`../../assets/ExoticAnimals"${animal.image}`} /> {/* ADD REQUIRE WHEN WORKING */}
               <h3>{animal.name}</h3>
               <p>{animal.biome}</p>
               <p>{animal.type}</p>

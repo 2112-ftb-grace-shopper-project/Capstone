@@ -64,25 +64,25 @@ export const getAnimals = () => {
     .catch(console.error);
 };
 
-// export const getSingleAnimal = (id) => {
-//   return fetch(
-//     `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`,
-//     {
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//     }
-//   )
-//     .then((response) => response.json())
-//     .then((result) => {
-//       return result;
-//     })
-//     .catch(console.error);
+// export const getSingleAnimal = async (id) => {
+//   const url = `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`;
+//   const response = await fetch(url);
+//   const json = await response.json();
+//   return json.animals
 // };
 
-export const getSingleAnimal = async (id) => {
-  const url = `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`;
-  const response = await fetch(url);
-  const json = await response.json();
-  return json.animals
+export const getSingleAnimal = (id) => {
+  return fetch(
+    `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => response.json())
+    .then((result) => {
+      return result;
+    })
+    .catch(console.error);
 };
