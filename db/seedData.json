@@ -1,4 +1,5 @@
 {
+
   "animals": [
     {
       "name": "Gorillaphant",
@@ -89,6 +90,7 @@
       "age": 2,
       "CareDifficulty": "hard",
       "price": "$9000",
+
       "image": "/id07sharse.png"
     },
     {
