@@ -3,31 +3,31 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ loggedIn, setLoggedIn }) => {
   const links = [
-    // {
-    //   key: "Home",
-    //   route: "/",
-    //   placeholder: "Home",
-    //   shouldDisplay: true,
-    // },
+    {
+      key: "Home",
+      route: "/",
+      placeholder: "Home",
+      shouldDisplay: true,
+    },
     {
       key: "Login",
       route: "/Login",
       placeholder: "Login",
-      shouldDisplay: !loggedIn,
+      shouldDisplay: true,
     },
     {
       key: "Register",
       route: "/Register",
       placeholder: "Register",
-      shouldDisplay: !loggedIn,
+      shouldDisplay: true,
     },
     {
       key: "Logout",
       route: "/Logout",
       placeholder: "Logout",
-      shouldDisplay: loggedIn,
+      shouldDisplay: true,
       onClick: () => {
-        localStorage.clear();
+        localStorage.removeItem("token");
         setLoggedIn(false);
       },
     },
