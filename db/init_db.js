@@ -1,7 +1,7 @@
 const client = require("./client");
 const { createUser, users, animals, createAnimals, orders, createOrders } = require("./index");
 
-const { user } = require("pg/lib/defaults");
+// const { user } = require("pg/lib/defaults");
 
 async function dropTables() {
   try {
@@ -55,8 +55,8 @@ async function createTables() {
       );
 
       CREATE TABLE animalOrders (
+        "orderId" INTEGER REFERENCES orders(id),
         "animalId" INTEGER REFERENCES animals(id),
-        "orderId" INTEGER REFERENCES order(id),
         UNIQUE ("animalId", "orderId")
       );
     `);
@@ -93,7 +93,7 @@ async function createInitialAnimals() {
       })
     );
 
-    // console.log(animals);
+    console.log(animals);
     console.log("Finished creating animals!");
   } catch (error) {
     console.error("Error creating animals!");
@@ -106,13 +106,13 @@ async function createInitialOrders() {
   console.log("starting to make orders...");
   try {
     await Promise.all(
-      orders.map(async(order) => {
+      orders.map(async (order) => {
         await createOrders(order);
       })
     );
 
-      console.log(orders)
-      console.log("Finished creating orders");
+    console.log(orders)
+    console.log("Finished creating orders");
   } catch (error) {
     console.log("There is an issue with creating order table");
     throw error;
@@ -125,10 +125,27 @@ async function createInitialAnimalOrders() {
 
     // const createAnimalOrderDummy = [
     //   {
-    //     animalId: "switch"
-    //     orderId: 
+    //     animalId: 1,//id from animals(id)
+    //     orderId: 10
+    //   },
+    //   {
+    //     animalId: 5,
+    //     orderId: 1
+    //   },
+    //   {
+    //     animalId: 4,
+    //     orderId: 5
+    //   },
+    //   {
+    //     animalId: 22,
+    //     orderId: 9
+    //   },
+    //   {
+    //     animalId: 37,
+    //     orderId: 4
     //   }
     // ]
+    // return createAnimalOrderDummy;
   } catch (error) {
     console.log("There is an issue with creating AnimalOrders table");
     throw error;

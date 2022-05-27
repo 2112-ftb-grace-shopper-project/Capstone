@@ -6,5 +6,6 @@ module.exports = {
   ...require("./users"),
   ...require("./seedData.json"),
   ...require("./animals"),
-  ...require("./orders")
+  ...require("./orders"),
+  ...require("./animalOrders")
 };
