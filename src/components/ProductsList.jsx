@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+// import { Product } from "./"
 import { Link } from "react-router-dom";
 import { getAnimals } from "../axios-services";
 
 const ProductsList = () => {
-  const [animalList, setAnimalList] = useState([])
-
+  const [animalList, setAnimalList] = useState([]);
+  
   useEffect(() => {
     const fetchAnimals = () => {
       getAnimals()
@@ -20,10 +21,10 @@ const ProductsList = () => {
     <div>
       {animalList.map((animal) => {
         return (
-          <Link to={`/animals/${animal.id}`}>
-            <div key={animal.id}>
-              {/* <Product to={`animal.id`} /> */}
-              {/* <img alt={animal.name} src={require("../../assets/ExoticAnimals" + animal.image)} /> */}
+          <Link key={animal.id} to={`/animals/${animal.id}`}>
+            <div>
+              {/* <Product /> */}
+              <img alt={animal.image} src={("../../assets/ExoticAnimals" + animal.image)} /> {/* ADD REQUIRE WHEN WORKING */}
               <h3>{animal.name}</h3>
               <p>{animal.biome}</p>
               <p>{animal.type}</p>
