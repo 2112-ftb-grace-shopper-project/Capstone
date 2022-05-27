@@ -19,10 +19,6 @@ const ProductsList = ({ animalList }) => {
         );
       })}
     </div>
-    //list of all products on store
-    //filters by type, diet, biome, price, alphabetized(?), caredifficulty
-    //search bar
-    //available to registered or unregisted users
   );
 };
 
