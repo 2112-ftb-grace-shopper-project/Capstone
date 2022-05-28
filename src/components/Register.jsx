@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { registerAccount } from '../axios-services';
 
 const Register = ({ setLoggedIn }) => {
-  const [newUsername, setNewUsername] = useState("COLINCOLIN");
-  const [newPassword, setNewPassword] = useState("1234567890");
-  const [passwordAgain, setPasswordAgain] = useState("1234567890");
-  const [email, setEmail] = useState("me@myeamiladdress.com");
+  const [newUsername, setNewUsername] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [passwordAgain, setPasswordAgain] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleEmail = (e) => {
     setEmail(e.target.value);

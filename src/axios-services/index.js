@@ -1,5 +1,3 @@
-// import Axios from "axios";
-
 export const accountLogin = (username, password) => {
   return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/users/login",
@@ -50,9 +48,25 @@ export const registerAccount = (username, password, email) => {
     .catch(console.error);
 };
 
-export const animals = () => {
+export const getAnimals = () => {
   return fetch(
     "https://exotic-animal-shop.herokuapp.com/api/animals",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => response.json())
+    .then((result) => {
+      return result;
+    })
+    .catch(console.error);
+};
+
+export const getSingleAnimal = (id) => {
+  return fetch(
+    `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`,
     {
       method: "GET",
       headers: {

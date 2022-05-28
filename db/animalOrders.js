@@ -1,10 +1,8 @@
 const client = require("./client");
 
 async function addAnimalToOrder({ animalId, orderId }) {
-
     try {
         console.log({ animalId, orderId })
-
         const { rows: [newOrder] } = await client.query(`
       INSERT INTO animalOrders(
       "animalId", "orderId")
@@ -12,7 +10,6 @@ async function addAnimalToOrder({ animalId, orderId }) {
       RETURNING *;
     `, [animalId, orderId]);
         return newOrder;
-
     } catch (error) {
         throw error;
     }
@@ -20,13 +17,11 @@ async function addAnimalToOrder({ animalId, orderId }) {
 
 async function getAnimalOrderById(id) {
     try {
-
         const { rows: [animalOrder] } = await client.query(`
       SELECT * 
       FROM animalOrders
       WHERE id= $1
     `, [id]);
-
         return animalOrder;
     } catch (error) {
         throw error;
@@ -37,18 +32,14 @@ async function updateAnimalOrders({ id }) {
     try {
         const order = await getAnimalOrderById(id);
         const fields = {};
-
         if (!order) {
             return;
         }
-
-
         const setString = Object.keys(fields).map((key, index) => `"${key}"=$${index + 1}`).join(", ");
 
         if (setString.length === 0) {
             return;
         }
-
         const { rows: [updatedOrder] } = await client.query(`
       UPDATE animalOrders
       SET ${setString}
@@ -74,7 +65,6 @@ async function destroyAnimalOrder(id) {
         console.error(error);
     }
 }
-
 
 module.exports = {
     addAnimalToOrder,
