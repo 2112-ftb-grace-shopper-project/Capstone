@@ -80,13 +80,18 @@ usersRouter.post("/login", async (req, res, next) => {
         id: user.id,
         username: user.username
       }, JWT_SECRET);
-      
-      res.send({user, message: "You are now logged in", token: token });
-    } 
-    
-  } catch ({name, message}) {
-    next({name, message});
+
+      res.send({ user, message: "thanks for signing up", token: token });
+    }
+
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
+
+
+
+
+
 
 module.exports = usersRouter;
