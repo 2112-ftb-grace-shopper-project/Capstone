@@ -15,7 +15,6 @@ import { getAnimals, getSingleAnimal } from '../axios-services';
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
-  // const [singleAnimal, setSingleAnimal] = useState({});
   
   useEffect(() => {
     const fetchAnimals = () => {
@@ -29,18 +28,6 @@ const App = () => {
   }, []);
   // console.log(animalList)
 
-  // useEffect(() => {
-  //   const fetchSingleAnimal = () => {
-  //     setSingleAnimal(animalList)
-  //     console.log(animalList)
-  //     getSingleAnimal(singleAnimal.animal.id) 
-  //     .then((result) => {
-  //       setSingleAnimal(result)
-  //     })
-  //     .catch(console.error)
-  //   }
-  //   fetchSingleAnimal()
-  // }, [singleAnimal]);
 
   // useEffect(async () => {
   //   const animal = await getSingleAnimal(animal)
@@ -60,13 +47,13 @@ const App = () => {
     <div className="app-container">
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
-        <Route path="*" element={<ProductsList animalList={animalList} />} />
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Logout" element={<Logout />} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
-        <Route path="/animals/:animalId" element={<Product animalList={animalList} />} />
+        <Route path="/animals/:animalId" element={<Product />} />
+        <Route path="/" element={<ProductsList animalList={animalList} />} />
       </Routes>
     </div>
   );

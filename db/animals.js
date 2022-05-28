@@ -57,24 +57,26 @@ async function getAllAnimals() {
     }
 }
 
-async function getAnimalsById({ id }) {
+async function getAnimalsById( id ) {
     try {
         const {
             rows: [animal],
         } = await client.query(
             `
         SELECT *
-         FROM animals;
+         FROM animals
          WHERE id=$1
          `,
             [id]
         );
+        console.log("DB " + animal)
         return animal;
     } catch (error) {
         console.error(error);
         throw error;
     }
 }
+
 
 async function updateAnimal({ id, name, description }) {
     try {
