@@ -11,3 +11,8 @@
   color: var(--green);
   padding: 1rem;
 }
+
+
+.images {
+  width: 35vw;
+}
