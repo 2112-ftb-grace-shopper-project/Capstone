@@ -5,10 +5,8 @@ const { getAnimalsById } = require('../db');
 
 animalsRouter.get('/', async (req, res, next) => {
     const animals = await getAllAnimals();
-
     res.send(animals);
 })
-
 
 animalsRouter.get('/animals/:animalId', async (req, res, next) => {
     const { animalId } = req.params;
