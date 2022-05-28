@@ -685,6 +685,12 @@
       "username": "jhartshorne9",
       "password": "4qrUco",
       "email": "bgurnee9@elpais.com"
+    },
+    {
+      "id": 11,
+      "username": "colin",
+      "password": "password",
+      "email": "me@me.com"
     }
   ],
   "orders": [
