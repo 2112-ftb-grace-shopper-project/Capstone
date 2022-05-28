@@ -11,14 +11,15 @@ async function createAnimals({
     age,
     CareDifficulty,
     price,
+    image
 }) {
     try {
         const {
             rows: [animal],
         } = await client.query(
             `
-        INSERT INTO animals(id, name, biome, type, description, "CareInstructions", diet, age, "CareDifficulty", price)
-        VALUES($1,$2,$3,$4, $5, $6, $7, $8, $9, $10)
+        INSERT INTO animals(id, name, biome, type, description, "CareInstructions", diet, age, "CareDifficulty", price, image)
+        VALUES($1,$2,$3,$4, $5, $6, $7, $8, $9, $10, $11)
         RETURNING *;
         `,
             [
@@ -32,6 +33,7 @@ async function createAnimals({
                 age,
                 CareDifficulty,
                 price,
+                image
             ]
         );
         return animal;
