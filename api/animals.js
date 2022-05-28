@@ -14,6 +14,7 @@ animalsRouter.get('/animals/:animalId', async (req, res, next) => {
     const { animalId } = req.params;
     const animal = await getAnimalsById(animalId);
     res.send(animal);
+})
   
 animalsRouter.post('/', async (req, res, next) => {
     const { name, biome, type, description, careInstructions, diet, age, careDifficulty, price } = req.body;
