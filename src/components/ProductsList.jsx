@@ -11,7 +11,7 @@ const ProductsList = ({ animalList }) => {
         return (
           <Link key={animal.id} to={`/animals/${animal.id}`}>
             <div>
-              <img alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} /> {/* ADD REQUIRE WHEN WORKING */}
+              <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} /> {/* ADD REQUIRE WHEN WORKING */}
               <h3>{animal.name}</h3>
               <p>{animal.biome}</p>
               <p>{animal.type}</p>
