@@ -4,36 +4,30 @@ import { Link } from "react-router-dom";
 const Navbar = ({ loggedIn, setLoggedIn }) => {
   const links = [
     {
-      key: "Home",
-      route: "/",
-      placeholder: "Home",
-      shouldDisplay: true,
-    },
-    {
-      key: "Login",
-      route: "/Login",
-      placeholder: "Login",
-      shouldDisplay: true,
-    },
-    {
-      key: "Register",
-      route: "/Register",
-      placeholder: "Register",
-      shouldDisplay: true,
-    },
-    {
       key: "Cart",
       route: "/Cart",
       placeholder: "Cart",
       shouldDisplay: true,
     },
     {
+      key: "Login",
+      route: "/Login",
+      placeholder: "Login",
+      shouldDisplay: !loggedIn,
+    },
+    {
+      key: "Register",
+      route: "/Register",
+      placeholder: "Register",
+      shouldDisplay: !loggedIn,
+    },
+    {
       key: "Logout",
       route: "/Logout",
       placeholder: "Logout",
-      shouldDisplay: true,
+      shouldDisplay: loggedIn,
       onClick: () => {
-        localStorage.removeItem("token");
+        localStorage.clear();
         setLoggedIn(false);
       },
     },
