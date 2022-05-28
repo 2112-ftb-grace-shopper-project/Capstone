@@ -22,6 +22,12 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
       shouldDisplay: true,
     },
     {
+      key: "Cart",
+      route: "/Cart",
+      placeholder: "Cart",
+      shouldDisplay: true,
+    },
+    {
       key: "Logout",
       route: "/Logout",
       placeholder: "Logout",

@@ -18,14 +18,16 @@ const Login = ({ setLoggedIn }) => {
   const submitInformation = async (e) => {
     e.preventDefault();
     const response = await accountLogin(username, password)
+    
     if (response) {
-        navigate("/");
+      setUsername("");
+      setPassword("");
+      setLoggedIn(true);
+      navigate("/");
      } else {
        alert("Invalid Login, Try Again")
      }
-    setUsername("");
-    setPassword("");
-    setLoggedIn(true);
+    
   };
 
   return (
