@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,7 @@ const ProductsList = ({ animalList }) => {
         return (
           <Link key={animal.id} to={`/animals/${animal.id}`}>
             <div>
-              <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} /> {/* ADD REQUIRE WHEN WORKING */}
+              <img className="images" alt={animal.image} src={require(`/assets/ExoticAnimals/${animal.image}`)} />
               <h3>{animal.name}</h3>
               <p>{animal.biome}</p>
               <p>{animal.type}</p>

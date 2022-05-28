@@ -3,19 +3,22 @@ import { useParams } from "react-router-dom";
 import { getSingleAnimal } from "../axios-services";
 
 const Product = () => {
+  const {animalId} = useParams()
+  const [singleAnimal, setSingleAnimal] = useState({});
+  const [animalQuantity, setAnimalQuantity] = useState(1);
 
-    const [singleAnimal, setSingleAnimal] = useState({});
+  const handleIncrease = () => {
+    setAnimalQuantity(animalQuantity + 1)
+  }
 
-
-    const {animalId} = useParams()
-    console.log(animalId)
+  const handleDecrease = () => {
+    setAnimalQuantity(animalQuantity - 1)
+  }
 
   useEffect(() => {
     const fetchSingleAnimal = () => {
-     
       getSingleAnimal(animalId) 
       .then((result) => {
-        console.log(result)
         setSingleAnimal(result)
       })
       .catch(console.error)
@@ -24,19 +27,25 @@ const Product = () => {
   }, [animalId]);
 
   return (
-    <div>
-      <h1>TEST WITH ANIMAL ID: {animalId}</h1>
-
-      {/* <button onClick={handleDecrease}></button>
-      <p>{item.animalQuantity}</p>
-      <button onClick={handleIncrease}></button>
-
-      <button>Add to Cart</button> */}
-
-      {/* Adding x# of animals to cart    */}
-            
+    <div key={singleAnimal.id}>
+      <img className="images" alt={singleAnimal.image} src={`/assets/ExoticAnimals/${singleAnimal.image}`} />
+      <h3>{singleAnimal.name}</h3>
+      <p>{singleAnimal.biome}</p>
+      <p>{singleAnimal.type}</p>
+      <p>{singleAnimal.description}</p>
+      <p>{singleAnimal.CareInstructions}</p>
+      <p>{singleAnimal.age}</p>
+      <p>{singleAnimal.diet}</p>
+      <p>{singleAnimal.CareDifficulty}</p>
+      <p>{singleAnimal.price}</p>
+      <hr />
+      <button onClick={handleIncrease}>+</button>
+      <p>{animalQuantity}</p>
+      <button onClick={handleDecrease}>-</button>
+      <br />
+      <button>Add to Cart</button>
     </div>
   )
-}
+};
 
 export default Product

@@ -44,23 +44,27 @@ const Cart = () => {
             <img src={item.image} alt={item.animalId}/>
             <p>{item.name}</p>
             <p>{item.price}</p>
-            
 
-            {/* Log In/Register or Checkout as Guest (if not logged in)
+            {/* Log In/Register, then move locally stored cart to user's logged in backend (if not logged in)
+              match local storage obj keys with user backend obj keys, then clear local storage
             figure out how to have unregistered check out as "guest" 
             if logged in, animalorders backend should connect products to user obj
             if not logged in, animal orders should connect to guest user obj
             */}
+
+            {/* edit option (same quantity handlers as product page) */}
             {/* <button onClick={handleDecrease}>-</button>
             <p>{item.animalQuantity}</p>
             <button onClick={handleIncrease}>+</button> */}
 
-            <button>Remove</button>
+            {/* delete item option */}
+            {/* <button>Remove</button> */}
 
-           
+            {/* item price x quantity = total item price
+            total item prices added together = total order price */}
             
+            {/* checkout button that routes to OrderConfirm component */}
           </>
-          
         )
       })}
       <button>Proceed to Checkout</button>

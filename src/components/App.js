@@ -49,8 +49,8 @@ const App = () => {
       <Routes>
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
-        <Route path="/Cart" element={<Cart />} />
         <Route path="/Logout" element={<Logout />} />
+        <Route path="/Cart" element={<Cart />} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
         <Route path="/animals/:animalId" element={<Product />} />
         <Route path="/" element={<ProductsList animalList={animalList} />} />
