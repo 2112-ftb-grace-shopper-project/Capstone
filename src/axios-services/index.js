@@ -1,6 +1,6 @@
 export const accountLogin = (username, password) => {
   return fetch(
-    "https://exotic-animal-shop.herokuapp.com/api/users/login",
+    "/api/users/login",
     {
       method: "POST",
       headers: {
@@ -25,7 +25,7 @@ export const accountLogin = (username, password) => {
 
 export const registerAccount = (username, password, email) => {
   return fetch(
-    "https://exotic-animal-shop.herokuapp.com/api/users/register",
+    "/api/users/register",
     {
       method: "POST",
       headers: {
@@ -50,7 +50,7 @@ export const registerAccount = (username, password, email) => {
 
 export const getAnimals = () => {
   return fetch(
-    "https://exotic-animal-shop.herokuapp.com/api/animals",
+    "/api/animals",
     {
       method: "GET",
       headers: {
@@ -66,7 +66,7 @@ export const getAnimals = () => {
 
 export const getSingleAnimal = (id) => {
   return fetch(
-    `https://exotic-animal-shop.herokuapp.com/api/animals/${id}`,
+    `/api/animals/${id}`,
     {
       method: "GET",
       headers: {
