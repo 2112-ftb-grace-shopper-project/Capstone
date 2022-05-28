@@ -11,7 +11,7 @@
       "age": 8,
       "CareDifficulty": "Hard",
       "price": "$5000",
-      "image": "/id01gorillaphant.jpg"
+      "image": "id01gorillaphant.jpg"
     },
     {
       "name": "Orangutans",
@@ -24,7 +24,7 @@
       "age": 10,
       "CareDifficulty": "medium",
       "price": "$1000",
-      "image": "/id02orangutans.png"
+      "image": "id02orangutans.png"
     },
     {
       "name": "Zebrafrog",
@@ -37,7 +37,7 @@
       "age": 4,
       "CareDifficulty": "easy",
       "price": "$50",
-      "image": "/id03zebrafrog.jpg"
+      "image": "id03zebrafrog.jpg"
     },
     {
       "name": "Red Panda",
@@ -50,7 +50,7 @@
       "age": "3",
       "CareDifficulty": "easy",
       "price": "$600",
-      "image": "/id04redpanda.png"
+      "image": "id04redpanda.png"
     },
     {
       "name": "Stitch",
@@ -63,7 +63,7 @@
       "age": 626,
       "CareDifficulty": "hard",
       "price": "$2",
-      "image": "/id05stitch.png"
+      "image": "id05stitch.png"
     },
     {
       "name": "Emperor Tamarin",
@@ -76,7 +76,7 @@
       "age": 4,
       "CareDifficulty": "easy",
       "price": "$79.99",
-      "image": "/id06emperorTamarin.png"
+      "image": "id06emperorTamarin.png"
     },
     {
       "name": "Sharse",
@@ -89,7 +89,7 @@
       "age": 2,
       "CareDifficulty": "hard",
       "price": "$9000",
-      "image": "/id07sharse.png"
+      "image": "id07sharse.png"
     },
     {
       "name": "Beluga Whale",
@@ -102,7 +102,7 @@
       "age": 6,
       "CareDifficulty": "medium",
       "price": "$20000",
-      "image": "/id08belugaWhale.png"
+      "image": "id08belugaWhale.png"
     },
     {
       "name": "Tabby Cat",
@@ -115,7 +115,7 @@
       "age": 3,
       "CareDifficulty": "easy",
       "price": "$100",
-      "image": "/id09tabbyCat.png"
+      "image": "id09tabbyCat.png"
     },
     {
       "name": "Axolotl",
@@ -128,7 +128,7 @@
       "age": "Forever baby!The ability to regenerate keeps me young",
       "CareDifficulty": "easy",
       "price": "$500",
-      "image": "/id10axolotl.png"
+      "image": "id10axolotl.png"
     },
     {
       "name": "Komodo Dragon",
@@ -141,7 +141,7 @@
       "age": "6",
       "CareDifficulty": "hard",
       "price": "$5000",
-      "image": "/id11komodoDragon.png"
+      "image": "id11komodoDragon.png"
     },
     {
       "name": "Mongoose vs King Cobra",
@@ -154,7 +154,7 @@
       "age": 4,
       "CareDifficulty": "medium",
       "price": "$500 each, $850 together",
-      "image": "/id12MongooseVsKingCobra.png"
+      "image": "id12MongooseVsKingCobra.png"
     },
     {
       "name": "Creepy Boy",
@@ -167,7 +167,7 @@
       "age": 99,
       "CareDifficulty": "low",
       "price": "$0.01",
-      "image": "/id13CreepyBoy.png"
+      "image": "id13CreepyBoy.png"
     },
     {
       "name": "Hercules Beetle",
@@ -180,7 +180,7 @@
       "age": 2,
       "CareDifficulty": "easy",
       "price": "$200",
-      "image": "/id14herculesbeetle.jpeg"
+      "image": "id14herculesbeetle.jpeg"
     },
     {
       "name": "Guinea Pig",
@@ -193,7 +193,7 @@
       "age": 4,
       "CareDifficulty": "easy",
       "price": "$50",
-      "image": "/id15guineaPig.jpg"
+      "image": "id15guineaPig.jpg"
     },
     {
       "name": "Fairy Armadillo",
@@ -206,7 +206,7 @@
       "age": "2",
       "CareDifficulty": "easy for night lovers",
       "price": "$250",
-      "image": "/id16FairyArmadillo.png"
+      "image": "id16FairyArmadillo.png"
     },
     {
       "name": "Honey Badger",
@@ -219,7 +219,7 @@
       "age": 11,
       "CareDifficulty": "hard",
       "price": "$750",
-      "image": "/id17honeyBadger.png"
+      "image": "id17honeyBadger.png"
     },
     {
       "name": "Kangaroo",
@@ -232,7 +232,7 @@
       "age": 17,
       "CareDifficulty": "hard",
       "price": "$2500",
-      "image": "/id18Kangaroo.png"
+      "image": "id18Kangaroo.png"
     },
     {
       "name": "Horse",
@@ -245,7 +245,7 @@
       "age": 8,
       "CareDifficulty": "medium",
       "price": "$40,000",
-      "image": "/id19horse.png"
+      "image": "id19horse.png"
     },
     {
       "name": "Nessie",
@@ -258,7 +258,7 @@
       "age": 1500,
       "CareDifficulty": "hard",
       "price": "$10,000",
-      "image": "/id20nessie.png"
+      "image": "id20nessie.png"
     },
     {
       "name": "Hedgehog",
@@ -271,7 +271,7 @@
       "age": 4,
       "CareDifficulty": "easy",
       "price": "$75",
-      "image": "/id21hedgehog.png"
+      "image": "id21hedgehog.png"
     },
     {
       "name": "Mandarin Duck",
@@ -284,7 +284,7 @@
       "age": 5,
       "CareDifficulty": "hard",
       "price": "$250",
-      "image": "/id22mandarinduck.png"
+      "image": "id22mandarinduck.png"
     },
     {
       "name": "Emperor Penguin",
@@ -297,7 +297,7 @@
       "age": 9,
       "CareDifficulty": "easy",
       "price": "$1000",
-      "image": "/id23emperorpenguin.png"
+      "image": "id23emperorpenguin.png"
     },
     {
       "name": "2 Toed Sloth",
@@ -310,7 +310,7 @@
       "age": 2,
       "CareDifficulty": "easy",
       "price": "$200",
-      "image": "/id24twotoedsloth.png"
+      "image": "id24twotoedsloth.png"
     },
     {
       "name": "3 Toed Sloth",
@@ -323,7 +323,7 @@
       "age": 3,
       "CareDifficulty": "easy",
       "price": "$300",
-      "image": "/id25threetoedsloth.png"
+      "image": "id25threetoedsloth.png"
     },
     {
       "name": "Grizzly Bear",
@@ -336,7 +336,7 @@
       "age": 8,
       "CareDifficulty": "hard",
       "price": "$3000",
-      "image": "/id26grizzlybear.png"
+      "image": "id26grizzlybear.png"
     },
     {
       "name": "Black Bear",
@@ -349,7 +349,7 @@
       "age": 10,
       "CareDifficulty": "hard",
       "price": "$3000",
-      "image": "/id27blackBear.png"
+      "image": "id27blackBear.png"
     },
     {
       "name": "Golden Pheasant",
@@ -362,7 +362,7 @@
       "age": 7,
       "CareDifficulty": "low",
       "price": "$500",
-      "image": "/id28goldenpheasant.png"
+      "image": "id28goldenpheasant.png"
     },
     {
       "name": "Giraffe",
@@ -375,7 +375,7 @@
       "age": 12,
       "CareDifficulty": "low",
       "price": "$4000",
-      "image": "/id29giraffe.png"
+      "image": "id29giraffe.png"
     },
     {
       "name": "Minion (evil)",
@@ -388,7 +388,7 @@
       "age": 20,
       "CareDifficulty": "medium",
       "price": "$500",
-      "image": "/id30minion(evil).png"
+      "image": "id30minion(evil).png"
     },
     {
       "name": "Minion (yellow)",
@@ -401,7 +401,7 @@
       "age": 60000000,
       "CareDifficulty": "medium",
       "price": "$100 (each)",
-      "image": "/id31minions.png"
+      "image": "id31minions.png"
     },
     {
       "name": "Drogon",
@@ -414,7 +414,7 @@
       "age": 3,
       "CareDifficulty": "hard",
       "price": "$200,000",
-      "image": "/id32drogon.png"
+      "image": "id32drogon.png"
     },
     {
       "name": "Pangolin",
@@ -427,7 +427,7 @@
       "age": 5,
       "CareDifficulty": "medium",
       "price": "$699.99",
-      "image": "/id33pangolin.png"
+      "image": "id33pangolin.png"
     },
     {
       "name": "Mission Golden-Eyed Tree Frog",
@@ -440,7 +440,7 @@
       "age": 2,
       "CareDifficulty": "medium",
       "price": "$499.99",
-      "image": "/id34treefrog.png"
+      "image": "id34treefrog.png"
     },
     {
       "name": "Zebra",
@@ -453,7 +453,7 @@
       "age": 14,
       "CareDifficulty": "low",
       "price": "$12.99",
-      "image": "/id35zebra.png"
+      "image": "id35zebra.png"
     },
     {
       "name": "Lemur",
@@ -466,7 +466,7 @@
       "age": 4,
       "CareDifficulty": "high",
       "price": "$49.99",
-      "image": "/id36lemur.png"
+      "image": "id36lemur.png"
     },
     {
       "name": "Velociraptor",
@@ -479,7 +479,7 @@
       "age": 6,
       "CareDifficulty": "high",
       "price": "$19999.99",
-      "image": "/id37velociraptor.png"
+      "image": "id37velociraptor.png"
     },
     {
       "name": "Panther Chameleon",
@@ -492,7 +492,7 @@
       "age": 2,
       "CareDifficulty": "low",
       "price": "$4999.99",
-      "image": "/id38pantherchameleon.png"
+      "image": "id38pantherchameleon.png"
     },
     {
       "name": "Southern Cassowary",
@@ -505,7 +505,7 @@
       "age": 3,
       "CareDifficulty": "medium",
       "price": "$9.99",
-      "image": "/id39southerncassowary.png"
+      "image": "id39southerncassowary.png"
     },
     {
       "name": "Emu",
@@ -518,7 +518,7 @@
       "age": 4,
       "CareDifficulty": "medium",
       "price": "$199.99",
-      "image": "/id40emu.png"
+      "image": "id40emu.png"
     },
     {
       "name": "Hippopotamus",
@@ -531,7 +531,7 @@
       "age": 9,
       "CareDifficulty": "low",
       "price": "$29999.99",
-      "image": "/id41hippo.png"
+      "image": "id41hippo.png"
     },
     {
       "name": "Fire Ant",
@@ -544,7 +544,7 @@
       "age": 1,
       "CareDifficulty": "high",
       "price": "$1 (each)",
-      "image": "/id42fireant.jpg"
+      "image": "id42fireant.jpg"
     },
     {
       "name": "Spider Doggo",
@@ -557,7 +557,7 @@
       "age": 4,
       "CareDifficulty": "medium",
       "price": "$1999.99",
-      "image": "/id43spiderdoggo.png"
+      "image": "id43spiderdoggo.png"
     },
     {
       "name": "Ghost Bat",
@@ -570,7 +570,7 @@
       "age": 3,
       "CareDifficulty": "low",
       "price": "$19.99",
-      "image": "/id44ghostbat.png"
+      "image": "id44ghostbat.png"
     },
     {
       "name": "Man O War Jellyfish",
@@ -583,7 +583,7 @@
       "age": 450,
       "CareDifficulty": "medium",
       "price": "$49.99",
-      "image": "/id45manofwar.jpg"
+      "image": "id45manofwar.jpg"
     },
     {
       "name": "Dugite",
@@ -596,7 +596,7 @@
       "age": 2,
       "CareDifficulty": "low",
       "price": "$1.99",
-      "image": "/id46dugite.jpg"
+      "image": "id46dugite.jpg"
     },
     {
       "name": "Bush Viper",
@@ -609,7 +609,7 @@
       "age": 2,
       "CareDifficulty": "low",
       "price": "$4.99",
-      "image": "/id47bushviper.jpeg"
+      "image": "id47bushviper.jpeg"
     },
     {
       "name": "Spiny Turtle",
@@ -622,7 +622,7 @@
       "age": 249,
       "CareDifficulty": "high",
       "price": "$99.99",
-      "image": "/id48spinyturtle.jpeg"
+      "image": "id48spinyturtle.jpeg"
     }
   ],
   "users": [
