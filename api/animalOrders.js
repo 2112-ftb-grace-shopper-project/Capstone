@@ -5,8 +5,6 @@ const { updateAnimalOrders, destroyAnimalOrder, getAnimalOrderById } = require('
 
 animalOrdersRouter.patch("/:animalOrderId", requireUser, async (req, res, next) => {
     try {
-
-
         const { animalOrderId } = req.params;
         const animalOrders = await getAnimalOrderById(animalOrderId);
         const order = await getOrderById(animalOrders.orderId);
