@@ -10,11 +10,12 @@ import {
   Cart
  } from './'
 import '../style/App.css';
-import { getAnimals, getSingleAnimal } from '../axios-services';
+import { getAnimals, getNewOrder, getSingleAnimal } from '../axios-services';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
+  const [order, setOrder] = useState({})
   
   useEffect(() => {
     const fetchAnimals = () => {
@@ -26,6 +27,15 @@ const App = () => {
     }
     fetchAnimals()
   }, []);
+
+
+  // useEffect(() => {
+  //   const createOrder = () => {
+  //     if (!order) {
+  //       getNewOrder()
+  //     }
+  //   }
+  // }, [order])
   // console.log(animalList)
 
 
@@ -50,7 +60,7 @@ const App = () => {
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList}/>} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
         <Route path="/animals/:animalId" element={<Product />} />
         <Route path="/" element={<ProductsList animalList={animalList} />} />

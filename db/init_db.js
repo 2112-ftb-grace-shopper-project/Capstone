@@ -58,7 +58,8 @@ async function createTables() {
       CREATE TABLE animalOrders (
         "orderId" INTEGER REFERENCES orders(id),
         "animalId" INTEGER REFERENCES animals(id),
-        UNIQUE ("animalId", "orderId")
+        UNIQUE ("animalId", "orderId"),
+        quantity INTEGER NOT NULL DEFAULT 1
       );
     `);
 
