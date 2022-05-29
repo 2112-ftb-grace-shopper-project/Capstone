@@ -36,7 +36,7 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
   return (
     <div className="Navbar">
       <Link className="NavTitle" to={"/"}>
-        🐲Exotic Animals R Us©®™
+        <span aria-label="dragon emoji" alt="dragon emoji" role="img">🐲</span>Exotic Animals R Us<span aria-label="Copyrighted, registered, and trademarked" alt="Copyrighted, registered, and trademarked" role="img">©®™</span>
       </Link>
       <div className="NavLink">
         {links.map((link) => {
