@@ -1,7 +1,5 @@
 import React from 'react'
-import Login from './Login'
 import { Link } from "react-router-dom";
-import Register from './Register';
 
 const Cart = ({loggedIn, animalList }) => {
 
@@ -31,7 +29,7 @@ const Cart = ({loggedIn, animalList }) => {
       ? 
       <button>Proceed to Checkout</button> 
       : 
-        <p>Please <Link to={Login}>login</Link> or <Link to={Register}>create an account</Link> to complete checkout. </p>
+        <p>Please <Link to={"/Login"}>login</Link> or <Link to={"/Register"}>create an account</Link> to complete checkout. </p>
       }
       
     </div>

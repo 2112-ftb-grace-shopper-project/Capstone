@@ -17,11 +17,18 @@ const Product = () => {
   };
 
   const addToCart = (e) => {
-    e.preventDefault();
-    localStorage.setItem("name", singleAnimal.name);
-    localStorage.setItem("price", singleAnimal.price);
-    localStorage.setItem("quantity", animalQuantity);
-    //needs to be able to add more than one item
+    e.preventDefault()
+    let currentCart = localStorage.getItem("cart", []) || [];
+    let name = singleAnimal.name
+    let price = singleAnimal.price
+    let quant = animalQuantity
+    let newItem = {
+      name: name, 
+      price: price, 
+      quant: quant
+    }
+    let newItemString = JSON.stringify(newItem)
+    currentCart.push(newItemString)
     setCheckOutMsg(true);
     console.log(localStorage);
   };
