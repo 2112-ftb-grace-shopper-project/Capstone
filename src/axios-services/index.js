@@ -82,3 +82,30 @@ export const getSingleAnimal = (id) => {
     })
     .catch(console.error);
 };
+
+
+
+
+export const getNewOrder = (userId, status, cart) => {
+  return fetch(
+    "/api/orders",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: userId,
+        status: status,
+        cart: cart
+      }),
+    }
+  )
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      localStorage.getItem("userId", result.user.id);
+      return result.orders.userId;
+    })
+    .catch(console.error);
+};

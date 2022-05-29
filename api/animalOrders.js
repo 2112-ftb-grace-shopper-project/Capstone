@@ -1,7 +1,7 @@
 const express = require('express');
 const animalOrdersRouter = express.Router();
 const { requireUser } = require("./utils");
-const { updateAnimalOrders, destroyAnimalOrder, getAnimalOrderById } = require('../db');
+const { updateAnimalOrders, destroyAnimalOrder, getAnimalOrderById, addAnimalToOrder } = require('../db');
 
 animalOrdersRouter.patch("/:animalOrderId", requireUser, async (req, res, next) => {
     try {
@@ -41,5 +41,22 @@ animalOrdersRouter.delete("/:animalOrderId", requireUser, async (req, res, next)
         throw error;
     }
 }
+
 );
+
+
+
+animalOrdersRouter.post("/", requireUser, async (req, res, next) => {
+    try {
+        const {animalId, orderId, quantity} = req.body
+        const newOrder = await addAnimalToOrder({animalId, orderId, quantity})
+        res.send(newOrder)
+
+    }catch (error) {
+        throw error;
+    }
+    
+
+})
+
 module.exports = animalOrdersRouter;

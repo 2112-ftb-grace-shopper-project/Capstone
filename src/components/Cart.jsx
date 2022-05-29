@@ -1,23 +1,10 @@
 import React from 'react'
+import Login from './Login'
+import { Link } from "react-router-dom";
+import Register from './Register';
 
-const Cart = () => {
+const Cart = ({loggedIn, animalList }) => {
 
-  const testCartItems = [
-  {
-    animalName: "Tabby Cat",
-    animalId: 9,
-    animalQuantity: 4,
-    animalPrice: "$100",
-    image: "id09tabbyCat.png",
-  },
-  {
-    animalName: "Black Bear",
-    animalId: 27,
-    animalQuantity: 1,
-    animalPrice: "$3000",
-    image: "id27blackBear.png",
-  }
-]
   // const handleDecrease = () => {
 
   // }
@@ -38,36 +25,15 @@ const Cart = () => {
 
   return (
     <div>
-      {testCartItems.map((item) => {
-        return (
-          <>
-            <img src={item.image} alt={item.animalId}/>
-            <p>{item.name}</p>
-            <p>{item.price}</p>
-
-            {/* Log In/Register, then move locally stored cart to user's logged in backend (if not logged in)
-              match local storage obj keys with user backend obj keys, then clear local storage
-            figure out how to have unregistered check out as "guest" 
-            if logged in, animalorders backend should connect products to user obj
-            if not logged in, animal orders should connect to guest user obj
-            */}
-
-            {/* edit option (same quantity handlers as product page) */}
-            {/* <button onClick={handleDecrease}>-</button>
-            <p>{item.animalQuantity}</p>
-            <button onClick={handleIncrease}>+</button> */}
-
-            {/* delete item option */}
-            {/* <button>Remove</button> */}
-
-            {/* item price x quantity = total item price
-            total item prices added together = total order price */}
-            
-            {/* checkout button that routes to OrderConfirm component */}
-          </>
-        )
-      })}
-      <button>Proceed to Checkout</button>
+      <h1>My Cart</h1>
+      <p></p>
+      {loggedIn 
+      ? 
+      <button>Proceed to Checkout</button> 
+      : 
+        <p>Please <Link to={Login}>login</Link> or <Link to={Register}>create an account</Link> to complete checkout. </p>
+      }
+      
     </div>
 
     //list of items in cart

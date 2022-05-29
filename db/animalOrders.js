@@ -1,14 +1,14 @@
 const client = require("./client");
 
-async function addAnimalToOrder({ animalId, orderId }) {
+async function addAnimalToOrder({ animalId, orderId, quantity }) {
     try {
         console.log({ animalId, orderId })
         const { rows: [newOrder] } = await client.query(`
       INSERT INTO animalOrders(
-      "animalId", "orderId")
-      VALUES ($1, $2) 
+      "animalId", "orderId", quantity)
+      VALUES ($1, $2, $3) 
       RETURNING *;
-    `, [animalId, orderId]);
+    `, [animalId, orderId, quantity]);
         return newOrder;
     } catch (error) {
         throw error;
