@@ -1,17 +1,151 @@
-.app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.app-container h1 {
-  color: var(--green);
-  padding: 1rem;
+html {
+  background-image: url("wallpaper.png");
+  margin: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: whitesmoke;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
 }
 
 .images {
-  width: 35vw;
+  width: 25vw;
+}
+
+.SingleImages {
+  width: 75vw;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  width: 100vw;
+  padding: 15px;
+  background: darkgray;
+  top: 0;
+}
+
+@media only screen and (max-width: 380px) {
+  .Navbar {
+    width: 75%;
+  }
+}
+
+.NavLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: right;
+  font-weight: bold;
+  padding: 15px;
+  text-align: right;
+}
+
+
+.NavTitle {
+  font-size: larger;
+  align-self: center;
+}
+
+.ProductsList {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.ProductsInList {
+  display: flex;
+  padding: 50px;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.ProdListAniDesc {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-size: 1.25rem;
+  border-bottom: double;
+}
+
+.SingleAnimalInfo {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row column;
+  align-items: left;
+  justify-content: left;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.CartAddPopUp {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row column;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  font-size: 1.25rem;
+}
+
+/* Link Rules */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: limegreen;
+  text-decoration: none;
+  transition: color 200ms linear 60ms;
+}
+a:active {
+  color: lime;
+  text-decoration: none;
+  transition: color 100ms linear 30ms;
+}
+
+/* Button Rules */
+
+button {
+  color: black;
+  width: 150px;
+  background: slategray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  cursor: pointer;
+  height: 45px;
+}
+
+button:hover {
+  background: limegreen;
+  text-decoration: none;
+  transition: color 200ms linear 60ms;
+}
+button:active {
+  background: lime;
+  text-decoration: none;
+  transition: color 100ms linear 30ms;
 }

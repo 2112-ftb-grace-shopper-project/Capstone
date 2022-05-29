@@ -52,7 +52,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className="app-container">
+    <div>
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />

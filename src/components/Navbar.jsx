@@ -36,9 +36,9 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
   return (
     <div className="Navbar">
       <Link className="NavTitle" to={"/"}>
-        Exotic Animals R Us
+        🐲Exotic Animals R Us©®™
       </Link>
-      <div className="NavMenuItems">
+      <div className="NavLink">
         {links.map((link) => {
           const {
             key,
@@ -50,7 +50,7 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
           if (shouldDisplay) {
             return (
               <div key={key}>
-                <Link className="NavLink" to={route} onClick={onClick}>
+                <Link to={route} onClick={onClick}>
                   {placeholder}
                 </Link>
               </div>

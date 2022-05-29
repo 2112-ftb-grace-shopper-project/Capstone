@@ -5,18 +5,21 @@ const ProductsList = ({ animalList }) => {
 
 
   return (
-    <div>
+    <div className="ProductsList">
       {animalList.map((animal) => {
         return (
           <Link key={animal.id} to={`/animals/${animal.id}`}>
-            <div>
+            <div className="ProductsInList">
               <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} />
               <h3>{animal.name}</h3>
-              <p>{animal.biome}</p>
-              <p>{animal.type}</p>
-              <p>{animal.difficulty}</p>
+              <p>Biome Type: <br /> {animal.biome}</p>
+              <p>Animal Typ:e <br /> {animal.type}</p>
+              <p>Care Difficulty: <br /> {animal.CareDifficulty}</p>
               <p>{animal.price}</p>
             </div>
+              <div className="ProdListAniDesc">
+                <p>{animal.description}</p>
+              </div>
           </Link>
         );
       })}
