@@ -26,8 +26,8 @@ const App = () => {
       .catch(console.error)
     }
     fetchAnimals()
+    localStorage.setItem("cart", [])
   }, []);
-
 
   // useEffect(() => {
   //   const createOrder = () => {
@@ -37,7 +37,6 @@ const App = () => {
   //   }
   // }, [order])
   // console.log(animalList)
-
 
   // useEffect(async () => {
   //   const animal = await getSingleAnimal(animal)
