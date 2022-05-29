@@ -13,7 +13,7 @@ const ProductsList = ({ animalList }) => {
               <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} />
               <h3>{animal.name}</h3>
               <p>Biome Type: <br /> {animal.biome}</p>
-              <p>Animal Typ:e <br /> {animal.type}</p>
+              <p>Animal Type: <br /> {animal.type}</p>
               <p>Care Difficulty: <br /> {animal.CareDifficulty}</p>
               <p>{animal.price}</p>
             </div>
