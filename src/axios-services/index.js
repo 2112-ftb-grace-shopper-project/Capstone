@@ -1,6 +1,3 @@
-// https://exotic-animal-shop.herokuapp.com
-// /api/ENTERSTUFFHERE
-
 export const accountLogin = (username, password) => {
   return fetch(
     "/api/users/login",
