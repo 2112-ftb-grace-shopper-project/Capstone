@@ -106,3 +106,19 @@ export const getNewOrder = (userId, status, cart) => {
     })
     .catch(console.error);
 };
+
+export const getSingleUser = (username) => {
+  return fetch(
+    `/api/users/${username}}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => response.json())
+    .then((result) => {
+      return result;
+    })
+    .catch(console.error);
+};

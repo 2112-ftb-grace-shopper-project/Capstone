@@ -10,6 +10,12 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
       shouldDisplay: true,
     },
     {
+      key: "MyOrders",
+      route: "/myorders",
+      placeholder: `${localStorage.getItem("username")}`,
+      shouldDisplay: loggedIn,
+    },
+    {
       key: "Login",
       route: "/Login",
       placeholder: "Login",
