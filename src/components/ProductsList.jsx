@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ProductsList = ({ animalList }) => {
-
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div>
-      {animalList.map((animal) => {
+    <div >
+      <input
+        type="text"
+        placeholder="Search"
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
+      />
+      {animalList.filter((animal)=> {
+        if (searchTerm === "") {
+          return animal;
+        } else if (animal.name.toLowerCase().includes(searchTerm.toLowerCase())){
+          return animal;
+        }
+      })
+      .map((animal, key) => {
         return (
-          <Link key={animal.id} to={`/animals/${animal.id}`}>
-            <div>
+          <div>
+            <Link key={animal.id} to={`/animals/${animal.id}`}>
+            <div >
               <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} />
               <h3>{animal.name}</h3>
               <p>{animal.biome}</p>
@@ -18,6 +33,7 @@ const ProductsList = ({ animalList }) => {
               <p>{animal.price}</p>
             </div>
           </Link>
+          </div>
         );
       })}
     </div>
