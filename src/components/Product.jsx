@@ -26,7 +26,7 @@ const Product = ({cart, setCart}) => {
     // let newItem = {
     //   name: name,
     //   price: price,
-    //   quant: quant,
+    //   quant: quant
     // };
     // let newItemString = JSON.stringify(newItem);
     // currentCart.push(newItemString);
