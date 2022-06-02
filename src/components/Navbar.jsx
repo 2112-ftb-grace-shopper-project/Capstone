@@ -10,6 +10,12 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
       shouldDisplay: true,
     },
     {
+      key: "MyOrders",
+      route: "/myorders",
+      placeholder: `${localStorage.getItem("username")}`,
+      shouldDisplay: loggedIn,
+    },
+    {
       key: "Login",
       route: "/Login",
       placeholder: "Login",
@@ -36,9 +42,9 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
   return (
     <div className="Navbar">
       <Link className="NavTitle" to={"/"}>
-        Exotic Animals R Us
+        <span aria-label="dragon emoji" alt="dragon emoji" role="img">🐲</span>Exotic Animals R Us<span aria-label="Copyrighted, registered, and trademarked" alt="Copyrighted, registered, and trademarked" role="img">©®™</span>
       </Link>
-      <div className="NavMenuItems">
+      <div className="NavLink">
         {links.map((link) => {
           const {
             key,
@@ -50,7 +56,7 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
           if (shouldDisplay) {
             return (
               <div key={key}>
-                <Link className="NavLink" to={route} onClick={onClick}>
+                <Link to={route} onClick={onClick}>
                   {placeholder}
                 </Link>
               </div>

@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from "react-router-dom";
+import ProductsList from './ProductsList';
 
-const Cart = ({loggedIn, animalList }) => {
+const Cart = ({loggedIn, animalList, cart, setCart }) => {
+  
 
+
+  const testCart = [
+    {
+      name: "Minion (yellow)",
+      price: "100",
+      quantity: 3,
+      image: "id31minions.png"
+    },
+    {
+      name: "giraffe",
+      price: "4000",
+      quantity: 2,
+      image: "id29giraffe.png"
+    }
+  ]
   // const handleDecrease = () => {
 
   // }
@@ -24,10 +41,19 @@ const Cart = ({loggedIn, animalList }) => {
   return (
     <div>
       <h1>My Cart</h1>
-      <p></p>
+      {/* {products.map((product => (
+        <div>
+          <img className="images" alt={product.image} src={`/assets/ExoticAnimals/${product.image}`} />
+          <h3>{product.name}</h3>
+          <p>{product.price}</p>
+          <p>{product.quantity}</p>
+        </div>
+      )))} */}
+
+
       {loggedIn 
-      ? 
-      <button>Proceed to Checkout</button> 
+      ?
+      <button>Proceed to Checkout</button> //Link to Checkout.jsx
       : 
         <p>Please <Link to={"/Login"}>login</Link> or <Link to={"/Register"}>create an account</Link> to complete checkout. </p>
       }

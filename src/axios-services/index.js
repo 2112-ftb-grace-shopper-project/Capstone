@@ -1,6 +1,3 @@
-// https://exotic-animal-shop.herokuapp.com
-// /api/ENTERSTUFFHERE
-
 export const accountLogin = (username, password) => {
   return fetch(
     "/api/users/login",
@@ -106,6 +103,22 @@ export const getNewOrder = (userId, status, cart) => {
       console.log(result);
       localStorage.getItem("userId", result.user.id);
       return result.orders.userId;
+    })
+    .catch(console.error);
+};
+
+export const getSingleUser = (username) => {
+  return fetch(
+    `/api/users/}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => response.json())
+    .then((result) => {
+      return result;
     })
     .catch(console.error);
 };

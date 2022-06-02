@@ -7,15 +7,19 @@ import {
   Register,
   ProductsList,
   Product,
-  Cart
+  Cart,
+  MyOrders
  } from './'
 import '../style/App.css';
-import { getAnimals, getNewOrder, getSingleAnimal } from '../axios-services';
+import StripeCheckout from 'react-stripe-checkout';
+import { getAnimals } from '../axios-services';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
-  const [order, setOrder] = useState({})
+  const [myOrderList, setMyOrderList] = useState([]);
+  const [cart, setCart] = useState([])
+  // const [order, setOrder] = useState({})
   
   useEffect(() => {
     const fetchAnimals = () => {
@@ -29,6 +33,20 @@ const App = () => {
     localStorage.setItem("cart", [])
   }, []);
 
+  // useEffect(() => 
+  // {
+  //   const fetchUser = () => {
+  //     let localUser = localStorage.getItem("username")
+  //     getSingleUser(localUser)
+  //     .then((result) => {
+  //       console.log("new useEffect" + result)
+
+  //     })
+  //     .catch(console.error)
+  //   }
+  //   fetchUser()
+
+  // })
   // useEffect(() => {
   //   const createOrder = () => {
   //     if (!order) {
@@ -59,10 +77,11 @@ const App = () => {
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList}/>} />
+        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList} cart={cart} setCart={setCart}/>} />
+        <Route path="myorders" element={<MyOrders myOrderList={myOrderList} setMyOrderList={setMyOrderList}/>} loggedIn={loggedIn} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
-        <Route path="/animals/:animalId" element={<Product />} />
-        <Route path="/" element={<ProductsList animalList={animalList} />} />
+        <Route path="/animals/:animalId" element={<Product cart={cart} setCart={setCart}/>} />
+        <Route path="/" element={<ProductsList animalList={animalList} cart={cart} setCart={setCart} />} />
       </Routes>
     </div>
   );

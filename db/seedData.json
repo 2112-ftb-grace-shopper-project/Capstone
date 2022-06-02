@@ -75,7 +75,7 @@
       "diet": "omnivore",
       "age": 4,
       "CareDifficulty": "easy",
-      "price": "$79.99",
+      "price": "$79",
       "image": "id06emperorTamarin.png"
     },
     {
@@ -165,7 +165,7 @@
       "CareInstructions": "Just live your best life, he'll feed off your hopes, dreams, and aspirations.",
       "diet": "dreams",
       "age": 99,
-      "CareDifficulty": "low",
+      "CareDifficulty": "easy",
       "price": "$0.01",
       "image": "id13CreepyBoy.png"
     },
@@ -204,7 +204,7 @@
       "CareInstructions": "nocturnal little one who loves its burrow lots of sand for this one",
       "diet": "insectivore",
       "age": "2",
-      "CareDifficulty": "easy for night lovers",
+      "CareDifficulty": "easy",
       "price": "$250",
       "image": "id16FairyArmadillo.png"
     },
@@ -244,7 +244,7 @@
       "diet": "herbivore",
       "age": 8,
       "CareDifficulty": "medium",
-      "price": "$40,000",
+      "price": "$40000",
       "image": "id19horse.png"
     },
     {
@@ -257,7 +257,7 @@
       "diet": "carnivore",
       "age": 1500,
       "CareDifficulty": "hard",
-      "price": "$10,000",
+      "price": "$10000",
       "image": "id20nessie.png"
     },
     {
@@ -360,7 +360,7 @@
       "CareInstructions": "The only requirement is to be shiny, else you will looked down upon",
       "diet": "omnivore",
       "age": 7,
-      "CareDifficulty": "low",
+      "CareDifficulty": "easy",
       "price": "$500",
       "image": "id28goldenpheasant.png"
     },
@@ -373,7 +373,7 @@
       "CareInstructions": "Despite it's slender frame, these fare surprisingly well as indoor pets.",
       "diet": "herbivore",
       "age": 12,
-      "CareDifficulty": "low",
+      "CareDifficulty": "easy",
       "price": "$4000",
       "image": "id29giraffe.png"
     },
@@ -400,7 +400,7 @@
       "diet": "herbivore",
       "age": 60000000,
       "CareDifficulty": "medium",
-      "price": "$100 (each)",
+      "price": "$100",
       "image": "id31minions.png"
     },
     {
@@ -413,7 +413,7 @@
       "diet": "carnivore",
       "age": 3,
       "CareDifficulty": "hard",
-      "price": "$200,000",
+      "price": "$200000",
       "image": "id32drogon.png"
     },
     {
@@ -439,7 +439,7 @@
       "diet": "insectivore",
       "age": 2,
       "CareDifficulty": "medium",
-      "price": "$499.99",
+      "price": "$499",
       "image": "id34treefrog.png"
     },
     {
@@ -451,8 +451,8 @@
       "CareInstructions": "Large open fields, idk man it's basically just a bedazzled horse, figure it out.",
       "diet": "herbivore",
       "age": 14,
-      "CareDifficulty": "low",
-      "price": "$12.99",
+      "CareDifficulty": "easy",
+      "price": "$12",
       "image": "id35zebra.png"
     },
     {
@@ -464,8 +464,8 @@
       "CareInstructions": "Requires hourly musical numbers, always the same song.",
       "diet": "herbivore",
       "age": 4,
-      "CareDifficulty": "high",
-      "price": "$49.99",
+      "CareDifficulty": "hard",
+      "price": "$49",
       "image": "id36lemur.png"
     },
     {
@@ -477,8 +477,8 @@
       "CareInstructions": "Make sure you approach it with one hand extended in front of you and one off to the side. Just call up Chris Pratt if you need help, there aren't anymore Jurassic World movies coming up. He's free.",
       "diet": "carnivore",
       "age": 6,
-      "CareDifficulty": "high",
-      "price": "$19999.99",
+      "CareDifficulty": "hard",
+      "price": "$19999",
       "image": "id37velociraptor.png"
     },
     {
@@ -490,8 +490,8 @@
       "CareInstructions": "Give this guy a branch to sit on and some bugs to munch on and watch the lights slowly change.",
       "diet": "insectivore",
       "age": 2,
-      "CareDifficulty": "low",
-      "price": "$4999.99",
+      "CareDifficulty": "easy",
+      "price": "$4999",
       "image": "id38pantherchameleon.png"
     },
     {
@@ -504,7 +504,7 @@
       "diet": "omnivore",
       "age": 3,
       "CareDifficulty": "medium",
-      "price": "$9.99",
+      "price": "$9",
       "image": "id39southerncassowary.png"
     },
     {
@@ -517,7 +517,7 @@
       "diet": "herbivore",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": "$199.99",
+      "price": "$199",
       "image": "id40emu.png"
     },
     {
@@ -529,8 +529,8 @@
       "CareInstructions": "They're always super hungry, it's recommended to have 4 of them placed in the 4 cardinal directions, then just release white pellets for them to fight over.",
       "diet": "white pellets",
       "age": 9,
-      "CareDifficulty": "low",
-      "price": "$29999.99",
+      "CareDifficulty": "easy",
+      "price": "$29999",
       "image": "id41hippo.png"
     },
     {
@@ -542,8 +542,8 @@
       "CareInstructions": "Keep a fire extinguisher nearby at all times, also fruit",
       "diet": "omnivore",
       "age": 1,
-      "CareDifficulty": "high",
-      "price": "$1 (each)",
+      "CareDifficulty": "hard",
+      "price": "$1",
       "image": "id42fireant.jpg"
     },
     {
@@ -556,7 +556,7 @@
       "diet": "insectivore, dog food",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": "$1999.99",
+      "price": "$1999",
       "image": "id43spiderdoggo.png"
     },
     {
@@ -568,8 +568,8 @@
       "CareInstructions": "A tree to hang off of and something to scream at should be more than enough",
       "diet": "insectivore",
       "age": 3,
-      "CareDifficulty": "low",
-      "price": "$19.99",
+      "CareDifficulty": "easy",
+      "price": "$19",
       "image": "id44ghostbat.png"
     },
     {
@@ -582,7 +582,7 @@
       "diet": "jet fuel",
       "age": 450,
       "CareDifficulty": "medium",
-      "price": "$49.99",
+      "price": "$49",
       "image": "id45manofwar.jpg"
     },
     {
@@ -594,8 +594,8 @@
       "CareInstructions": "A rock in your backyard should suffice",
       "diet": "carnivore",
       "age": 2,
-      "CareDifficulty": "low",
-      "price": "$1.99",
+      "CareDifficulty": "easy",
+      "price": "$3",
       "image": "id46dugite.jpg"
     },
     {
@@ -607,8 +607,8 @@
       "CareInstructions": "Provide this boy with a fully grown out (overgrown if possible) jungle. Keep it stocked with a full ecosystem of plants, animals, etc.",
       "diet": "carnivore",
       "age": 2,
-      "CareDifficulty": "low",
-      "price": "$4.99",
+      "CareDifficulty": "easy",
+      "price": "$5",
       "image": "id47bushviper.jpeg"
     },
     {
@@ -620,8 +620,8 @@
       "CareInstructions": "Just don't jump on top of it or throw it at any plumbers",
       "diet": "omnivore",
       "age": 249,
-      "CareDifficulty": "high",
-      "price": "$99.99",
+      "CareDifficulty": "hard",
+      "price": "$115",
       "image": "id48spinyturtle.jpeg"
     }
   ],
@@ -695,7 +695,7 @@
   ],
   "orders": [
     {
-      "userId": 1,
+      "userId": 11,
       "status": "In Progress",
       "cart": 0
     },
@@ -740,7 +740,7 @@
       "cart": 0
     },
     {
-      "userId": 10,
+      "userId": 11,
       "status": "Delivered",
       "cart": 0
     }
