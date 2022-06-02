@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 const ProductsList = ({ animalList }) => {
+
   const [searchTerm, setSearchTerm] = useState("");
   const [name, setName] = useState("");
   const [difficulty, setDifficulty] = useState("")
@@ -92,7 +93,7 @@ const ProductsList = ({ animalList }) => {
   }
 
   return (
-    <div >
+     <>
       <div>
         <p>Sort by:</p>
         {/* Product Sort
@@ -108,9 +109,9 @@ const ProductsList = ({ animalList }) => {
         <button onClick={handleClearSort}>None</button>
         <button onClick={handleName}>Name</button>
         <button onClick={handlePrice}>Price (Low to High)</button>
-        <button onClick={handleDifficulty}>Difficulty (Low to High)</button>
+        <button onClick={handleDifficulty}>Difficulty (Easy to Hard)</button>
       </div>
-
+      
       <input
         type="text"
         placeholder="Search"
@@ -118,30 +119,35 @@ const ProductsList = ({ animalList }) => {
           setSearchTerm(event.target.value);
         }}
       />
-      {animalList.filter((animal)=> {
-        if (searchTerm === "") {
-          return animal;
-        } else if (animal.name.toLowerCase().includes(searchTerm.toLowerCase())){
-          return animal;
-        }
-      })
-      .map((animal, key) => {
-        return (
-          <div>
+
+
+      <div className="ProductsList">        
+          {animalList.filter((animal)=> {
+          if (searchTerm === "") {
+            return animal;
+          } else if (animal.name.toLowerCase().includes(searchTerm.toLowerCase())){
+            return animal;
+          }
+        })
+        .map((animal) => {
+          return (
             <Link key={animal.id} to={`/animals/${animal.id}`}>
-            <div >
-              <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} />
-              <h3>{animal.name}</h3>
-              <p>{animal.biome}</p>
-              <p>{animal.type}</p>
-              <p>{animal.difficulty}</p>
-              <p>{animal.price}</p>
-            </div>
-          </Link>
-          </div>
-        );
-      })}
-    </div>
+              <div className="ProductsInList">
+                <img className="images" alt={animal.image} src={`/assets/ExoticAnimals/${animal.image}`} />
+                <h3>{animal.name}</h3>
+                <p>Biome Type: <br /> {animal.biome}</p>
+                <p>Animal Type: <br /> {animal.type}</p>
+                <p>Care Difficulty: <br /> {animal.CareDifficulty}</p>
+                <p>{animal.price}</p>
+              </div>
+                <div className="ProdListAniDesc">
+                  <p>{animal.description}</p>
+                </div>
+            </Link>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
