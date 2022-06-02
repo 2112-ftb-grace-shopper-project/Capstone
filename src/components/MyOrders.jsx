@@ -53,6 +53,10 @@ const MyOrders = () => {
         </form>
 
         <label>My Orders</label>
+        {/* {orderslist.map((order)=> {
+
+        })} */}
+
         {/* grab username from local storage, match with user info from DB, then grab user's ID and map orders with that ID */}
     </div>
     //only available to logged in registered users

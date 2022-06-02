@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getSingleAnimal } from "../axios-services";
 
-const Product = () => {
+const Product = ({cart, setCart}) => {
   const { animalId } = useParams();
   const [singleAnimal, setSingleAnimal] = useState({});
   const [animalQuantity, setAnimalQuantity] = useState(1);
@@ -16,21 +16,22 @@ const Product = () => {
     setAnimalQuantity(animalQuantity - 1);
   };
 
-  const addToCart = (e) => {
-    e.preventDefault();
-    let currentCart = localStorage.getItem("cart", []) || [];
-    let name = singleAnimal.name;
-    let price = singleAnimal.price;
-    let quant = animalQuantity;
-    let newItem = {
-      name: name,
-      price: price,
-      quant: quant
-    };
-    let newItemString = JSON.stringify(newItem);
-    currentCart.push(newItemString);
-    setCheckOutMsg(true);
-    console.log(localStorage);
+  const addToCart = (product) => {
+    setCart([...cart, product])
+    // e.preventDefault();
+    // let currentCart = localStorage.getItem("cart", []) || [];
+    // let name = singleAnimal.name;
+    // let price = singleAnimal.price;
+    // let quant = animalQuantity;
+    // let newItem = {
+    //   name: name,
+    //   price: price,
+    //   quant: quant
+    // };
+    // let newItemString = JSON.stringify(newItem);
+    // currentCart.push(newItemString);
+    // setCheckOutMsg(true);
+    // console.log(localStorage);
   };
 
   useEffect(() => {

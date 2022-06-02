@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
-const ProductsList = ({ animalList }) => {
+const ProductsList = ({ animalList, cart, setCart }) => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [name, setName] = useState("");
@@ -99,13 +99,10 @@ const ProductsList = ({ animalList }) => {
         {/* Product Sort
             Sort by:
                 -name (X)
-                -age
-                -type
-                -price low to high
+                -price low to high (X)
                 -price high to low 
-                -biome 
-                -diet
-                -care difficulty*/}
+                -care difficulty low to high (X)
+                -care difficulty high to low (X)*/}
         <button onClick={handleClearSort}>None</button>
         <button onClick={handleName}>Name</button>
         <button onClick={handlePrice}>Price (Low to High)</button>
@@ -119,7 +116,6 @@ const ProductsList = ({ animalList }) => {
           setSearchTerm(event.target.value);
         }}
       />
-
 
       <div className="ProductsList">        
           {animalList.filter((animal)=> {

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import ProductsList from './ProductsList';
 
-const Cart = ({loggedIn, animalList }) => {
+const Cart = ({loggedIn, animalList, cart, setCart }) => {
   
 
 
@@ -13,7 +13,6 @@ const Cart = ({loggedIn, animalList }) => {
       quantity: 3,
       image: "id31minions.png"
     },
-
     {
       name: "giraffe",
       price: "4000",

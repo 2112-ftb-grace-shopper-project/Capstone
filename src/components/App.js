@@ -18,7 +18,7 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
   const [myOrderList, setMyOrderList] = useState([]);
-  // const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([])
   // const [order, setOrder] = useState({})
   
   useEffect(() => {
@@ -77,11 +77,11 @@ const App = () => {
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList}/>} />
+        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList} cart={cart} setCart={setCart}/>} />
         <Route path="myorders" element={<MyOrders myOrderList={myOrderList} setMyOrderList={setMyOrderList}/>} loggedIn={loggedIn} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
-        <Route path="/animals/:animalId" element={<Product />} />
-        <Route path="/" element={<ProductsList animalList={animalList} />} />
+        <Route path="/animals/:animalId" element={<Product cart={cart} setCart={setCart}/>} />
+        <Route path="/" element={<ProductsList animalList={animalList} cart={cart} setCart={setCart} />} />
       </Routes>
     </div>
   );
