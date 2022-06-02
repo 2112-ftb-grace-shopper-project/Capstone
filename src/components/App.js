@@ -11,13 +11,15 @@ import {
   MyOrders
  } from './'
 import '../style/App.css';
+import StripeCheckout from 'react-stripe-checkout';
 import { getAnimals } from '../axios-services';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
   const [myOrderList, setMyOrderList] = useState([]);
-  const [order, setOrder] = useState({})
+  // const [cart, setCart] = useState([])
+  // const [order, setOrder] = useState({})
   
   useEffect(() => {
     const fetchAnimals = () => {

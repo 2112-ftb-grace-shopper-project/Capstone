@@ -6,6 +6,7 @@ const MyOrders = () => {
   const [newEmail, setNewEmail] = useState("");
   const [newUsername, setNewUsername] = useState("")
 
+
   const handleEmail = (e) => {
     setNewEmail(e.target.value);
   }
@@ -15,6 +16,10 @@ const MyOrders = () => {
   };
 
   const submitAcctUpdate = async (e) => {
+    // grab newUsername and/or newEmail from handlers above
+    // send patch request to db
+
+
     // e.preventDefault();
     // if (newPassword.length < 5) {
     //   alert("Your Password needs to be at least 6 characters long")
