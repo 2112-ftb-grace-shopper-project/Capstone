@@ -15,11 +15,13 @@ import '../style/App.css';
 // import StripeCheckout from 'react-stripe-checkout';
 import { getAnimals, } from '../axios-services';
 
+const localStorageCart = JSON.parse(localStorage.getItem("cart") || "[]")
+
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
   const [myOrderList, setMyOrderList] = useState([]);
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(localStorageCart)
   const [animalQuantity, setAnimalQuantity] = useState(1);
   // const [order, setOrder] = useState({})
   
@@ -32,16 +34,11 @@ const App = () => {
       .catch(console.error)
     }
     fetchAnimals()
-    const currLocalCart = localStorage.getItem("cart")
-    if (!currLocalCart){
-      localStorage.setItem("cart", JSON.stringify([]))
-    } 
-    else {
-      const parsedCart = JSON.parse(currLocalCart)
-      setCart(parsedCart)
-    }
-    
   }, []);
+
+  useEffect(()=> {
+   localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
 
   // useEffect(() => {
   //   const fetchMyOrders = () => {

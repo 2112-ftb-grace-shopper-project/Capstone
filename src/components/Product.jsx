@@ -16,29 +16,32 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
   };
 
   const addToCart = (product) => {
-    //need to add animal name, quantity, image, and price to cart
-    //add on state and local storage
     const newItem = {
       name: product.name,
       quantity: animalQuantity,
       image: product.image,
       price: product.price
     }
+    if (cart.includes(newItem.name)){
+        alert("This animal is already in your cart!")
+        return;
+      }
+    setCart([...cart, newItem])
     //grab existing cart+add newItem
     //grab local cart (stored as string)
-    const currLocalCart = localStorage.getItem("cart") // ex: [] OR [{name: "stitch", quantity: 1, image: "img05stitch.png", price: $2 }]
+    // const currLocalCart = localStorage.getItem("cart") // ex: [] OR [{name: "stitch", quantity: 1, image: "img05stitch.png", price: $2 }]
     //parse from string to an array of objects
-    if (currLocalCart.includes(product.name)){
-      alert("This animal is already in your cart!")
-      return;
-    }
-    const parsedCart = JSON.parse(currLocalCart)
+    // if (cart.includes(product.name)){
+    //   alert("This animal is already in your cart!")
+    //   return;
+    // }
+    // const parsedCart = JSON.parse(currLocalCart)
     //add new item to state cart
-    const newCart= [...parsedCart, newItem]
-    setCart(newCart)
+    // const newCart= [...parsedCart, newItem]
+    
   
     //stringify new state cart back to localstorage
-    localStorage.setItem("cart", JSON.stringify(newCart))
+    // localStorage.setItem("cart", JSON.stringify(newCart))
     setAnimalQuantity(1)
     
 
