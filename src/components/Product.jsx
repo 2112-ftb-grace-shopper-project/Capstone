@@ -27,54 +27,9 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
         return;
       }
     setCart([...cart, newItem])
-    //grab existing cart+add newItem
-    //grab local cart (stored as string)
-    // const currLocalCart = localStorage.getItem("cart") // ex: [] OR [{name: "stitch", quantity: 1, image: "img05stitch.png", price: $2 }]
-    //parse from string to an array of objects
-    // if (cart.includes(product.name)){
-    //   alert("This animal is already in your cart!")
-    //   return;
-    // }
-    // const parsedCart = JSON.parse(currLocalCart)
-    //add new item to state cart
-    // const newCart= [...parsedCart, newItem]
     
-  
-    //stringify new state cart back to localstorage
-    // localStorage.setItem("cart", JSON.stringify(newCart))
     setAnimalQuantity(1)
     
-
-    //to convert back to obj, result, then JSON.parse(result)
-
-
-    //adding item to state cart
-    // const exist = cart.find((x) => x.name === product.name);
-    // if (exist) {
-    //   setCart(
-    //     cart.map((x) =>
-    //       x.name === product.name
-    //         ? { ...exist, quantity: exist.quantity + 1 }
-    //         : x
-    //     )
-    //   );
-    // } else {
-    //   setCart([...cart, { ...product, quantity: 1 }]);
-    // }
-
-
-    // e.preventDefault();
-    // let currentCart = localStorage.getItem("cart", []) || [];
-    // let name = singleAnimal.name;
-    // let price = singleAnimal.price;
-    // let quant = animalQuantity;
-    // let newItem = {
-    //   name: name,
-    //   price: price,
-    //   quant: quant
-    // };
-    // let newItemString = JSON.stringify(newItem);
-    // currentCart.push(newItemString);
     setCheckOutMsg(true);
   };
 
@@ -126,7 +81,7 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
           Care Difficulty <hr /> {singleAnimal.CareDifficulty}
         </h5>
         <br />
-        <h3>TOTAL: {singleAnimal.price} (+tax, shipping, and handling)</h3>
+        <h3>TOTAL: ${singleAnimal.price}</h3>
         <br />
         <hr></hr>
         <p>How Many Would You Like to Add</p>

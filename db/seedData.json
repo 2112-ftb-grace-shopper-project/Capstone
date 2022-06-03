@@ -10,7 +10,7 @@
       "diet": "Omnivore",
       "age": 8,
       "CareDifficulty": "Hard",
-      "price": "$5000",
+      "price": 5000,
       "image": "id01gorillaphant.jpg"
     },
     {
@@ -23,7 +23,7 @@
       "diet": "Omnivore",
       "age": 10,
       "CareDifficulty": "medium",
-      "price": "$1000",
+      "price": 1000,
       "image": "id02orangutans.png"
     },
     {
@@ -36,7 +36,7 @@
       "diet": "carnivore",
       "age": 4,
       "CareDifficulty": "easy",
-      "price": "$50",
+      "price": 50,
       "image": "id03zebrafrog.jpg"
     },
     {
@@ -49,7 +49,7 @@
       "diet": "vegetarian carnivore; mostly bamboo but feel free to throw in a bug or two",
       "age": "3",
       "CareDifficulty": "easy",
-      "price": "$600",
+      "price": 600,
       "image": "id04redpanda.png"
     },
     {
@@ -62,7 +62,7 @@
       "diet": "Loves SPAM",
       "age": 626,
       "CareDifficulty": "hard",
-      "price": "$2",
+      "price": 2,
       "image": "id05stitch.png"
     },
     {
@@ -75,7 +75,7 @@
       "diet": "omnivore",
       "age": 4,
       "CareDifficulty": "easy",
-      "price": "$79",
+      "price": 79,
       "image": "id06emperorTamarin.png"
     },
     {
@@ -88,7 +88,7 @@
       "diet": "Omnivore",
       "age": 2,
       "CareDifficulty": "hard",
-      "price": "$9000",
+      "price": 9000,
       "image": "id07sharse.png"
     },
     {
@@ -101,7 +101,7 @@
       "diet": "Carnivore",
       "age": 6,
       "CareDifficulty": "medium",
-      "price": "$20000",
+      "price": 20000,
       "image": "id08belugaWhale.png"
     },
     {
@@ -114,7 +114,7 @@
       "diet": "carnivore",
       "age": 3,
       "CareDifficulty": "easy",
-      "price": "$100",
+      "price": 100,
       "image": "id09tabbyCat.png"
     },
     {
@@ -127,7 +127,7 @@
       "diet": "carnivore",
       "age": "Forever baby!The ability to regenerate keeps me young",
       "CareDifficulty": "easy",
-      "price": "$500",
+      "price": 500,
       "image": "id10axolotl.png"
     },
     {
@@ -140,7 +140,7 @@
       "diet": "carnivore",
       "age": "6",
       "CareDifficulty": "hard",
-      "price": "$5000",
+      "price": 5000,
       "image": "id11komodoDragon.png"
     },
     {
@@ -153,7 +153,7 @@
       "diet": "carnivore",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": "$500 each, $850 together",
+      "price": 500,
       "image": "id12MongooseVsKingCobra.png"
     },
     {
@@ -166,7 +166,7 @@
       "diet": "dreams",
       "age": 99,
       "CareDifficulty": "easy",
-      "price": "$0.01",
+      "price": 0.01,
       "image": "id13CreepyBoy.png"
     },
     {
@@ -179,7 +179,7 @@
       "diet": "herbivore",
       "age": 2,
       "CareDifficulty": "easy",
-      "price": "$200",
+      "price": 200,
       "image": "id14herculesbeetle.jpeg"
     },
     {
@@ -192,7 +192,7 @@
       "diet": "herbivore",
       "age": 4,
       "CareDifficulty": "easy",
-      "price": "$50",
+      "price": 50,
       "image": "id15guineaPig.jpg"
     },
     {
@@ -205,7 +205,7 @@
       "diet": "insectivore",
       "age": "2",
       "CareDifficulty": "easy",
-      "price": "$250",
+      "price": 250,
       "image": "id16FairyArmadillo.png"
     },
     {
@@ -218,7 +218,7 @@
       "diet": "omnivore",
       "age": 11,
       "CareDifficulty": "hard",
-      "price": "$750",
+      "price": 750,
       "image": "id17honeyBadger.png"
     },
     {
@@ -231,7 +231,7 @@
       "diet": "herbivore",
       "age": 17,
       "CareDifficulty": "hard",
-      "price": "$2500",
+      "price": 2500,
       "image": "id18Kangaroo.png"
     },
     {
@@ -244,7 +244,7 @@
       "diet": "herbivore",
       "age": 8,
       "CareDifficulty": "medium",
-      "price": "$40000",
+      "price": 40000,
       "image": "id19horse.png"
     },
     {
@@ -257,7 +257,7 @@
       "diet": "carnivore",
       "age": 1500,
       "CareDifficulty": "hard",
-      "price": "$10000",
+      "price": 10000,
       "image": "id20nessie.png"
     },
     {
@@ -270,7 +270,7 @@
       "diet": "insectivore",
       "age": 4,
       "CareDifficulty": "easy",
-      "price": "$75",
+      "price": 75,
       "image": "id21hedgehog.png"
     },
     {
@@ -283,7 +283,7 @@
       "diet": "omnivore",
       "age": 5,
       "CareDifficulty": "hard",
-      "price": "$250",
+      "price": 250,
       "image": "id22mandarinduck.png"
     },
     {
@@ -296,7 +296,7 @@
       "diet": "carnivore",
       "age": 9,
       "CareDifficulty": "easy",
-      "price": "$1000",
+      "price": 1000,
       "image": "id23emperorpenguin.png"
     },
     {
@@ -309,7 +309,7 @@
       "diet": "herbivore",
       "age": 2,
       "CareDifficulty": "easy",
-      "price": "$200",
+      "price": 200,
       "image": "id24twotoedsloth.png"
     },
     {
@@ -322,7 +322,7 @@
       "diet": "herbivore",
       "age": 3,
       "CareDifficulty": "easy",
-      "price": "$300",
+      "price": 300,
       "image": "id25threetoedsloth.png"
     },
     {
@@ -335,7 +335,7 @@
       "diet": "omnivore",
       "age": 8,
       "CareDifficulty": "hard",
-      "price": "$3000",
+      "price": 3000,
       "image": "id26grizzlybear.png"
     },
     {
@@ -348,7 +348,7 @@
       "diet": "omnivore",
       "age": 10,
       "CareDifficulty": "hard",
-      "price": "$3000",
+      "price": 3000,
       "image": "id27blackBear.png"
     },
     {
@@ -361,7 +361,7 @@
       "diet": "omnivore",
       "age": 7,
       "CareDifficulty": "easy",
-      "price": "$500",
+      "price": 500,
       "image": "id28goldenpheasant.png"
     },
     {
@@ -374,7 +374,7 @@
       "diet": "herbivore",
       "age": 12,
       "CareDifficulty": "easy",
-      "price": "$4000",
+      "price": 4000,
       "image": "id29giraffe.png"
     },
     {
@@ -387,7 +387,7 @@
       "diet": "herbivore",
       "age": 20,
       "CareDifficulty": "medium",
-      "price": "$500",
+      "price": 500,
       "image": "id30minion(evil).png"
     },
     {
@@ -400,7 +400,7 @@
       "diet": "herbivore",
       "age": 60000000,
       "CareDifficulty": "medium",
-      "price": "$100",
+      "price": 100,
       "image": "id31minions.png"
     },
     {
@@ -413,7 +413,7 @@
       "diet": "carnivore",
       "age": 3,
       "CareDifficulty": "hard",
-      "price": "$200000",
+      "price": 200000,
       "image": "id32drogon.png"
     },
     {
@@ -426,7 +426,7 @@
       "diet": "insectivore",
       "age": 5,
       "CareDifficulty": "medium",
-      "price": "$699.99",
+      "price": 699.99,
       "image": "id33pangolin.png"
     },
     {
@@ -439,7 +439,7 @@
       "diet": "insectivore",
       "age": 2,
       "CareDifficulty": "medium",
-      "price": "$499",
+      "price": 499,
       "image": "id34treefrog.png"
     },
     {
@@ -452,7 +452,7 @@
       "diet": "herbivore",
       "age": 14,
       "CareDifficulty": "easy",
-      "price": "$12",
+      "price": 12,
       "image": "id35zebra.png"
     },
     {
@@ -465,7 +465,7 @@
       "diet": "herbivore",
       "age": 4,
       "CareDifficulty": "hard",
-      "price": "$49",
+      "price": 49,
       "image": "id36lemur.png"
     },
     {
@@ -478,7 +478,7 @@
       "diet": "carnivore",
       "age": 6,
       "CareDifficulty": "hard",
-      "price": "$19999",
+      "price": 19999,
       "image": "id37velociraptor.png"
     },
     {
@@ -491,7 +491,7 @@
       "diet": "insectivore",
       "age": 2,
       "CareDifficulty": "easy",
-      "price": "$4999",
+      "price": 4999,
       "image": "id38pantherchameleon.png"
     },
     {
@@ -504,7 +504,7 @@
       "diet": "omnivore",
       "age": 3,
       "CareDifficulty": "medium",
-      "price": "$9",
+      "price": 9,
       "image": "id39southerncassowary.png"
     },
     {
@@ -517,7 +517,7 @@
       "diet": "herbivore",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": "$199",
+      "price": 199,
       "image": "id40emu.png"
     },
     {
@@ -530,7 +530,7 @@
       "diet": "white pellets",
       "age": 9,
       "CareDifficulty": "easy",
-      "price": "$29999",
+      "price": 29999,
       "image": "id41hippo.png"
     },
     {
@@ -543,7 +543,7 @@
       "diet": "omnivore",
       "age": 1,
       "CareDifficulty": "hard",
-      "price": "$1",
+      "price": 1,
       "image": "id42fireant.jpg"
     },
     {
@@ -556,7 +556,7 @@
       "diet": "insectivore, dog food",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": "$1999",
+      "price": 1999,
       "image": "id43spiderdoggo.png"
     },
     {
@@ -569,7 +569,7 @@
       "diet": "insectivore",
       "age": 3,
       "CareDifficulty": "easy",
-      "price": "$19",
+      "price": 19,
       "image": "id44ghostbat.png"
     },
     {
@@ -582,7 +582,7 @@
       "diet": "jet fuel",
       "age": 450,
       "CareDifficulty": "medium",
-      "price": "$49",
+      "price": 49,
       "image": "id45manofwar.jpg"
     },
     {
@@ -595,7 +595,7 @@
       "diet": "carnivore",
       "age": 2,
       "CareDifficulty": "easy",
-      "price": "$3",
+      "price": 3,
       "image": "id46dugite.jpg"
     },
     {
@@ -608,7 +608,7 @@
       "diet": "carnivore",
       "age": 2,
       "CareDifficulty": "easy",
-      "price": "$5",
+      "price": 5,
       "image": "id47bushviper.jpeg"
     },
     {
@@ -621,7 +621,7 @@
       "diet": "omnivore",
       "age": 249,
       "CareDifficulty": "hard",
-      "price": "$115",
+      "price": 115,
       "image": "id48spinyturtle.jpeg"
     }
   ],
