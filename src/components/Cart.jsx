@@ -1,25 +1,24 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
-import ProductsList from './ProductsList';
+
 
 const Cart = ({loggedIn, animalList, cart, setCart }) => {
   
 
+  const handleIncrease = (quantity) => {
+    return quantity + 1;
+  };
 
-  const testCart = [
-    {
-      name: "Minion (yellow)",
-      price: "100",
-      quantity: 3,
-      image: "id31minions.png"
-    },
-    {
-      name: "giraffe",
-      price: "4000",
-      quantity: 2,
-      image: "id29giraffe.png"
-    }
-  ]
+  const handleDecrease = (quantity) => {
+   return quantity - 1;
+  };
+
+  const removeFromCart = (itemtoDelete) => {
+    setCart(
+      cart.filter((item)=>item !==itemtoDelete)
+    );
+  };
+
   // const handleDecrease = () => {
 
   // }
@@ -41,19 +40,24 @@ const Cart = ({loggedIn, animalList, cart, setCart }) => {
   return (
     <div>
       <h1>My Cart</h1>
-      {/* {products.map((product => (
-        <div>
-          <img className="images" alt={product.image} src={`/assets/ExoticAnimals/${product.image}`} />
-          <h3>{product.name}</h3>
-          <p>{product.price}</p>
-          <p>{product.quantity}</p>
+      {cart.map((item => (
+        <div key={item.id}>
+          <img className="images" alt={item.image} src={`/assets/ExoticAnimals/${item.image}`} />
+          <h3>{item.name}</h3>
+          <p>Price (each): {item.price}</p>
+          <button onClick={handleIncrease(item.quantity)}>+</button>
+          <p>Quantity: {item.quantity}</p>
+          <button onClick={handleDecrease(item.quantity)}>-</button>
+          <button onClick={()=>removeFromCart(item)}>Remove</button>
         </div>
-      )))} */}
+      )))}
+
+      <h3>Total (includes shipping+processing): {} </h3>
 
 
       {loggedIn 
       ?
-      <button>Proceed to Checkout</button> //Link to Checkout.jsx
+      <p><Link to={"/Checkout"}>Proceed to Checkout</Link></p> //Link to Checkout.jsx
       : 
         <p>Please <Link to={"/Login"}>login</Link> or <Link to={"/Register"}>create an account</Link> to complete checkout. </p>
       }

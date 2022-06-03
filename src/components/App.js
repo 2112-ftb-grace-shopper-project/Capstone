@@ -8,17 +8,19 @@ import {
   ProductsList,
   Product,
   Cart,
-  MyOrders
+  MyOrders,
+  Checkout
  } from './'
 import '../style/App.css';
-import StripeCheckout from 'react-stripe-checkout';
-import { getAnimals } from '../axios-services';
+// import StripeCheckout from 'react-stripe-checkout';
+import { getAnimals, } from '../axios-services';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [animalList, setAnimalList] = useState([]);
   const [myOrderList, setMyOrderList] = useState([]);
   const [cart, setCart] = useState([])
+  const [animalQuantity, setAnimalQuantity] = useState(1);
   // const [order, setOrder] = useState({})
   
   useEffect(() => {
@@ -30,38 +32,30 @@ const App = () => {
       .catch(console.error)
     }
     fetchAnimals()
-    localStorage.setItem("cart", [])
+    const currLocalCart = localStorage.getItem("cart")
+    if (currLocalCart.length === 0 || !currLocalCart){
+      localStorage.setItem("cart", JSON.stringify([]))
+    } 
+    else {
+      const parsedCart = JSON.parse(currLocalCart)
+      setCart(parsedCart)
+    }
+    
   }, []);
 
-  // useEffect(() => 
-  // {
-  //   const fetchUser = () => {
-  //     let localUser = localStorage.getItem("username")
-  //     getSingleUser(localUser)
+  // useEffect(() => {
+  //   const fetchMyOrders = () => {
+  //     const id = //grab ID of logged in user
+  //     getMyOrders(id)
   //     .then((result) => {
-  //       console.log("new useEffect" + result)
-
+  //       setMyOrderList(result)
   //     })
   //     .catch(console.error)
   //   }
-  //   fetchUser()
-
-  // })
-  // useEffect(() => {
-  //   const createOrder = () => {
-  //     if (!order) {
-  //       getNewOrder()
-  //     }
-  //   }
-  // }, [order])
-  // console.log(animalList)
-
-  // useEffect(async () => {
-  //   const animal = await getSingleAnimal(animal)
-  //   const animalFind = animal.find(animal => animal.id === +animalId)
-  //   return animalFind;
-
-  // }, [setSingleAnimal(animalFind)])
+  //   fetchMyOrders()
+  //   localStorage.setItem("cart", [])
+  // }, []);
+  
 
   useEffect (() => {
     const token = localStorage.getItem("token")
@@ -77,10 +71,11 @@ const App = () => {
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList} cart={cart} setCart={setCart}/>} />
+        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList} cart={cart} setCart={setCart} animalQuantity={animalQuantity} setAnimalQuantity={setAnimalQuantity}/>} />
+        <Route path="/Checkout" element={<Checkout />} />
         <Route path="myorders" element={<MyOrders myOrderList={myOrderList} setMyOrderList={setMyOrderList}/>} loggedIn={loggedIn} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
-        <Route path="/animals/:animalId" element={<Product cart={cart} setCart={setCart}/>} />
+        <Route path="/animals/:animalId" element={<Product cart={cart} setCart={setCart} animalQuantity={animalQuantity} setAnimalQuantity={setAnimalQuantity}/>} />
         <Route path="/" element={<ProductsList animalList={animalList} cart={cart} setCart={setCart} />} />
       </Routes>
     </div>

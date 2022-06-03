@@ -48,6 +48,38 @@ async function getOrdersById(id) {
     }
 }
 
+async function getAllOrdersByUser({username}) {
+    try {
+        const user = await getUserByUsername(username);
+        const { rows: order } = await client.query(`
+            SELECT *
+            FROM orders
+            JOIN users ON orders."userId" = users.id
+            WHERE "userId" = $1;
+        `, [user.id]);
+
+        const { rows: animals } = await client.query(`
+            SELECT *
+            FROM animalOrders
+            JOIN animals ON animals.id = animalOrders."animalId";
+        `);
+
+        for(let i = 0; i < order.length; i++) {
+            const currOrder = order[i];
+            currOrder.animals = [];
+
+            for (let j = 0; j < animals.length; j++) {
+                if (currOrder.id === animals[j].orderId) {
+                    currOrder.animals.push(animals[j]);
+                }
+            }
+        }
+        return order;
+    } catch (error) {
+        throw error;
+    }
+}
+
 async function updateOrders({ id, status, cart }) {
     try {
         const order = await getOrdersById(id);
