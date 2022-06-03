@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getSingleAnimal } from "../axios-services";
+import CartPopUp from './CartPopUp'
 
 const Product = ({cart, setCart}) => {
   const { animalId } = useParams();
@@ -19,19 +20,19 @@ const Product = ({cart, setCart}) => {
   const addToCart = (product) => {
     setCart([...cart, product])
     // e.preventDefault();
-    // let currentCart = localStorage.getItem("cart", []) || [];
-    // let name = singleAnimal.name;
-    // let price = singleAnimal.price;
-    // let quant = animalQuantity;
-    // let newItem = {
-    //   name: name,
-    //   price: price,
-    //   quant: quant
-    // };
-    // let newItemString = JSON.stringify(newItem);
-    // currentCart.push(newItemString);
-    // setCheckOutMsg(true);
-    // console.log(localStorage);
+    let currentCart = localStorage.getItem("cart", []) || [];
+    let name = singleAnimal.name;
+    let price = singleAnimal.price;
+    let quant = animalQuantity;
+    let newItem = {
+      name: name,
+      price: price,
+      quant: quant
+    };
+    let newItemString = JSON.stringify(newItem);
+    currentCart.push(newItemString);
+    setCheckOutMsg(true);
+    console.log(localStorage);
   };
 
   useEffect(() => {
@@ -72,16 +73,9 @@ const Product = ({cart, setCart}) => {
       </div>
 
       {checkOutMsg ? (
-        <div className="CartAddPopUp">
-          <h4>You've Added an Item to your Cart!</h4>
-          <p>
-            <Link to={"/"}>Click Here to Continue Shopping</Link> 
-          </p>
-          <p>
-            <Link to={"/cart"}>Click Here to Proceed to Checkout</Link>
-          </p>
-        </div>
+        <CartPopUp />
       ) : null}
+      
     </div>
   );
 };

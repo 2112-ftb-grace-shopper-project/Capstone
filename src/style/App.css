@@ -85,7 +85,7 @@ html {
 .SingleAnimalInfo {
   display: flex;
   flex-direction: column;
-  flex-flow: row column;
+  flex-flow: column wrap;
   align-items: left;
   justify-content: left;
   color: black;
@@ -93,13 +93,15 @@ html {
 }
 
 .CartAddPopUp {
+  position: fixed;
   display: flex;
-  flex-direction: column;
-  flex-flow: row column;
-  align-items: center;
-  justify-content: space-around;
-  color: black;
-  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;  
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .Sort {
