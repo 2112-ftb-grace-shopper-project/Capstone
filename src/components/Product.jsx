@@ -28,14 +28,18 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
     //grab local cart (stored as string)
     const currLocalCart = localStorage.getItem("cart") // ex: [] OR [{name: "stitch", quantity: 1, image: "img05stitch.png", price: $2 }]
     //parse from string to an array of objects
+    if (currLocalCart.includes(product.name)){
+      alert("This animal is already in your cart!")
+      return;
+    }
     const parsedCart = JSON.parse(currLocalCart)
     //add new item to state cart
     const newCart= [...parsedCart, newItem]
     setCart(newCart)
-    console.log(cart)
   
     //stringify new state cart back to localstorage
     localStorage.setItem("cart", JSON.stringify(newCart))
+    setAnimalQuantity(1)
     
 
     //to convert back to obj, result, then JSON.parse(result)

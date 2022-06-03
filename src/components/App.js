@@ -33,7 +33,7 @@ const App = () => {
     }
     fetchAnimals()
     const currLocalCart = localStorage.getItem("cart")
-    if (currLocalCart.length === 0 || !currLocalCart){
+    if (!currLocalCart){
       localStorage.setItem("cart", JSON.stringify([]))
     } 
     else {
@@ -71,7 +71,7 @@ const App = () => {
         <Route path="/Login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/Register" element={<Register setLoggedIn={setLoggedIn} />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="/Cart" element={<Cart loggedIn={loggedIn} animalList={animalList} cart={cart} setCart={setCart} animalQuantity={animalQuantity} setAnimalQuantity={setAnimalQuantity}/>} />
+        <Route path="/Cart" element={<Cart loggedIn={loggedIn} cart={cart} setCart={setCart} animalQuantity={animalQuantity} setAnimalQuantity={setAnimalQuantity}/>} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="myorders" element={<MyOrders myOrderList={myOrderList} setMyOrderList={setMyOrderList}/>} loggedIn={loggedIn} />
         {/* <Route path="/ProductsList" element={<ProductsList />} /> */}

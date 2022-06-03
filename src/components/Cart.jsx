@@ -2,30 +2,25 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 
-const Cart = ({loggedIn, animalList, cart, setCart }) => {
-  
+const Cart = ({loggedIn, cart, setCart }) => {
 
-  const handleIncrease = (quantity) => {
-    return quantity + 1;
-  };
+  // const handleIncrease = (quantity) => {
+  //   setItemQuantity(quantity+1)
+  //   console.log(itemQuantity)
+  // };
 
-  const handleDecrease = (quantity) => {
-   return quantity - 1;
-  };
+  // const handleDecrease = (quantity) => {
+  //   setItemQuantity(quantity-1)
+  //   console.log(itemQuantity)
+  // };
 
   const removeFromCart = (itemtoDelete) => {
-    setCart(
-      cart.filter((item)=>item !==itemtoDelete)
-    );
+    const currLocalCart = localStorage.getItem("cart")
+    const parsedCart = JSON.parse(currLocalCart)
+    const newCart = parsedCart.filter((item)=>item !==itemtoDelete)
+    setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(cart))
   };
-
-  // const handleDecrease = () => {
-
-  // }
-
-  // const handleIncrease = () => {
-    
-  // }
 
   //grab everything we have added to the cart
     //quantity of each
@@ -44,13 +39,15 @@ const Cart = ({loggedIn, animalList, cart, setCart }) => {
         <div key={item.id}>
           <img className="images" alt={item.image} src={`/assets/ExoticAnimals/${item.image}`} />
           <h3>{item.name}</h3>
-          <p>Price (each): {item.price}</p>
-          <button onClick={handleIncrease(item.quantity)}>+</button>
-          <p>Quantity: {item.quantity}</p>
-          <button onClick={handleDecrease(item.quantity)}>-</button>
+          {/* <button onClick={handleIncrease(item.quantity)}>+</button>
+          <button onClick={handleDecrease(item.quantity)}>-</button> */}
+          <p>{item.quantity} x {item.price}</p>
           <button onClick={()=>removeFromCart(item)}>Remove</button>
+          
         </div>
+
       )))}
+      
 
       <h3>Total (includes shipping+processing): {} </h3>
 
