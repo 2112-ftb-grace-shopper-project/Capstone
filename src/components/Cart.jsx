@@ -16,8 +16,6 @@ const Cart = ({loggedIn, cart, setCart }) => {
       item.name === x.name ? {...x, quantity: x.quantity - (x.quantity >1 ? 1 : 0)} : x))
   };
 
-  
-
   const removeFromCart = (itemtoDelete) => {
     const newCart = cart.filter((item)=>item !==itemtoDelete)
     setCart(newCart);
@@ -34,7 +32,7 @@ const Cart = ({loggedIn, cart, setCart }) => {
           <h3>{item.name}</h3>
           <button onClick={()=>handleIncrease(item)}>+</button>
           <button onClick={()=>handleDecrease(item)}>-</button>
-          <p>{item.quantity} x ${item.price}</p>
+          <p>{item.quantity} x ${item.price/100}</p>
           <button onClick={()=>removeFromCart(item)}>Remove</button>
           
         </div>
@@ -42,7 +40,7 @@ const Cart = ({loggedIn, cart, setCart }) => {
       )))}
       {cart.length !== 0 && (
         <div>
-          <h3>Total (includes shipping+processing+tax): {cartTotal} </h3>
+          <h3>Total (includes shipping+processing+tax): ${cartTotal/100} </h3>
         </div>
       )}
       

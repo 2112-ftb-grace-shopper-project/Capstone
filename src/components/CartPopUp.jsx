@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CartPopUp = () => {
+const CartPopUp = ({cart}) => {
   return (
     <div className="CartAddPopUp">
       <div
@@ -15,7 +15,7 @@ const CartPopUp = () => {
         </p>
         <Link to={"/"}>Click Here to Continue Shopping</Link>
         <br />
-        <Link to={"/cart"}>Click Here to Proceed to Checkout</Link>
+        <Link to={"/cart"}>Click Here to Proceed to Checkout ({cart.length}) </Link>
       </div>
     </div>
   );

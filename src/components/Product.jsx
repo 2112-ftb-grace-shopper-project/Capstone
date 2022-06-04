@@ -24,10 +24,10 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       image: product.image,
       price: product.price
     }
-    if (cart.includes(newItem.name)){
+    if (cart.includes(product.name)){
         alert("This animal is already in your cart!")
         return;
-      }
+    }
     setCart([...cart, newItem])
     
     setAnimalQuantity(1)
@@ -64,18 +64,18 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       <p><strong>Age</strong> <br /> {singleAnimal.age}</p>
       <p><strong>Dietary Restrictions</strong> <br /> {singleAnimal.diet}</p>
       <p><strong>Care Difficulty</strong> <br /> {singleAnimal.CareDifficulty}</p>
-      <h3>TOTAL: {singleAnimal.price} (+tax, shipping, and handling)</h3>
+      <h3>TOTAL: {singleAnimal.price/100} (+tax, shipping, and handling)</h3>
       <br />
       <p>Quantity</p>
       <button onClick={handleIncrease}>+</button>
       <p>{animalQuantity}</p>
       <button onClick={handleDecrease}>-</button>
       <hr />
-      <button onClick={addToCart}>Add to Cart</button>
+      <button onClick={()=>addToCart(singleAnimal)}>Add to Cart</button>
       </div>
 
       {checkOutMsg ? (
-        <CartPopUp />
+        <CartPopUp cart={cart} />
       ) : null}
       
     </div>

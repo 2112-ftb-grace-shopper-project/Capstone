@@ -45,7 +45,7 @@ const ProductsList = ({ animalList, cart, setCart }) => {
                   <p>
                     Care Difficulty: <br /> {animal.CareDifficulty}
                   </p>
-                  <p>{animal.price}</p>
+                  <p>${animal.price/100}</p>
                 </div>
                 <div className="ProdListAniDesc">
                   <p>{animal.description}</p>
