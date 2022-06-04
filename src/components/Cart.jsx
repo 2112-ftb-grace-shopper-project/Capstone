@@ -24,17 +24,6 @@ const Cart = ({loggedIn, cart, setCart }) => {
 
   };
 
-  //grab everything we have added to the cart
-    //quantity of each
-    //quantity x base price = total price
-
-    //single animal > cart (animalOrders) > checkout/finished order(orders)
-    //animal order back end = connecting users+animals
-    //front-end state to build
-      //edit quantity
-      //multiply+add for total prices
-
-
     const cartTotal=cart.reduce((a, c) => a + c.price * c.quantity, 0)
   return (
     <div>
