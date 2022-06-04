@@ -151,5 +151,6 @@ module.exports = {
     getAllOrders,
     getOrdersById,
     updateOrders,
-    destroyOrder
+    destroyOrder,
+    getAllOrdersByUser
 }
