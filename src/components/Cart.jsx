@@ -1,59 +1,58 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
-import ProductsList from './ProductsList';
 
-const Cart = ({loggedIn, animalList, cart, setCart }) => {
+
+const Cart = ({loggedIn, cart, setCart }) => {
+
+  const handleIncrease = (item) => {
+    setCart(cart => 
+      cart.map((x) => 
+      item.name === x.name ? {...x, quantity: x.quantity + 1} : x))
+  };
+
+  const handleDecrease = (item) => {
+    setCart(cart => 
+      cart.map((x) => 
+      item.name === x.name ? {...x, quantity: x.quantity - (x.quantity >1 ? 1 : 0)} : x))
+  };
+
   
 
+  const removeFromCart = (itemtoDelete) => {
+    const newCart = cart.filter((item)=>item !==itemtoDelete)
+    setCart(newCart);
 
-  const testCart = [
-    {
-      name: "Minion (yellow)",
-      price: "100",
-      quantity: 3,
-      image: "id31minions.png"
-    },
-    {
-      name: "giraffe",
-      price: "4000",
-      quantity: 2,
-      image: "id29giraffe.png"
-    }
-  ]
-  // const handleDecrease = () => {
+  };
 
-  // }
-
-  // const handleIncrease = () => {
-    
-  // }
-
-  //grab everything we have added to the cart
-    //quantity of each
-    //quantity x base price = total price
-
-    //single animal > cart (animalOrders) > checkout/finished order(orders)
-    //animal order back end = connecting users+animals
-    //front-end state to build
-      //edit quantity
-      //multiply+add for total prices
-
+    const cartTotal=cart.reduce((a, c) => a + c.price * c.quantity, 0)
   return (
     <div>
       <h1>My Cart</h1>
-      {/* {products.map((product => (
-        <div>
-          <img className="images" alt={product.image} src={`/assets/ExoticAnimals/${product.image}`} />
-          <h3>{product.name}</h3>
-          <p>{product.price}</p>
-          <p>{product.quantity}</p>
+      {cart.map((item => (
+        <div key={item.id}>
+          <img className="images" alt={item.image} src={`/assets/ExoticAnimals/${item.image}`} />
+          <h3>{item.name}</h3>
+          <button onClick={()=>handleIncrease(item)}>+</button>
+          <button onClick={()=>handleDecrease(item)}>-</button>
+          <p>{item.quantity} x ${item.price}</p>
+          <button onClick={()=>removeFromCart(item)}>Remove</button>
+          
         </div>
-      )))} */}
+
+      )))}
+      {cart.length !== 0 && (
+        <div>
+          <h3>Total (includes shipping+processing+tax): {cartTotal} </h3>
+        </div>
+      )}
+      
+
+      
 
 
       {loggedIn 
       ?
-      <button>Proceed to Checkout</button> //Link to Checkout.jsx
+      <p><Link to={"/Checkout"}>Proceed to Checkout</Link></p> //Link to Checkout.jsx
       : 
         <p>Please <Link to={"/Login"}>login</Link> or <Link to={"/Register"}>create an account</Link> to complete checkout. </p>
       }

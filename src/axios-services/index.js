@@ -122,3 +122,19 @@ export const getSingleUser = (username) => {
     })
     .catch(console.error);
 };
+
+export const getMyOrders = (id) => {
+  return fetch(
+    `/api/orders/${id}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => response.json())
+    .then((result) => {
+      return result;
+    })
+    .catch(console.error);
+};

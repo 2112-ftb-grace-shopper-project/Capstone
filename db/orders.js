@@ -80,7 +80,6 @@ async function getAllOrdersByUser({username}) {
     }
 }
 
-
 async function updateOrders({ id, status, cart }) {
     try {
         const order = await getOrdersById(id);

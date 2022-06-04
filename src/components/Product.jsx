@@ -3,10 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import { getSingleAnimal } from "../axios-services";
 import CartPopUp from './CartPopUp'
 
-const Product = ({cart, setCart}) => {
+const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
   const { animalId } = useParams();
   const [singleAnimal, setSingleAnimal] = useState({});
-  const [animalQuantity, setAnimalQuantity] = useState(1);
   const [checkOutMsg, setCheckOutMsg] = useState(false);
 
   const handleIncrease = () => {
@@ -18,21 +17,23 @@ const Product = ({cart, setCart}) => {
   };
 
   const addToCart = (product) => {
-    setCart([...cart, product])
-    // e.preventDefault();
-    let currentCart = localStorage.getItem("cart", []) || [];
-    let name = singleAnimal.name;
-    let price = singleAnimal.price;
-    let quant = animalQuantity;
-    let newItem = {
-      name: name,
-      price: price,
-      quant: quant
-    };
-    let newItemString = JSON.stringify(newItem);
-    currentCart.push(newItemString);
+
+    const newItem = {
+      name: product.name,
+      quantity: animalQuantity,
+      image: product.image,
+      price: product.price
+    }
+    if (cart.includes(newItem.name)){
+        alert("This animal is already in your cart!")
+        return;
+      }
+    setCart([...cart, newItem])
+    
+    setAnimalQuantity(1)
+    
     setCheckOutMsg(true);
-    console.log(localStorage);
+
   };
 
   useEffect(() => {
@@ -54,6 +55,7 @@ const Product = ({cart, setCart}) => {
         src={`/assets/ExoticAnimals/${singleAnimal.image}`}
       />
       <div className="SingleAnimalInfo">
+
       <h3>{singleAnimal.name}</h3>
       <p><strong>Biome Type</strong> <br /> {singleAnimal.biome}</p>
       <p><strong>Animal Type</strong> <br /> {singleAnimal.type}</p>

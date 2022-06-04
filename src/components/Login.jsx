@@ -24,6 +24,7 @@ const Login = ({ setLoggedIn }) => {
       setPassword("");
       setLoggedIn(true);
       navigate("/");
+      //also need to add localstorage/state cart to user via db function
      } else {
        alert("Invalid Login, Try Again")
      }

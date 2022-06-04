@@ -49,7 +49,6 @@ async function getAllAnimals() {
         SELECT *
         FROM animals;
         `);
-        console.log("These are all the animals", rows);
         return rows;
     } catch (error) {
         console.error(error);
