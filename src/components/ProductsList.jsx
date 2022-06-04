@@ -5,14 +5,14 @@ import Sort from "./Sort";
 const ProductsList = ({ animalList, cart, setCart }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [name, setName] = useState("");
-  const [difficulty, setDifficulty] = useState("");
+  // const [difficulty, setDifficulty] = useState("");
 
   return (
     <div>
       <Sort
         setName={setName}
         animalList={animalList}
-        setDifficulty={setDifficulty}
+        // setDifficulty={setDifficulty}
         setSearchTerm={setSearchTerm}
       />
       <div className="ProductsList">
