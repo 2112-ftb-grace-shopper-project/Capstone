@@ -107,28 +107,46 @@ async function getUserByEmail(email) {
   }
 }
 
-async function updateUser(id, fields = {}) {
-  const setString = Object.keys(fields).map(
-    (key, index) => `"${ key }"=$${ index + 1 }`
-  ).join(', ');
-
-  if (setString.length === 0) {
-    return;
-  }
-
+async function updateUser({ email, username }) {
   try {
-    const { rows: [ user ] } = await client.query(`
-      UPDATE users
-      SET ${ setString }
-      WHERE id=${ id }
-      RETURNING *;
-    `, Object.values(fields));
+      const user = await getUserById(id);
+      const fields = {};
 
-    return user;
+      if (!user) {
+          return;
+      }
+
+      if (email) {
+          fields.email = email;
+      }
+
+      if (username) {
+          fields.username = username;
+      }
+
+
+
+      const setString = Object.keys(fields)
+          .map((key, index) => `"${key}"=$${index + 1}`)
+          .join(", ");
+
+      if (setString.length === 0) {
+          return;
+      }
+
+      const { rows: [updatedUsers] } = await client.query(`
+    UPDATE users
+    SET ${setString}
+    WHERE id = ${id}
+    RETURNING *;
+  `, Object.values(fields));
+
+      return updatedUsers;
   } catch (error) {
-    throw error;
+      console.error(error);
   }
 }
+
 
 async function deleteUser(id) {
   try {

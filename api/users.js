@@ -8,6 +8,7 @@ const {
   getUserByUsername,
   getUser,
   getAllUsers,
+  updateUser,
 } = require("../db");
 
 usersRouter.get("/", async (req, res, next) => {
@@ -79,5 +80,20 @@ usersRouter.post("/login", async (req, res, next) => {
     next({name, message});
   }
 });
+
+
+usersRouter.patch("/:id", requireUser, async (req, res, next) => {
+  try {
+      const { id } = req.params;
+      const { email, username } = req.body;
+      const update = await updateUser({ id, email, username });
+
+      res.send(update);
+  } catch (error) {
+      next(error);
+  }
+});
+
+
 
 module.exports = usersRouter;
