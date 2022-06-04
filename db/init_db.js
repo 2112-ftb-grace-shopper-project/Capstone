@@ -44,7 +44,7 @@ async function createTables() {
         Diet TEXT NOT NULL,
         Age TEXT NOT NULL,
         "CareDifficulty" TEXT NOT NULL,
-        Price TEXT NOT NULL,
+        Price INT NOT NULL,
         Image TEXT
       );
 
