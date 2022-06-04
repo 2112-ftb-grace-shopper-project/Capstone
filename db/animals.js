@@ -13,6 +13,7 @@ async function createAnimals({
     price,
     image
 }) {
+    price=Math.trunc(100*price)
     try {
         const {
             rows: [animal],

@@ -75,7 +75,7 @@
       "diet": "omnivore",
       "age": 4,
       "CareDifficulty": "easy",
-      "price": 79,
+      "price": 79.99,
       "image": "id06emperorTamarin.png"
     },
     {
@@ -153,7 +153,7 @@
       "diet": "carnivore",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": 500,
+      "price": 850,
       "image": "id12MongooseVsKingCobra.png"
     },
     {
@@ -165,7 +165,7 @@
       "CareInstructions": "Just live your best life, he'll feed off your hopes, dreams, and aspirations.",
       "diet": "dreams",
       "age": 99,
-      "CareDifficulty": "easy",
+      "CareDifficulty": "low",
       "price": 0.01,
       "image": "id13CreepyBoy.png"
     },
@@ -204,7 +204,7 @@
       "CareInstructions": "nocturnal little one who loves its burrow lots of sand for this one",
       "diet": "insectivore",
       "age": "2",
-      "CareDifficulty": "easy",
+      "CareDifficulty": "easy for night lovers",
       "price": 250,
       "image": "id16FairyArmadillo.png"
     },
@@ -213,7 +213,7 @@
       "id": 17,
       "biome": "savannah",
       "type": "mammal",
-      "description": "He gets stung by bees like a thousand times, do you think he cares?",
+      "description": "Weasel meets skunk with a hint of wolverine",
       "CareInstructions": "When you find out let us know!",
       "diet": "omnivore",
       "age": 11,
@@ -360,7 +360,7 @@
       "CareInstructions": "The only requirement is to be shiny, else you will looked down upon",
       "diet": "omnivore",
       "age": 7,
-      "CareDifficulty": "easy",
+      "CareDifficulty": "low",
       "price": 500,
       "image": "id28goldenpheasant.png"
     },
@@ -373,7 +373,7 @@
       "CareInstructions": "Despite it's slender frame, these fare surprisingly well as indoor pets.",
       "diet": "herbivore",
       "age": 12,
-      "CareDifficulty": "easy",
+      "CareDifficulty": "low",
       "price": 4000,
       "image": "id29giraffe.png"
     },
@@ -439,7 +439,7 @@
       "diet": "insectivore",
       "age": 2,
       "CareDifficulty": "medium",
-      "price": 499,
+      "price": 499.99,
       "image": "id34treefrog.png"
     },
     {
@@ -451,8 +451,8 @@
       "CareInstructions": "Large open fields, idk man it's basically just a bedazzled horse, figure it out.",
       "diet": "herbivore",
       "age": 14,
-      "CareDifficulty": "easy",
-      "price": 12,
+      "CareDifficulty": "low",
+      "price": 12.99,
       "image": "id35zebra.png"
     },
     {
@@ -464,8 +464,8 @@
       "CareInstructions": "Requires hourly musical numbers, always the same song.",
       "diet": "herbivore",
       "age": 4,
-      "CareDifficulty": "hard",
-      "price": 49,
+      "CareDifficulty": "high",
+      "price": 49.99,
       "image": "id36lemur.png"
     },
     {
@@ -477,8 +477,8 @@
       "CareInstructions": "Make sure you approach it with one hand extended in front of you and one off to the side. Just call up Chris Pratt if you need help, there aren't anymore Jurassic World movies coming up. He's free.",
       "diet": "carnivore",
       "age": 6,
-      "CareDifficulty": "hard",
-      "price": 19999,
+      "CareDifficulty": "high",
+      "price": 19999.99,
       "image": "id37velociraptor.png"
     },
     {
@@ -490,8 +490,8 @@
       "CareInstructions": "Give this guy a branch to sit on and some bugs to munch on and watch the lights slowly change.",
       "diet": "insectivore",
       "age": 2,
-      "CareDifficulty": "easy",
-      "price": 4999,
+      "CareDifficulty": "low",
+      "price": 4999.99,
       "image": "id38pantherchameleon.png"
     },
     {
@@ -504,7 +504,7 @@
       "diet": "omnivore",
       "age": 3,
       "CareDifficulty": "medium",
-      "price": 9,
+      "price": 9.99,
       "image": "id39southerncassowary.png"
     },
     {
@@ -517,7 +517,7 @@
       "diet": "herbivore",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": 199,
+      "price": 199.99,
       "image": "id40emu.png"
     },
     {
@@ -529,8 +529,8 @@
       "CareInstructions": "They're always super hungry, it's recommended to have 4 of them placed in the 4 cardinal directions, then just release white pellets for them to fight over.",
       "diet": "white pellets",
       "age": 9,
-      "CareDifficulty": "easy",
-      "price": 29999,
+      "CareDifficulty": "low",
+      "price": 29999.99,
       "image": "id41hippo.png"
     },
     {
@@ -542,7 +542,7 @@
       "CareInstructions": "Keep a fire extinguisher nearby at all times, also fruit",
       "diet": "omnivore",
       "age": 1,
-      "CareDifficulty": "hard",
+      "CareDifficulty": "high",
       "price": 1,
       "image": "id42fireant.jpg"
     },
@@ -556,7 +556,7 @@
       "diet": "insectivore, dog food",
       "age": 4,
       "CareDifficulty": "medium",
-      "price": 1999,
+      "price": 1999.99,
       "image": "id43spiderdoggo.png"
     },
     {
@@ -568,8 +568,8 @@
       "CareInstructions": "A tree to hang off of and something to scream at should be more than enough",
       "diet": "insectivore",
       "age": 3,
-      "CareDifficulty": "easy",
-      "price": 19,
+      "CareDifficulty": "low",
+      "price": 19.99,
       "image": "id44ghostbat.png"
     },
     {
@@ -582,7 +582,7 @@
       "diet": "jet fuel",
       "age": 450,
       "CareDifficulty": "medium",
-      "price": 49,
+      "price": 49.99,
       "image": "id45manofwar.jpg"
     },
     {
@@ -594,8 +594,8 @@
       "CareInstructions": "A rock in your backyard should suffice",
       "diet": "carnivore",
       "age": 2,
-      "CareDifficulty": "easy",
-      "price": 3,
+      "CareDifficulty": "low",
+      "price": 1.99,
       "image": "id46dugite.jpg"
     },
     {
@@ -607,8 +607,8 @@
       "CareInstructions": "Provide this boy with a fully grown out (overgrown if possible) jungle. Keep it stocked with a full ecosystem of plants, animals, etc.",
       "diet": "carnivore",
       "age": 2,
-      "CareDifficulty": "easy",
-      "price": 5,
+      "CareDifficulty": "low",
+      "price": 4.99,
       "image": "id47bushviper.jpeg"
     },
     {
@@ -620,8 +620,8 @@
       "CareInstructions": "Just don't jump on top of it or throw it at any plumbers",
       "diet": "omnivore",
       "age": 249,
-      "CareDifficulty": "hard",
-      "price": 115,
+      "CareDifficulty": "high",
+      "price": 99.99,
       "image": "id48spinyturtle.jpeg"
     }
   ],
@@ -695,7 +695,7 @@
   ],
   "orders": [
     {
-      "userId": 11,
+      "userId": 1,
       "status": "In Progress",
       "cart": 0
     },
@@ -740,7 +740,7 @@
       "cart": 0
     },
     {
-      "userId": 11,
+      "userId": 10,
       "status": "Delivered",
       "cart": 0
     }
