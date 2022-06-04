@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getSingleAnimal } from "../axios-services";
+import CartPopUp from './CartPopUp'
 
 const Product = ({cart, setCart}) => {
   const { animalId } = useParams();
@@ -19,19 +20,19 @@ const Product = ({cart, setCart}) => {
   const addToCart = (product) => {
     setCart([...cart, product])
     // e.preventDefault();
-    // let currentCart = localStorage.getItem("cart", []) || [];
-    // let name = singleAnimal.name;
-    // let price = singleAnimal.price;
-    // let quant = animalQuantity;
-    // let newItem = {
-    //   name: name,
-    //   price: price,
-    //   quant: quant
-    // };
-    // let newItemString = JSON.stringify(newItem);
-    // currentCart.push(newItemString);
-    // setCheckOutMsg(true);
-    // console.log(localStorage);
+    let currentCart = localStorage.getItem("cart", []) || [];
+    let name = singleAnimal.name;
+    let price = singleAnimal.price;
+    let quant = animalQuantity;
+    let newItem = {
+      name: name,
+      price: price,
+      quant: quant
+    };
+    let newItemString = JSON.stringify(newItem);
+    currentCart.push(newItemString);
+    setCheckOutMsg(true);
+    console.log(localStorage);
   };
 
   useEffect(() => {
@@ -54,43 +55,27 @@ const Product = ({cart, setCart}) => {
       />
       <div className="SingleAnimalInfo">
       <h3>{singleAnimal.name}</h3>
-      <p>Biome Type <hr /> {singleAnimal.biome}</p>
-      <br />
-      <p>Animal Type <hr /> {singleAnimal.type}</p>
-      <br />
-      <p>Description <hr /> {singleAnimal.description}</p>
-      <br />
-      <p>How to Handle <hr /> {singleAnimal.CareInstructions}</p>
-      <br />
-      <p>Age <hr /> {singleAnimal.age}</p>
-      <br />
-      <h5>Dietary Restrictions <hr /> {singleAnimal.diet}</h5>
-      <br />
-      <h5>Care Difficulty <hr /> {singleAnimal.CareDifficulty}</h5>
-      <br />
+      <p><strong>Biome Type</strong> <br /> {singleAnimal.biome}</p>
+      <p><strong>Animal Type</strong> <br /> {singleAnimal.type}</p>
+      <p><strong>Description</strong> <br /> {singleAnimal.description}</p>
+      <p><strong>How to Handle</strong> <br /> {singleAnimal.CareInstructions}</p>
+      <p><strong>Age</strong> <br /> {singleAnimal.age}</p>
+      <p><strong>Dietary Restrictions</strong> <br /> {singleAnimal.diet}</p>
+      <p><strong>Care Difficulty</strong> <br /> {singleAnimal.CareDifficulty}</p>
       <h3>TOTAL: {singleAnimal.price} (+tax, shipping, and handling)</h3>
       <br />
-      <hr></hr>
-      <p>How Many Would You Like to Add</p>
+      <p>Quantity</p>
       <button onClick={handleIncrease}>+</button>
       <p>{animalQuantity}</p>
       <button onClick={handleDecrease}>-</button>
-      <br />
-      <hr></hr>
+      <hr />
       <button onClick={addToCart}>Add to Cart</button>
       </div>
 
       {checkOutMsg ? (
-        <div className="CartAddPopUp">
-          <h4>You've Added an Item to your Cart!</h4>
-          <p>
-            <Link to={"/"}>Click Here to Continue Shopping</Link> 
-          </p>
-          <p>
-            <Link to={"/cart"}>Click Here to Proceed to Checkout</Link>
-          </p>
-        </div>
+        <CartPopUp />
       ) : null}
+      
     </div>
   );
 };
