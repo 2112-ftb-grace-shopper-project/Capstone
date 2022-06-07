@@ -1,10 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { getSingleUser, getMyOrders } from '../axios-services';
 
 
-
-const MyOrders = () => {
+const MyOrders = ({user, setMyOrderList, myOrderList}) => {
   const [newEmail, setNewEmail] = useState("");
   const [newUsername, setNewUsername] = useState("")
+
+  useEffect(() => {
+    //get the user, grab their id, pass into get my orders
+    const fetchMyOrders = () => {
+      const id = localStorage.getItem('id')
+      getMyOrders(id)
+      .then((result) => {
+        setMyOrderList(result)
+      })
+      .catch(console.error)
+    }
+    fetchMyOrders()
+  }, []);
+  
+  // useEffect(() => {
+  //   const fetchAnimals = () => {
+  //     getAnimals()
+  //     .then((result) => {
+  //       setAnimalList(result)
+  //     })
+  //     .catch(console.error)
+  //   }
+  //   fetchAnimals()
+  // }, []);
+  
 
 
   const handleEmail = (e) => {
@@ -53,10 +78,24 @@ const MyOrders = () => {
         </form>
 
         <label>My Orders</label>
-        {/* {orderslist.map((order)=> {
+        {myOrderList ? 
+        myOrderList.map((order)=> {
+          return (
+            <div>
+              <p>Order #</p>{/* order.id */}
+              <p>Order Status: {order.status}</p> 
+              <p># of items ordered: {order.cart}</p>    
+            </div>
+          )
 
-        })} */}
+        })
+        : 
+        <p>You have not placed any orders yet.</p>}
 
+
+
+        
+      
         {/* grab username from local storage, match with user info from DB, then grab user's ID and map orders with that ID */}
     </div>
     //only available to logged in registered users

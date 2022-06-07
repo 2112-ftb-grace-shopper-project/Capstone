@@ -2,7 +2,9 @@ import React from 'react'
 
 const Checkout = () => {
   return (
-    <div>Checkout</div>
+    <div className="Misc">
+      <h3>You've Successfully Checked Out!</h3>
+    </div>
     //setup stripe
     //after successful checkout:
       //change order status to "processed" on db/myorders

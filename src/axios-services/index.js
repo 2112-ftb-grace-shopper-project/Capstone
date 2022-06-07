@@ -17,7 +17,7 @@ export const accountLogin = (username, password) => {
       console.log(result);
       localStorage.setItem("token", result.token);
       localStorage.setItem("username", result.user.username);
-      localStorage.setItem("userId", result.user.id);
+      localStorage.setItem("id", result.user.id);
       return result.user.username;
     })
     .catch(console.error);

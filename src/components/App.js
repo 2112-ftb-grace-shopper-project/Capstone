@@ -23,7 +23,6 @@ const App = () => {
   const [myOrderList, setMyOrderList] = useState([]);
   const [cart, setCart] = useState(localStorageCart)
   const [animalQuantity, setAnimalQuantity] = useState(1);
-  // const [order, setOrder] = useState({})
   
   useEffect(() => {
     const fetchAnimals = () => {
@@ -40,18 +39,6 @@ const App = () => {
    localStorage.setItem("cart", JSON.stringify(cart))
   }, [cart])
 
-  // useEffect(() => {
-  //   const fetchMyOrders = () => {
-  //     const id = //grab ID of logged in user
-  //     getMyOrders(id)
-  //     .then((result) => {
-  //       setMyOrderList(result)
-  //     })
-  //     .catch(console.error)
-  //   }
-  //   fetchMyOrders()
-  //   localStorage.setItem("cart", [])
-  // }, []);
   
 
   useEffect (() => {
