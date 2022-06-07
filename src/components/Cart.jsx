@@ -21,7 +21,7 @@ const Cart = ({loggedIn, cart, setCart }) => {
 
   };
 
-    const cartTotal=cart.reduce((a, c) => a + c.price * c.quantity, 0)
+  const cartTotal=cart.reduce((a, c) => a + c.price * c.quantity, 0)
   return (
     <div>
       <h1>My Cart</h1>
@@ -33,9 +33,7 @@ const Cart = ({loggedIn, cart, setCart }) => {
           <button onClick={()=>handleDecrease(item)}>-</button>
           <p>{item.quantity} x ${item.price/100}</p>
           <button onClick={()=>removeFromCart(item)}>Remove</button>
-          
         </div>
-
       )))}
       {cart.length !== 0 && (
         <div>

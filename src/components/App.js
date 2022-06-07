@@ -39,8 +39,6 @@ const App = () => {
    localStorage.setItem("cart", JSON.stringify(cart))
   }, [cart])
 
-  
-
   useEffect (() => {
     const token = localStorage.getItem("token")
     if (token) {
