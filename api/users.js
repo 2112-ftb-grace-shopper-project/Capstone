@@ -2,6 +2,7 @@ const express = require("express");
 const usersRouter = express.Router();
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET = 'neverTell' } = process.env;
+const { requireUser } = require("./utils");
 
 const {
   createUser,
@@ -71,12 +72,12 @@ usersRouter.post("/login", async (req, res, next) => {
         id: user.id,
         username: user.username
       }, JWT_SECRET);
-      
-      res.send({user, message: "You are now logged in", token: token });
-    } 
-    
-  } catch ({name, message}) {
-    next({name, message});
+
+      res.send({ user, message: "You are now logged in", token: token });
+    }
+
+  } catch ({ name, message }) {
+    next({ name, message });
   }
 });
 
