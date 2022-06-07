@@ -55,17 +55,29 @@ const Cart = ({ loggedIn, cart, setCart }) => {
         </div>
       )}
 
-      { cart.length === 0 ? <p>Add Something to your Cart</p> : null }
+      {cart.length === 0 ? <p>Add Something to your Cart</p> : null}
 
-      { !loggedIn
-      ? 
-      <button>
-          Please <Link to={"/Login"}>login</Link> or{" "}
-          <Link to={"/Register"}>create an account</Link> to complete checkout.
-        </button>
-      :
-      cart.length !== 0 ? <button onClick={()=>handleCheckout()}> <Link to={"/Checkout"}>Checkout</Link></button> : null
-      }
+      {!loggedIn && cart.length !== 0 ? (
+        <h3>
+          Please{" "}
+          <br />
+          <Link to={"/Login"}>
+            <button>login</button>
+          </Link>{" "}
+          <br />
+          or{" "}
+          <br />
+          <Link to={"/Register"}>
+            <button>create an account</button>
+          </Link>{" "}
+          <br />
+          to complete checkout.
+        </h3>
+      ) : cart.length !== 0 ? (
+        <Link to={"/Checkout"}>
+          <button onClick={() => handleCheckout()}>Checkout</button>
+        </Link>
+      ) : null}
     </div>
 
     //list of items in cart
