@@ -25,8 +25,8 @@ const Register = ({ setLoggedIn }) => {
 
   const submitInformation = async (e) => {
     e.preventDefault();
-    if (newPassword.length < 5) {
-      alert("Your Password needs to be at least 6 characters long")
+    if (newPassword.length < 8) {
+      alert("Your Password needs to be at least 8 characters long")
     } else if (newPassword !== passwordAgain) {
       alert("Your Password did not match!")
     } else {

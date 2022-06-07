@@ -42,7 +42,7 @@ export const registerAccount = (username, password, email) => {
     .then((result) => {
       localStorage.setItem("token", result.token);
       localStorage.setItem("username", result.user.username);
-      localStorage.setItem("userId", result.user.id);
+      localStorage.setItem("id", result.user.id);
       return result.user.username;
     })
     .catch(console.error);
@@ -79,9 +79,6 @@ export const getSingleAnimal = (id) => {
     })
     .catch(console.error);
 };
-
-
-
 
 export const getNewOrder = (userId, status, cart) => {
   return fetch(
