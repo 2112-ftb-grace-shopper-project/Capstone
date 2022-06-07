@@ -33,8 +33,9 @@ const Cart = ({ loggedIn, cart, setCart }) => {
   return (
     <div>
       <h1>My Cart</h1>
+      {console.log(cart)}
       {cart.map((item) => (
-        <div key={item.id}>
+        <div key={item.name}>
           <img
             className="images"
             alt={item.image}

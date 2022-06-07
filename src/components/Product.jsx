@@ -17,23 +17,20 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
   };
 
   const addToCart = (product) => {
-
     const newItem = {
       name: product.name,
       quantity: animalQuantity,
       image: product.image,
       price: product.price
     }
-    if (cart.includes(product.name)){
+    console.log(cart)
+    if (cart.some(e => e.name === product.name)){
         alert("This animal is already in your cart!")
         return;
     }
     setCart([...cart, newItem])
-    
     setAnimalQuantity(1)
-    
     setCheckOutMsg(true);
-
   };
 
   useEffect(() => {
