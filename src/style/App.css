@@ -86,10 +86,11 @@ html {
   display: flex;
   flex-direction: column;
   flex-flow: column wrap;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   color: black;
   font-size: 1.25rem;
+  text-align: center;
 }
 
 .CartAddPopUp {
@@ -122,6 +123,25 @@ html {
   justify-content: center;
   color: black;
   font-size: 1.5rem;
+}
+
+.Misc,
+.Register,
+.Login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: column wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.Cart,
+.MyOrders {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: column wrap;
+  align-items: center;
+  text-align: center;
 }
 
 /* Link Rules */

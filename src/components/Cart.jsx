@@ -32,8 +32,9 @@ const Cart = ({ loggedIn, cart, setCart }) => {
 
   const cartTotal = cart.reduce((a, c) => a + c.price * c.quantity, 0);
   return (
-    <div>
+    <div className="Cart">
       <h1>My Cart</h1>
+      <br />
       {cart.map((item) => (
         <div key={item.name}>
           <img
@@ -43,11 +44,15 @@ const Cart = ({ loggedIn, cart, setCart }) => {
           />
           <h3>{item.name}</h3>
           <button onClick={() => handleIncrease(item)}>+</button>
+          <br />
           <button onClick={() => handleDecrease(item)}>-</button>
-          <p>
-            {item.quantity} x ${item.price / 100}
-          </p>
+          <p>Qty: {item.quantity}</p>
+          <p>${item.price / 100} each</p>
+          <hr />
+          <p>Total: ${item.quantity * item.price / 100}</p>
+          <hr />
           <button onClick={() => removeFromCart(item)}>Remove</button>
+          <hr />
         </div>
       ))}
       {cart.length !== 0 && (

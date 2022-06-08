@@ -17,7 +17,7 @@ const MyOrders = ({ setMyOrderList, myOrderList }) => {
   }, [setMyOrderList]);
 
   return (
-    <div>
+    <div className="MyOrders">
         <label>My Orders</label>
         {myOrderList ? 
         myOrderList.map((order)=> {

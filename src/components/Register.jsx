@@ -42,29 +42,34 @@ const Register = ({ setLoggedIn }) => {
   return (
     <div className="Register">
       <h2>Register</h2>
+      <br />
       <form onSubmit={submitInformation}>
       <input
           placeholder="E-Mail"
           value={email}
           onChange={handleEmail}
         ></input>
+        <hr />
         <input
           placeholder="Username"
           value={newUsername}
           onChange={handleUsername}
         ></input>
+        <hr />
         <input
           placeholder="Password"
           type="password"
           value={newPassword}
           onChange={handlePassword}
         ></input>
+        <br />
         <input
           placeholder="Retype Your Password"
           type="password"
           value={passwordAgain}
           onChange={handlePasswordAgain}
         ></input>
+        <hr />
         <button>Submit</button>
       </form>
     </div>

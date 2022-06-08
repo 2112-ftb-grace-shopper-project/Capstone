@@ -14,7 +14,6 @@ export const accountLogin = (username, password) => {
   )
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
       localStorage.setItem("token", result.token);
       localStorage.setItem("username", result.user.username);
       localStorage.setItem("id", result.user.id);
@@ -97,7 +96,6 @@ export const getNewOrder = (userId, status, cart) => {
   )
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
       localStorage.getItem("userId", result.user.id);
       return result.orders.userId;
     })

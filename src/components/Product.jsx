@@ -60,12 +60,10 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       <p><strong>Dietary Restrictions</strong> <br /> {singleAnimal.diet}</p>
       <p><strong>Care Difficulty</strong> <br /> {singleAnimal.CareDifficulty}</p>
       <h3>TOTAL: {singleAnimal.price/100} (+tax, shipping, and handling)</h3>
-      <br />
       <p>Quantity</p>
       <button onClick={handleIncrease}>+</button>
       <p>{animalQuantity}</p>
       <button onClick={handleDecrease}>-</button>
-      <hr />
       <button onClick={()=>addToCart(singleAnimal)}>Add to Cart</button>
       </div>
       {checkOutMsg ? (
