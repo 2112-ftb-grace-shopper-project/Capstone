@@ -26,7 +26,7 @@ const Sort = ({ animalList, setName, setSearchTerm, /*setDifficulty*/ }) => {
     return animals;
   };
 
-  const priceSort = () => {
+  const priceSortAscending = () => {
     const arr = animalList.sort(function (a, b) {
       const na = a.price;
       const nb = b.price;
@@ -41,8 +41,33 @@ const Sort = ({ animalList, setName, setSearchTerm, /*setDifficulty*/ }) => {
     return arr;
   };
 
-  const handlePrice = () => {
-    const animals = priceSort();
+  const handlePriceAscending = () => {
+    const animals = priceSortAscending();
+    setName(
+      animals.map((animal) => {
+        return <p>{animal.price}</p>;
+      })
+    );
+    return animals;
+  };
+
+  const priceSortDescending = () => {
+    const arr = animalList.sort(function (a, b) {
+      const na = a.price;
+      const nb = b.price;
+      if (na > nb) {
+        return -1;
+      }
+      if (na < nb) {
+        return 1;
+      }
+      return 0;
+    });
+    return arr;
+  }
+
+  const handlePriceDescending = () => {
+    const animals = priceSortDescending();
     setName(
       animals.map((animal) => {
         return <p>{animal.price}</p>;
@@ -114,8 +139,9 @@ const Sort = ({ animalList, setName, setSearchTerm, /*setDifficulty*/ }) => {
       </div>
       <div className="Sort">
         <button onClick={handleClearSort}>Reset to Default</button>
-        <button onClick={handleName}>Sort by Name</button>
-        <button onClick={handlePrice}>Sort by Price ↓</button>
+        <button onClick={handleName}>Sort by Name 0 - Z</button>
+        <button onClick={handlePriceAscending}>Sort by Price ↓</button>
+        <button onClick={handlePriceDescending}>Sort by Price ↑</button>
         {/* <button onClick={handleDifficulty}>Sort by Difficulty ↓</button> */}
       </div>
     </>

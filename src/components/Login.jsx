@@ -40,12 +40,14 @@ const Login = ({ setLoggedIn }) => {
           value={username}
           onChange={handleUsername}
         ></input>
+        <hr />
         <input
           placeholder="Password"
           type="password"
           value={password}
           onChange={handlePassword}
         ></input>
+        <hr />
         <button>Submit</button>
       </form>
     </div>

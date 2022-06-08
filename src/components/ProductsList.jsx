@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sort from "./Sort";
 
-const ProductsList = ({ animalList, cart, setCart }) => {
+const ProductsList = ({ animalList }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [name, setName] = useState("");
   // const [difficulty, setDifficulty] = useState("");
@@ -10,14 +10,14 @@ const ProductsList = ({ animalList, cart, setCart }) => {
   return (
     <div>
       <Sort
+        name={name}
         setName={setName}
         animalList={animalList}
         // setDifficulty={setDifficulty}
         setSearchTerm={setSearchTerm}
       />
       <div className="ProductsList">
-        {animalList
-          .filter((animal) => {
+        {animalList.filter((animal) => {
             if (searchTerm === "") {
               return animal;
             } else if (
@@ -25,30 +25,30 @@ const ProductsList = ({ animalList, cart, setCart }) => {
             ) {
               return animal;
             }
-          })
-          .map((animal) => {
+          }).map((animal) => {
             return (
               <Link key={animal.id} to={`/animals/${animal.id}`}>
                 <div className="ProductsInList">
                   <img
-                    className="images"
                     alt={animal.image}
                     src={`/assets/ExoticAnimals/${animal.image}`}
                   />
-                  <h3>{animal.name}</h3>
+                  <div className="ProductItems">
+                  <h3><u>{animal.name}</u></h3>
                   <p>
-                    Biome Type: <br /> {animal.biome}
+                    <strong>Biome Type</strong> <br /> {animal.biome}
                   </p>
                   <p>
-                    Animal Type: <br /> {animal.type}
+                    <strong>Animal Type</strong> <br /> {animal.type}
                   </p>
                   <p>
-                    Care Difficulty: <br /> {animal.CareDifficulty}
+                    <strong>Care Difficulty</strong> <br /> {animal.CareDifficulty}
                   </p>
-                  <p>${animal.price/100}</p>
+                  <p><strong>${animal.price/100}</strong></p>
                 </div>
                 <div className="ProdListAniDesc">
                   <p>{animal.description}</p>
+                </div>
                 </div>
               </Link>
             );

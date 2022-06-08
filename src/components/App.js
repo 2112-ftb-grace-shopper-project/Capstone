@@ -39,8 +39,6 @@ const App = () => {
    localStorage.setItem("cart", JSON.stringify(cart))
   }, [cart])
 
-  
-
   useEffect (() => {
     const token = localStorage.getItem("token")
     if (token) {
@@ -57,10 +55,9 @@ const App = () => {
         <Route path="/Logout" element={<Logout />} />
         <Route path="/Cart" element={<Cart loggedIn={loggedIn} cart={cart} setCart={setCart} animalQuantity={animalQuantity} setAnimalQuantity={setAnimalQuantity}/>} />
         <Route path="/Checkout" element={<Checkout />} />
-        <Route path="myorders" element={<MyOrders myOrderList={myOrderList} setMyOrderList={setMyOrderList}/>} loggedIn={loggedIn} />
-        {/* <Route path="/ProductsList" element={<ProductsList />} /> */}
+        <Route path="/MyOrders" element={<MyOrders myOrderList={myOrderList} setMyOrderList={setMyOrderList}/>} loggedIn={loggedIn} />
         <Route path="/animals/:animalId" element={<Product cart={cart} setCart={setCart} animalQuantity={animalQuantity} setAnimalQuantity={setAnimalQuantity}/>} />
-        <Route path="/" element={<ProductsList animalList={animalList} cart={cart} setCart={setCart} />} />
+        <Route path="/" element={<ProductsList animalList={animalList} />} />
       </Routes>
     </div>
   );

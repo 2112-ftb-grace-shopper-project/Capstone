@@ -17,23 +17,19 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
   };
 
   const addToCart = (product) => {
-
     const newItem = {
       name: product.name,
       quantity: animalQuantity,
       image: product.image,
       price: product.price
     }
-    if (cart.includes(product.name)){
+    if (cart.some(e => e.name === product.name)){
         alert("This animal is already in your cart!")
         return;
     }
     setCart([...cart, newItem])
-    
     setAnimalQuantity(1)
-    
     setCheckOutMsg(true);
-
   };
 
   useEffect(() => {
@@ -55,8 +51,7 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
         src={`/assets/ExoticAnimals/${singleAnimal.image}`}
       />
       <div className="SingleAnimalInfo">
-
-      <h3>{singleAnimal.name}</h3>
+      <h3><u>{singleAnimal.name}</u></h3>
       <p><strong>Biome Type</strong> <br /> {singleAnimal.biome}</p>
       <p><strong>Animal Type</strong> <br /> {singleAnimal.type}</p>
       <p><strong>Description</strong> <br /> {singleAnimal.description}</p>
@@ -64,8 +59,7 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       <p><strong>Age</strong> <br /> {singleAnimal.age}</p>
       <p><strong>Dietary Restrictions</strong> <br /> {singleAnimal.diet}</p>
       <p><strong>Care Difficulty</strong> <br /> {singleAnimal.CareDifficulty}</p>
-      <h3>TOTAL: {singleAnimal.price/100} (+tax, shipping, and handling)</h3>
-      <br />
+      <h3>TOTAL <br /> ${singleAnimal.price/100} <br /> (+tax, shipping, and handling)</h3>
       <p>Quantity</p>
       <button onClick={handleIncrease}>+</button>
       <p>{animalQuantity}</p>
@@ -73,11 +67,9 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       <hr />
       <button onClick={()=>addToCart(singleAnimal)}>Add to Cart</button>
       </div>
-
       {checkOutMsg ? (
         <CartPopUp cart={cart} />
       ) : null}
-      
     </div>
   );
 };

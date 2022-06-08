@@ -14,7 +14,6 @@ export const accountLogin = (username, password) => {
   )
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
       localStorage.setItem("token", result.token);
       localStorage.setItem("username", result.user.username);
       localStorage.setItem("id", result.user.id);
@@ -42,7 +41,7 @@ export const registerAccount = (username, password, email) => {
     .then((result) => {
       localStorage.setItem("token", result.token);
       localStorage.setItem("username", result.user.username);
-      localStorage.setItem("userId", result.user.id);
+      localStorage.setItem("id", result.user.id);
       return result.user.username;
     })
     .catch(console.error);
@@ -80,9 +79,6 @@ export const getSingleAnimal = (id) => {
     .catch(console.error);
 };
 
-
-
-
 export const getNewOrder = (userId, status, cart) => {
   return fetch(
     "/api/orders",
@@ -100,7 +96,6 @@ export const getNewOrder = (userId, status, cart) => {
   )
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
       localStorage.getItem("userId", result.user.id);
       return result.orders.userId;
     })
@@ -109,7 +104,7 @@ export const getNewOrder = (userId, status, cart) => {
 
 export const getSingleUser = (username) => {
   return fetch(
-    `/api/users/}`,
+    `/api/users`,
     {
       method: "GET",
       headers: {
