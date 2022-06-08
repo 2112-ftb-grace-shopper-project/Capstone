@@ -51,7 +51,7 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
         src={`/assets/ExoticAnimals/${singleAnimal.image}`}
       />
       <div className="SingleAnimalInfo">
-      <h3>{singleAnimal.name}</h3>
+      <h3><u>{singleAnimal.name}</u></h3>
       <p><strong>Biome Type</strong> <br /> {singleAnimal.biome}</p>
       <p><strong>Animal Type</strong> <br /> {singleAnimal.type}</p>
       <p><strong>Description</strong> <br /> {singleAnimal.description}</p>
@@ -59,11 +59,12 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       <p><strong>Age</strong> <br /> {singleAnimal.age}</p>
       <p><strong>Dietary Restrictions</strong> <br /> {singleAnimal.diet}</p>
       <p><strong>Care Difficulty</strong> <br /> {singleAnimal.CareDifficulty}</p>
-      <h3>TOTAL: {singleAnimal.price/100} (+tax, shipping, and handling)</h3>
+      <h3>TOTAL <br /> ${singleAnimal.price/100} <br /> (+tax, shipping, and handling)</h3>
       <p>Quantity</p>
       <button onClick={handleIncrease}>+</button>
       <p>{animalQuantity}</p>
       <button onClick={handleDecrease}>-</button>
+      <hr />
       <button onClick={()=>addToCart(singleAnimal)}>Add to Cart</button>
       </div>
       {checkOutMsg ? (

@@ -30,24 +30,25 @@ const ProductsList = ({ animalList }) => {
               <Link key={animal.id} to={`/animals/${animal.id}`}>
                 <div className="ProductsInList">
                   <img
-                    className="images"
                     alt={animal.image}
                     src={`/assets/ExoticAnimals/${animal.image}`}
                   />
-                  <h3>{animal.name}</h3>
+                  <div className="ProductItems">
+                  <h3><u>{animal.name}</u></h3>
                   <p>
-                    Biome Type: <br /> {animal.biome}
+                    <strong>Biome Type</strong> <br /> {animal.biome}
                   </p>
                   <p>
-                    Animal Type: <br /> {animal.type}
+                    <strong>Animal Type</strong> <br /> {animal.type}
                   </p>
                   <p>
-                    Care Difficulty: <br /> {animal.CareDifficulty}
+                    <strong>Care Difficulty</strong> <br /> {animal.CareDifficulty}
                   </p>
-                  <p>${animal.price/100}</p>
+                  <p><strong>${animal.price/100}</strong></p>
                 </div>
                 <div className="ProdListAniDesc">
                   <p>{animal.description}</p>
+                </div>
                 </div>
               </Link>
             );

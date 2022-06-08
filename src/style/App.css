@@ -1,7 +1,8 @@
 html {
   background-image: url("wallpaper.png");
-  margin: auto;
   background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100vw;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10,8 +11,12 @@ html {
   font-size: 1rem;
 }
 
-.images {
+img {
   width: 25vw;
+}
+
+hr {
+  width: 100%;
 }
 
 .SingleImages {
@@ -27,12 +32,6 @@ html {
   padding: 15px;
   background: darkgray;
   top: 0;
-}
-
-@media only screen and (max-width: 380px) {
-  .Navbar {
-    width: 75%;
-  }
 }
 
 .NavLink {
@@ -61,25 +60,39 @@ html {
 
 .ProductsInList {
   display: flex;
-  padding: 50px;
+  margin: 15px;
+  padding: 15px;
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   color: black;
   font-size: 1.25rem;
+  text-align: center;
+  border: solid 2px black;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.05)
 }
 
 .ProdListAniDesc {
   display: flex;
-  padding: 50px;
+  width: 25vw;
   flex-direction: column;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
   color: black;
   font-size: 1.25rem;
-  border-bottom: double;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 449px) {
+  img {
+    display: none;
+  }
+  .ProdListAniDesc {
+    display: none;
+  }
 }
 
 .SingleAnimalInfo {
@@ -115,6 +128,12 @@ html {
   font-size: 1.25rem;
 }
 
+@media only screen and (max-width: 599px) {
+  .Sort{
+    display: none;
+  }
+}
+
 .Search {
   display: flex;
   flex-direction: column;
@@ -123,6 +142,7 @@ html {
   justify-content: center;
   color: black;
   font-size: 1.5rem;
+  width: 100%;
 }
 
 .Misc,
@@ -142,6 +162,14 @@ html {
   flex-wrap: column wrap;
   align-items: center;
   text-align: center;
+}
+
+.CartItems {
+  border: solid 2px black;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.05);
+  margin: 15px;
+  padding: 50px;
 }
 
 /* Link Rules */

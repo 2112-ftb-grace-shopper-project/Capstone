@@ -36,7 +36,7 @@ const Cart = ({ loggedIn, cart, setCart }) => {
       <h1>My Cart</h1>
       <br />
       {cart.map((item) => (
-        <div key={item.name}>
+        <div className="CartItems" key={item.name}>
           <img
             className="images"
             alt={item.image}
@@ -52,7 +52,6 @@ const Cart = ({ loggedIn, cart, setCart }) => {
           <p>Total: ${item.quantity * item.price / 100}</p>
           <hr />
           <button onClick={() => removeFromCart(item)}>Remove</button>
-          <hr />
         </div>
       ))}
       {cart.length !== 0 && (
@@ -85,16 +84,6 @@ const Cart = ({ loggedIn, cart, setCart }) => {
         </Link>
       ) : null}
     </div>
-
-    //list of items in cart
-    //include quantity, price, description
-    //unregistered users can revisit cart on same device and see items (local storage)
-    //edit cart
-    //change quantity
-    //remove item
-    //only allow individual customer to edit
-    //registered users can revisit cart on different device and see items in cart (needs backend user functionality)
-    //total price of all items
   );
 };
 
