@@ -23,7 +23,6 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       image: product.image,
       price: product.price
     }
-    console.log(cart)
     if (cart.some(e => e.name === product.name)){
         alert("This animal is already in your cart!")
         return;
@@ -52,7 +51,6 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
         src={`/assets/ExoticAnimals/${singleAnimal.image}`}
       />
       <div className="SingleAnimalInfo">
-
       <h3>{singleAnimal.name}</h3>
       <p><strong>Biome Type</strong> <br /> {singleAnimal.biome}</p>
       <p><strong>Animal Type</strong> <br /> {singleAnimal.type}</p>
@@ -70,11 +68,9 @@ const Product = ({ cart, setCart, animalQuantity, setAnimalQuantity }) => {
       <hr />
       <button onClick={()=>addToCart(singleAnimal)}>Add to Cart</button>
       </div>
-
       {checkOutMsg ? (
         <CartPopUp cart={cart} />
       ) : null}
-      
     </div>
   );
 };

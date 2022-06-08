@@ -106,7 +106,7 @@ export const getNewOrder = (userId, status, cart) => {
 
 export const getSingleUser = (username) => {
   return fetch(
-    `/api/users/}`,
+    `/api/users`,
     {
       method: "GET",
       headers: {

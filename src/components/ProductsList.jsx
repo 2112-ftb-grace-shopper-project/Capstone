@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sort from "./Sort";
 
-const ProductsList = ({ animalList, cart, setCart }) => {
+const ProductsList = ({ animalList }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [name, setName] = useState("");
   // const [difficulty, setDifficulty] = useState("");
@@ -10,14 +10,14 @@ const ProductsList = ({ animalList, cart, setCart }) => {
   return (
     <div>
       <Sort
+        name={name}
         setName={setName}
         animalList={animalList}
         // setDifficulty={setDifficulty}
         setSearchTerm={setSearchTerm}
       />
       <div className="ProductsList">
-        {animalList
-          .filter((animal) => {
+        {animalList.filter((animal) => {
             if (searchTerm === "") {
               return animal;
             } else if (
@@ -25,8 +25,7 @@ const ProductsList = ({ animalList, cart, setCart }) => {
             ) {
               return animal;
             }
-          })
-          .map((animal) => {
+          }).map((animal) => {
             return (
               <Link key={animal.id} to={`/animals/${animal.id}`}>
                 <div className="ProductsInList">
